@@ -12,7 +12,7 @@ export async function POST(request) {
     last_name: body.lastName || rest.join(' ') || undefined,
     email: body.email,
     phone: body.phone,
-    campaign_name: body.service || body.topic,
+    campaign_name: body.topic || body.service,
     source: 'website',
     form_id: 'oai-nextjs',
   };
@@ -32,5 +32,24 @@ export async function POST(request) {
     return Response.json({ error: data.error || 'Something went wrong. Please try again.' }, { status: res.status });
   }
 
-  return Response.json({ id: data.leadId });
+  const leadId = data.leadId;
+
+  const noteLines = [
+    body.insurance && `Insurance / Payment: ${body.insurance}`,
+    body.contactMethod && `Preferred Contact Method: ${body.contactMethod}`,
+    body.message && `Message: ${body.message}`,
+  ].filter(Boolean);
+
+  if (leadId && noteLines.length > 0) {
+    await fetch(`${ECHO5_API_URL}/api/leads/${leadId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Tenant-Key': ECHO5_TENANT_KEY,
+      },
+      body: JSON.stringify({ notes: noteLines.join('\n') }),
+    }).catch(() => {});
+  }
+
+  return Response.json({ id: leadId });
 }

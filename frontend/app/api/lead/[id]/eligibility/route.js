@@ -17,6 +17,21 @@ export async function PATCH(request, { params }) {
     body.memberId && `Insurance/Medicaid Member ID: ${body.memberId}`,
   ].filter(Boolean);
 
+  const eligibilityNote = `Eligibility Information\n${lines.join('\n')}`;
+
+  let existingNotes = '';
+  try {
+    const getRes = await fetch(`${ECHO5_API_URL}/api/leads/${id}`, {
+      headers: { 'X-Tenant-Key': ECHO5_TENANT_KEY },
+    });
+    if (getRes.ok) {
+      const getData = await getRes.json();
+      existingNotes = getData.lead?.notes || '';
+    }
+  } catch {}
+
+  const combinedNotes = existingNotes ? `${existingNotes}\n\n${eligibilityNote}` : eligibilityNote;
+
   const res = await fetch(`${ECHO5_API_URL}/api/leads/${id}`, {
     method: 'PUT',
     headers: {
@@ -25,7 +40,7 @@ export async function PATCH(request, { params }) {
     },
     body: JSON.stringify({
       city: body.city,
-      notes: `Eligibility Information\n${lines.join('\n')}`,
+      notes: combinedNotes,
     }),
   });
 
