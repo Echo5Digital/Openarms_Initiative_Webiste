@@ -102,6 +102,10 @@ function buildNotificationHtml({ heading, intro, rows, footerNote }) {
 
 async function sendTeamNotification({ subject, text, html }) {
   const to = process.env.TEAM_NOTIFICATION_EMAIL;
+  const cc = (process.env.TEAM_NOTIFICATION_CC || '')
+    .split(',')
+    .map((addr) => addr.trim())
+    .filter(Boolean);
   const from = process.env.SMTP_FROM || process.env.SMTP_USER;
   const t = getTransporter();
 
@@ -114,6 +118,7 @@ async function sendTeamNotification({ subject, text, html }) {
     await t.sendMail({
       from,
       to,
+      cc: cc.length ? cc : undefined,
       subject,
       text,
       html,
