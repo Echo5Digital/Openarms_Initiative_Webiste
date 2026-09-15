@@ -73,8 +73,8 @@ export default function FinalCtaForm() {
           <input name="email" type="email" value={form.email} onChange={handleChange} required />
         </label>
         <label className="final-cta-field">
-          <span>Phone Number</span>
-          <input name="phone" type="tel" value={form.phone} onChange={handleChange} />
+          <span>Phone Number*</span>
+          <input name="phone" type="tel" value={form.phone} onChange={handleChange} required />
         </label>
       </div>
       <label className="final-cta-field">

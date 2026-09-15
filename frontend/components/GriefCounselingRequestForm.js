@@ -55,10 +55,10 @@ export default function GriefCounselingRequestForm() {
         <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="you@example.org" required />
       </div>
 
-      <label className="grief-req-label">Phone Number</label>
+      <label className="grief-req-label">Phone Number*</label>
       <div className="grief-req-input-wrap">
         <IconPhone />
-        <input name="phone" value={form.phone} onChange={handleChange} placeholder="(123) 456-7890" />
+        <input name="phone" value={form.phone} onChange={handleChange} placeholder="(123) 456-7890" required />
       </div>
 
       <label className="grief-req-label">How will you be paying for services?</label>

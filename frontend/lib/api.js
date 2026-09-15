@@ -1,7 +1,7 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
 export async function submitForm(payload) {
-  const res = await fetch(`${API_URL}/api/submissions`, {
+  const res = await fetch(`/api/lead`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -76,7 +76,7 @@ export async function updateSubmission(token, id, fields) {
 }
 
 export async function submitEligibility(id, payload) {
-  const res = await fetch(`${API_URL}/api/submissions/${id}/eligibility`, {
+  const res = await fetch(`/api/lead/${id}/eligibility`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),

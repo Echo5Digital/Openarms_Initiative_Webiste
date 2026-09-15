@@ -54,10 +54,10 @@ export default function DepressionAnxietyRequestForm() {
         <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="you@example.org" required />
       </div>
 
-      <label className="da-req-label">Phone Number</label>
+      <label className="da-req-label">Phone Number*</label>
       <div className="da-req-input-wrap">
         <IconPhone />
-        <input name="phone" value={form.phone} onChange={handleChange} placeholder="(123) 456-7890" />
+        <input name="phone" value={form.phone} onChange={handleChange} placeholder="(123) 456-7890" required />
       </div>
 
       <label className="da-req-label">How will you be paying for services?</label>

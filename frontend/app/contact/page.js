@@ -134,7 +134,7 @@ function ContactForm() {
       </div>
       <div className="oa-contact-form-row">
         <label className="oa-contact-field"><span>Email Address*</span><input type="email" name="email" value={form.email} onChange={handleChange} required /></label>
-        <label className="oa-contact-field"><span>Phone Number</span><input type="tel" name="phone" value={form.phone} onChange={handleChange} /></label>
+        <label className="oa-contact-field"><span>Phone Number*</span><input type="tel" name="phone" value={form.phone} onChange={handleChange} required /></label>
       </div>
       <label className="oa-contact-field"><span>What type of support are you looking for?*</span>
         <select name="service" value={form.service} onChange={handleChange} required>

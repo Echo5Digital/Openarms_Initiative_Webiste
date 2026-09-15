@@ -97,17 +97,17 @@ export default function ReferralRequestForm() {
 
       <div className="referral-req-row">
         <div>
-          <label className="fs-req-label">Patient&rsquo;s Email Address</label>
+          <label className="fs-req-label">Patient&rsquo;s Email Address*</label>
           <div className="fs-req-input-wrap">
             <IconMail />
-            <input name="patientEmail" type="email" value={form.patientEmail} onChange={handleChange} placeholder="Patient's Email" />
+            <input name="patientEmail" type="email" value={form.patientEmail} onChange={handleChange} placeholder="Patient's Email" required />
           </div>
         </div>
         <div>
-          <label className="fs-req-label">Patient&rsquo;s Phone Number</label>
+          <label className="fs-req-label">Patient&rsquo;s Phone Number*</label>
           <div className="fs-req-input-wrap">
             <IconPhone />
-            <input name="patientPhone" value={form.patientPhone} onChange={handleChange} placeholder="Patient's Number" />
+            <input name="patientPhone" value={form.patientPhone} onChange={handleChange} placeholder="Patient's Number" required />
           </div>
         </div>
       </div>
