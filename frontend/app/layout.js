@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { DM_Sans, Playfair_Display, Plus_Jakarta_Sans, Alex_Brush } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
@@ -41,6 +42,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable} ${alexBrush.variable}`}>
       <body suppressHydrationWarning>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18435077192"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18435077192');
+          `}
+        </Script>
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
