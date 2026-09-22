@@ -18,11 +18,20 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /* overflow-x alone implicitly resolves overflow-y to a non-"visible"
+     value in most browsers, which breaks position:sticky for every
+     descendant on the page (a well-known CSS gotcha, confirmed here: the
+     blog post sidebar's "Need Support?"/"On This Page"/"Related Posts"
+     cards never stuck while scrolling). Declaring overflow-y explicitly
+     restores normal vertical scroll/sticky behavior while keeping the
+     horizontal-scroll prevention this rule was actually here for. */
+  overflow-y: visible;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+  overflow-y: visible;
   background: #ffffff;
   color: var(--ink);
   font-family: var(--font-dm-sans), Arial, sans-serif;
