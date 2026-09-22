@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "struggling-as-a-parent-okc-training-can-help",
+    "title": "Struggling as a Parent? OKC Training Can Help",
+    "date": "September 22, 2026",
+    "category": "blog",
+    "excerpt": "Find parent support training in Oklahoma City with Open Arms Initiative. Evidence-based parenting classes, coaching, and family support for real results.",
+    "image": "/struggling-as-a-parent-okc-training-can-help/featured.jpg",
+    "alt": "Struggling as a Parent? OKC Training Can Help"
+  },
+  {
     "slug": "where-can-your-family-turn-for-help-in-okc",
     "title": "Where Can Your Family Turn for Help in OKC?",
     "date": "September 22, 2026",
