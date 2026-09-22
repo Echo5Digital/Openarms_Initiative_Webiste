@@ -18,23 +18,36 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  /* overflow-x alone implicitly resolves overflow-y to a non-"visible"
-     value in most browsers, which breaks position:sticky for every
-     descendant on the page (a well-known CSS gotcha, confirmed here: the
-     blog post sidebar's "Need Support?"/"On This Page"/"Related Posts"
-     cards never stuck while scrolling). Declaring overflow-y explicitly
-     restores normal vertical scroll/sticky behavior while keeping the
-     horizontal-scroll prevention this rule was actually here for. */
-  overflow-y: visible;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  overflow-y: visible;
   background: #ffffff;
   color: var(--ink);
   font-family: var(--font-dm-sans), Arial, sans-serif;
+}
+
+/* Blog post pages have no real horizontal overflow of their own (verified:
+   document.documentElement.scrollWidth === viewport width with the guard
+   removed), but the homepage does — a decorative section genuinely runs
+   ~55px past the viewport edge, so overflow-x:hidden must stay on html/body
+   globally. The problem: setting overflow-x to a non-"visible" value forces
+   the browser to also resolve overflow-y to "auto" (confirmed via
+   getComputedStyle in production — plain overflow-y:visible on the same
+   rule does NOT survive this coupling), and an "auto"/non-"visible"
+   overflow-y on html/body silently breaks position:sticky for every
+   descendant (the blog post sidebar's "Need Support?"/"On This Page"/
+   "Related Posts" cards never stuck while scrolling). Scoping the override
+   to just blog post pages via :has() avoids touching the homepage's
+   existing overflow guard. */
+body:has(main.blog-post-page) {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+html:has(body main.blog-post-page) {
+  overflow-x: visible;
+  overflow-y: visible;
 }
 
 a {
