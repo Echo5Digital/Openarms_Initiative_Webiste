@@ -1,14 +1,5 @@
 export const blogPosts = [
   {
-    "slug": "test-echo5-blockjson-connectivity-check",
-    "title": "Understanding Trauma-Informed Care Training in OKC",
-    "date": "September 22, 2026",
-    "category": "Blog",
-    "excerpt": "Automated connectivity test — safe to delete.",
-    "image": "/test-echo5-blockjson-connectivity-check/featured.jpg",
-    "alt": "Understanding Trauma-Informed Care Training in OKC"
-  },
-  {
     "slug": "the-let-them-theory-a-therapist-s-perspective-on-when-it-helps-and-when-it-doesn-t",
     "title": "The ‘Let Them’ Theory: A Therapist’s Perspective on When It Helps, and When It Doesn’t",
     "date": "August 28, 2026",
