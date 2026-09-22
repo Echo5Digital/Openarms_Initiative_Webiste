@@ -8327,6 +8327,22 @@ footer a:hover {
   padding: 48px;
 }
 
+/* Echo5 styled-component-library output (see ArticleBlock's 'html' case)
+   sets its own full-bleed section backgrounds and a 1140px inner content
+   column via inline !important styles — the card's own 48px padding would
+   just add unwanted extra margin around an already-designed layout, so
+   let it break out to the card's own edges instead of nesting inside that
+   padding. */
+.blog-post-rich-html {
+  margin: -48px -48px 0;
+}
+
+@media (max-width: 640px) {
+  .blog-post-rich-html {
+    margin: -26px -20px 0;
+  }
+}
+
 .blog-post-thumb {
   border-radius: 16px;
   overflow: hidden;

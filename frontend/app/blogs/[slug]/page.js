@@ -29,6 +29,13 @@ function slugifyHeading(text) {
 
 function ArticleBlock({ block, index }) {
   switch (block.type) {
+    // Full self-contained rich HTML — e.g. the Echo5 styled component
+    // library's output (icon cards, checklists, colored callouts, CTA
+    // banner, FAQ accordion). Rendered as a plain <div>, not <p>, since
+    // that HTML contains real block-level elements (<div>, <h2>, etc.) that
+    // are invalid inside a <p> tag.
+    case 'html':
+      return <div className="blog-post-rich-html" dangerouslySetInnerHTML={{ __html: block.html }} />;
     case 'intro-heading':
       return <p className="blog-post-intro-heading" dangerouslySetInnerHTML={{ __html: block.html }} />;
     case 'h2':
