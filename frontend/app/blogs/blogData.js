@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "how-your-okc-neighbors-access-community-support",
+    "title": "How Your OKC Neighbors Access Community Support",
+    "date": "September 22, 2026",
+    "category": "blog",
+    "excerpt": "Discover how OKC residents access non-profit community support for healthcare, food, housing, and more. Learn how to find help or get involved in Oklahoma City.",
+    "image": "/how-your-okc-neighbors-access-community-support/featured.jpg",
+    "alt": "How Your OKC Neighbors Access Community Support"
+  },
+  {
     "slug": "the-let-them-theory-a-therapist-s-perspective-on-when-it-helps-and-when-it-doesn-t",
     "title": "The ‘Let Them’ Theory: A Therapist’s Perspective on When It Helps, and When It Doesn’t",
     "date": "August 28, 2026",
