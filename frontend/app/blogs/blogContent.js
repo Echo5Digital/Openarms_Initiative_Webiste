@@ -1,43 +1,6 @@
 // Full article bodies for individual blog posts, keyed by slug.
 // Each body is a list of content blocks rendered by [slug]/page.js.
 export const blogContent = {
-  "test-echo5-new-design-check": {
-    blocks: [
-      {
-        "type": "p",
-        "text": "Trauma-informed care is one of the most important investments a community can make in understanding what happened to people, not just what is wrong with them."
-      },
-      {
-        "type": "h2",
-        "text": "Understanding Trauma-Informed Care Training in OKC"
-      },
-      {
-        "type": "p",
-        "text": "Trauma-informed care is not a single technique or therapy model. It is a philosophy that influences how every interaction happens, from the front desk to the therapist's office."
-      },
-      {
-        "type": "h2",
-        "text": "How Trauma-Informed Therapy Differs from Traditional Counseling"
-      },
-      {
-        "type": "p",
-        "text": "Traditional therapy sometimes focuses heavily on symptoms. Trauma-informed therapy goes deeper."
-      },
-      {
-        "type": "h2",
-        "text": "The Role of Safety and Trust"
-      },
-      {
-        "type": "p",
-        "text": "Safety is the foundation of trauma-informed therapy."
-      },
-      {
-        "type": "faq",
-        "q": "What is trauma-informed care?",
-        "a": "An approach that recognizes trauma is widespread and responds in ways that promote safety and trust."
-      }
-    ],
-  },
   'how-do-i-know-if-i-need-counseling-or-just-someone-to-talk-to': {
     nextPost: {
       slug: 'why-emotional-burnout-is-becoming-the-new-normal',
