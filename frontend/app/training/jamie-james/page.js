@@ -511,7 +511,7 @@ That's the perspective she brings into every training, workshop, and speaking en
       </section>
 
       {/* ══ REVIEWS ══ */}
-      <section id="reviews" className="reviews-section">
+      <section id="reviews" className="reviews-section jj-reviews-bg">
         <div className="reviews-inner">
           <div className="reviews-layout">
             <div className="reviews-heading-col reveal reveal-from-left">

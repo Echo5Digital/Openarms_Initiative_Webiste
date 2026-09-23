@@ -4029,8 +4029,12 @@ footer a:hover {
 
 /* ══ LEADING THROUGH WEIGHT ══ */
 .jj-ltw {
-  background: url('/Training/leading-through-weight-bg.png') center center / cover no-repeat;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 38%, rgba(255, 255, 255, 0.75) 55%, rgba(1, 112, 237, 0.35) 100%), url('/Training/leading-through-weight-wide.jpg') center center / cover no-repeat;
   padding: 5.5rem 1.5rem;
+}
+
+.jj-reviews-bg {
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 38%, rgba(255, 255, 255, 0.75) 55%, rgba(1, 112, 237, 0.35) 100%), url('/Training/leading-through-weight-wide.jpg') center center / cover no-repeat;
 }
 
 .jj-ltw-grid {
