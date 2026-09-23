@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "how-comparing-children-can-affect-their-mental-and-emotional-health",
+    "title": "How Comparing Children Can Affect Their Mental and Emotional Health",
+    "date": "September 23, 2026",
+    "category": "blog",
+    "excerpt": "Learn how comparing children affects their mental health, self-esteem, and sibling relationships. Open Arms Initiative offers support for healthier family dynamics.",
+    "image": "/how-comparing-children-can-affect-their-mental-and-emotional-health/featured.jpg",
+    "alt": "How Comparing Children Can Affect Their Mental and Emotional Health"
+  },
+  {
     "slug": "the-let-them-theory-a-therapist-s-perspective-on-when-it-helps-and-when-it-doesn-t",
     "title": "The ‘Let Them’ Theory: A Therapist’s Perspective on When It Helps, and When It Doesn’t",
     "date": "August 28, 2026",
