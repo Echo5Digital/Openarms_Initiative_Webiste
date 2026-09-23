@@ -3508,7 +3508,15 @@ footer a:hover {
 /* ══ TRAINING AREAS ══ */
 .jj-trains {
   padding: 5rem 1.5rem;
-  background: #F0F7FE;
+  background: radial-gradient(circle at 88% 12%, rgba(0, 175, 247, 0.28) 0%, rgba(0, 175, 247, 0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
+}
+
+.jj-trains .jj-section-tag {
+  color: #ffffff;
+}
+
+.jj-trains .jj-section-title {
+  color: #ffffff;
 }
 
 .jj-trains-grid {
@@ -3517,25 +3525,51 @@ footer a:hover {
   gap: 1.5rem;
 }
 
+@media (min-width: 1025px) {
+  .jj-trains-grid .jj-train-card:nth-child(7):last-child {
+    grid-column: 2;
+  }
+}
+
 .jj-train-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  background: #ffffff;
-  border: 1px solid #e0dbd0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   padding: 2rem 1.75rem;
   text-decoration: none;
-  color: #072B3A;
+  color: #ffffff;
   line-height: 1.4;
-  transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s, background 0.2s;
+}
+
+.jj-train-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0170ED 0%, #00AFF7 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 
 .jj-train-card:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-  border-color: #00AFF7;
+  box-shadow: 0 22px 40px rgba(3, 15, 26, 0.25);
+  transform: translateY(-6px);
+  border-color: rgba(0, 175, 247, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.jj-train-card:hover::before {
+  transform: scaleX(1);
 }
 
 .jj-train-icon {
@@ -3545,56 +3579,49 @@ footer a:hover {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #deeaf6;
-  color: #28588b;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
   flex-shrink: 0;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.jj-train-card:hover .jj-train-icon {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
 }
 
 .jj-train-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #072B3A;
+  color: #ffffff;
   line-height: 1.35;
 }
 
 .jj-train-desc {
   font-size: 0.88rem;
-  color: #5B6B60;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.65;
   margin-top: -0.25rem;
 }
 
 /* ══ POPULAR TOPICS ══ */
 .jj-topics {
-  background: #a6c4e5;
-  padding: 0;
-  position: relative;
+  background: #F0F7FE;
+  padding: 5rem 1.5rem;
 }
 
-.jj-topics-wave-top {
+.jj-topics-header {
+  text-align: center;
+}
+
+.jj-topics-header .jj-section-tag {
   display: block;
-  width: 100%;
-  height: 60px;
-  margin-bottom: -2px;
-}
-
-.jj-topics-wave-bottom {
-  display: block;
-  width: 100%;
-  height: 60px;
-  margin-top: -2px;
-}
-
-.jj-topics-content {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .jj-topics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: 1.5rem;
 }
 
 .jj-topic-card {
@@ -3603,7 +3630,7 @@ footer a:hover {
   align-items: center;
   gap: 1rem;
   background: #ffffff;
-  border: 1px solid #ddd8cc;
+  border: 1px solid #e0dbd0;
   border-radius: 14px;
   padding: 1.5rem 1.5rem;
   text-decoration: none;
@@ -3789,41 +3816,61 @@ footer a:hover {
 
 
 /* ══ CTA BANNER ══ */
-.jj-cta {
-  background: radial-gradient(circle at 88% 12%, rgba(0,175,247,.28) 0%, rgba(0,175,247,0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
-  padding: 4.5rem 1.5rem;
+.jj-final {
+  margin: 70px 24px;
+  padding: 50px 0;
+  border-radius: 22px;
+  background: linear-gradient(100deg, rgba(7, 43, 58, 0.92), rgba(7, 43, 58, 0.8)), url('/n3.jpg') center/cover;
+  color: #fff;
 }
 
-.jj-cta-inner {
-  max-width: 1100px;
+.jj-final-grid {
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 38px;
+  padding: 0 40px;
 }
 
-.jj-cta-title {
+.jj-final-grid h2 {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
   line-height: 1.25;
+  margin: 0 0 8px;
+  color: #fff;
+  max-width: 700px;
 }
 
-.jj-cta-sub {
-  font-size: 0.98rem;
-  color: #ffffff;
-  margin: 0;
-  max-width: 460px;
+.jj-final-grid p {
   line-height: 1.6;
+  max-width: 720px;
+  margin: 0;
+  color: #fff;
+}
+
+.jj-final .ca-solid {
+  background: rgb(0, 163, 245);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.jj-final .ca-solid:hover {
+  background: #0E9CB8;
+}
+
+@media (max-width: 768px) {
+  .jj-final-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+  }
 }
 
 /* ══ MEET YOUR TRAINER ══ */
 .jj-myt {
-  background: url('/Jamie/jamie-botanical-bg.png') center center / cover no-repeat;
+  background: #ffffff;
   padding: 5.5rem 1.5rem;
   position: relative;
 }
@@ -3977,6 +4024,59 @@ footer a:hover {
   height: 520px;
   object-fit: cover;
   object-position: top center;
+  display: block;
+}
+
+/* ══ LEADING THROUGH WEIGHT ══ */
+.jj-ltw {
+  background: url('/Training/leading-through-weight-bg.png') center center / cover no-repeat;
+  padding: 5.5rem 1.5rem;
+}
+
+.jj-ltw-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.jj-ltw-title {
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #0170ED;
+  line-height: 1.2;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.jj-ltw-body {
+  font-size: 1rem;
+  color: #1e4269;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+}
+
+.jj-ltw-video-col {
+  display: flex;
+  justify-content: center;
+}
+
+.jj-ltw-video-wrap {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(5, 46, 38, 0.14);
+  background: #08121c;
+}
+
+.jj-ltw-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -4254,12 +4354,6 @@ footer a:hover {
     gap: 1.25rem;
   }
   
-  .jj-cta-inner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
   .jj-cred {
     padding: 1.25rem 1.5rem;
     min-width: 160px;
@@ -4271,7 +4365,14 @@ footer a:hover {
   .jj-speaker-photo-col {
     order: -1;
   }
-  
+  .jj-ltw-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .jj-ltw-video-col {
+    order: -1;
+  }
+
   .jj-bio-photo-col {
     order: -1;
   }
@@ -4348,9 +4449,8 @@ footer a:hover {
   .jj-arch-bg {
     height: 340px;
   }
-  .jj-topics-wave-top,
-  .jj-topics-wave-bottom {
-    height: 35px;
+  .jj-topics {
+    padding: 3rem 1rem;
   }
   .jj-myt {
     padding: 3rem 1rem;
@@ -4365,6 +4465,18 @@ footer a:hover {
   }
   .jj-speaker-title {
     font-size: 1.5rem;
+  }
+  .jj-ltw {
+    padding: 3rem 1rem;
+  }
+  .jj-ltw-title {
+    font-size: 1.5rem;
+  }
+  .jj-ltw-body {
+    font-size: 0.93rem;
+  }
+  .jj-ltw-video-wrap {
+    max-width: 260px;
   }
   .jj-myt-body {
     font-size: 0.97rem;
@@ -4386,14 +4498,6 @@ footer a:hover {
   }
   .jj-reviews {
     padding: 3rem 1rem;
-  }
-  .jj-cta {
-    padding: 3rem 1rem;
-  }
-  .jj-cta-inner {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
   .jj-speaker-topics li {
     font-size: 0.9rem;
@@ -5406,16 +5510,6 @@ footer a:hover {
   }
   
 
-  /* CTA */
-  .jj-cta-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  .jj-cta-title {
-    font-size: 1.4rem;
-  }
 }
 
 /* ── Small mobile (max 480px) ── */

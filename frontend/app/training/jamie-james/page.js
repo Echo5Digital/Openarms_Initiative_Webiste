@@ -4,6 +4,41 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 
+const clientReviews = [
+  {
+    quote: 'Open Arms has incredible vision with an amazing foundation for what their company represents. An amazing staff and people you want on your side and to just walk with through life!',
+    author: 'Kamryn Bass',
+    photo: '/kamyrn.png',
+  },
+  {
+    quote: 'The owner & staff are caring, supportive, and dedicated to helping both the children and foster families succeed. You can tell they genuinely care and truly make a difference.',
+    author: 'Jency Mathew',
+    photo: '/unnamed (1).png',
+  },
+  {
+    quote: 'If you are looking for mental health services, please look no further. Do your self a favor and contact this agency! The services they provide are second to none. Their hearts are rooted in helping people become their best selves regardless of any background.',
+    author: 'Amber Price',
+    photo: '/unnamed (2).png',
+  },
+  {
+    quote: 'Open Arms Initiative truly lives up to its name. I’ve known the owner for many years, and her passion and genuine care for others shows in everything she does. That same care carries through the entire organization and its staff. The work they’re doing for the community is truly inspiring, and I highly recommend Open Arms Initiative to anyone looking to support or connect with a compassionate, people-centered organization.',
+    author: 'Shines Mathew',
+    photo: '/unnamed (3).png',
+  },
+  {
+    quote: 'This was a great training for someone who recently moved to a new role which comes with a lot of stress. Recently had the conversation with my supervisor about this topic. This was a full circle moment for me!',
+    author: 'Benard Kwame Bentum',
+    photo: '/unnamed (4).png',
+  },
+  {
+    quote: 'Amazing!!!! Such thoughtful training.',
+    author: 'Kyle and Jordan',
+    photo: '/unnamed (5).png',
+  },
+];
+
+const REVIEWS_PER_PAGE = 3;
+
 const ALL_VIDEOS = [
   { id: 'Hy-mRWM6zi0', title: 'Why Strong Leaders Feel Empty? High-Functioning Burnout' },
   { id: 'cdCBtTdeMxk', title: 'You Were Never Called to Carry Everyone: Leadership Burnout and Boundaries' },
@@ -99,6 +134,8 @@ function VideoSection() {
 
 export default function JamieJamesPage() {
   const revealRootRef = useRef(null);
+  const [reviewsPage, setReviewsPage] = useState(0);
+  const totalReviewPages = Math.ceil(clientReviews.length / REVIEWS_PER_PAGE);
 
   useEffect(() => {
     const root = revealRootRef.current;
@@ -348,6 +385,37 @@ That's the perspective she brings into every training, workshop, and speaking en
         </div>
       </section>
 
+      {/* ══ LEADING THROUGH WEIGHT ══ */}
+      <section className="jj-ltw">
+        <div className="jj-inner">
+          <div className="jj-ltw-grid">
+            <div className="jj-ltw-copy reveal reveal-from-left">
+              <p className="jj-section-tag">LEADING THROUGH WEIGHT</p>
+              <h2 className="jj-ltw-title">Learning. Growth. Community.</h2>
+              <p className="jj-ltw-body">
+                A look inside a recent Open Arms training session, where leaders and teams came together to learn practical, trauma-informed tools for carrying the weight of their work without losing themselves in it.
+              </p>
+              <Link href="/contact" className="jj-btn jj-btn-dark">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Bring This Training to Your Team
+              </Link>
+            </div>
+            <div className="jj-ltw-video-col reveal reveal-from-right">
+              <div className="jj-ltw-video-wrap">
+                <video
+                  className="jj-ltw-video"
+                  src="/Training/leading-through-weight.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/Training/leading-through-weight-poster.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ══ WHO IS JAMIE ══ */}
       <section className="jj-bio">
         <div className="jj-inner">
@@ -400,12 +468,11 @@ That's the perspective she brings into every training, workshop, and speaking en
 
       {/* ══ POPULAR TOPICS ══ */}
       <section className="jj-topics">
-        {/* top wave */}
-        <svg className="jj-topics-wave-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 0 L0 40 Q180 80 360 30 Q540 0 720 40 Q900 70 1080 25 Q1260 0 1440 35 L1440 0Z" fill="#f2f6fb"/>
-        </svg>
-        <div className="jj-inner jj-topics-content">
-          <p className="jj-section-tag reveal reveal-from-bottom" style={{color:'#224b76', fontSize:'1.5rem', letterSpacing:'0.02em', textTransform:'none', marginBottom:'0.75rem'}}>Popular Training Topics</p>
+        <div className="jj-inner">
+          <div className="jj-section-header jj-topics-header reveal reveal-from-bottom">
+            <p className="jj-section-tag">POPULAR TOPICS</p>
+            <h2 className="jj-section-title">Popular Training Topics</h2>
+          </div>
           <div className="jj-topics-grid reveal-stagger">
             {popularTopics.map((t, i) => (
               <Link key={i} href={t.href} className="jj-topic-card reveal reveal-from-bottom">
@@ -415,10 +482,6 @@ That's the perspective she brings into every training, workshop, and speaking en
             ))}
           </div>
         </div>
-        {/* bottom wave */}
-        <svg className="jj-topics-wave-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 60 L0 25 Q180 0 360 35 Q540 60 720 20 Q900 0 1080 35 Q1260 60 1440 25 L1440 60Z" fill="#f2f6fb"/>
-        </svg>
       </section>
 
       {/* ══ WHY ORGANIZATIONS BOOK ══ */}
@@ -448,21 +511,104 @@ That's the perspective she brings into every training, workshop, and speaking en
       </section>
 
       {/* ══ REVIEWS ══ */}
-      <section className="jj-reviews">
-        <div className="jj-inner">
-          <div className="jj-reviews-grid reveal-stagger">
-            <blockquote className="jj-review-card reveal reveal-from-left">
-              <span className="jj-review-qmark">&ldquo;</span>
-              <p className="jj-review-text">Jamie&apos;s training was one of the best investments we&apos;ve made. Our team left every session feeling more confident and empowered to create real change.</p>
-              <div className="jj-review-line" />
-              <footer className="jj-review-name">Erica L., HR Director</footer>
-            </blockquote>
-            <blockquote className="jj-review-card reveal reveal-from-right">
-              <span className="jj-review-qmark">&ldquo;</span>
-              <p className="jj-review-text">Our staff is better equipped and has tools they can use in real time. The training and follow-up support make all the difference.</p>
-              <div className="jj-review-line" />
-              <footer className="jj-review-name">Michael T., School Principal</footer>
-            </blockquote>
+      <section id="reviews" className="reviews-section">
+        <div className="reviews-inner">
+          <div className="reviews-layout">
+            <div className="reviews-heading-col reveal reveal-from-left">
+              <h2 className="reviews-heading">What Our<br />Clients Say</h2>
+              <span className="reviews-heading-divider" aria-hidden="true"></span>
+              <div className="reviews-rating">
+                <span className="reviews-stars" aria-hidden="true">★★★★★</span>
+                <span className="reviews-rating-label">
+                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" loading="lazy" />
+                  Google Reviews
+                </span>
+              </div>
+              <a
+                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews#lrd=0x87b2115b2214b573:0x9f7f9c5bde6f356d,1,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="reviews-cta-link reviews-cta-link-desktop"
+              >
+                Read More Reviews
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+            <div className="reviews-cards-col">
+              <div className="reviews-grid-row">
+                {totalReviewPages > 1 && (
+                  <button
+                    type="button"
+                    className="reviews-nav-btn reviews-nav-btn-side reviews-nav-btn-prev"
+                    onClick={() => setReviewsPage((p) => (p - 1 + totalReviewPages) % totalReviewPages)}
+                    aria-label="Previous reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+                  </button>
+                )}
+                <div className="reviews-grid reveal-stagger">
+                  {clientReviews
+                    .slice(reviewsPage * REVIEWS_PER_PAGE, reviewsPage * REVIEWS_PER_PAGE + REVIEWS_PER_PAGE)
+                    .map((review) => (
+                      <article className="review-card reveal reveal-from-bottom" key={review.author}>
+                        <div className="review-author-row">
+                          {review.photo && (
+                            <img src={review.photo} alt={review.author} className="review-author-photo" loading="lazy" />
+                          )}
+                          <span className="review-author">{review.author}</span>
+                          <img src="/Training/icon.svg" alt="Google" className="review-google-icon" loading="lazy" />
+                        </div>
+                        <div className="review-stars" aria-hidden="true">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <img src="/Training/f.svg" alt="" key={i} loading="lazy" />
+                          ))}
+                        </div>
+                        <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
+                        <p>{review.quote}</p>
+                      </article>
+                    ))}
+                </div>
+                {totalReviewPages > 1 && (
+                  <button
+                    type="button"
+                    className="reviews-nav-btn reviews-nav-btn-side reviews-nav-btn-next"
+                    onClick={() => setReviewsPage((p) => (p + 1) % totalReviewPages)}
+                    aria-label="Next reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                )}
+              </div>
+              {totalReviewPages > 1 && (
+                <div className="reviews-nav reviews-nav-mobile">
+                  <button
+                    type="button"
+                    className="reviews-nav-btn"
+                    onClick={() => setReviewsPage((p) => (p - 1 + totalReviewPages) % totalReviewPages)}
+                    aria-label="Previous reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+                  </button>
+                  <button
+                    type="button"
+                    className="reviews-nav-btn"
+                    onClick={() => setReviewsPage((p) => (p + 1) % totalReviewPages)}
+                    aria-label="Next reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                </div>
+              )}
+              <a
+                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews#lrd=0x87b2115b2214b573:0x9f7f9c5bde6f356d,1,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="reviews-cta-link reviews-cta-link-mobile"
+              >
+                Read More Reviews
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -515,16 +661,13 @@ Jamie James speaks from operating experience, not just clinical theory. She lead
       <VideoSection />
 
       {/* ══ CTA BANNER ══ */}
-      <section className="jj-cta">
-        <div className="jj-cta-inner reveal reveal-from-bottom">
+      <section className="jj-final">
+        <div className="jj-final-grid reveal reveal-scale-in">
           <div>
-            <h2 className="jj-cta-title">Bring Training that Empowers People and<br />Strengthens Teams</h2>
-            <p className="jj-cta-sub">Schedule Jamie for your next staff development, conference, or organization training.</p>
+            <h2>Bring Training that Empowers People and Strengthens Teams</h2>
+            <p>Schedule Jamie for your next staff development, conference, or organization training.</p>
           </div>
-          <Link href="/contact" className="jj-btn jj-btn-accent">
-            Request a Consultation
-            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </Link>
+          <Link href="/contact" className="ca-btn ca-solid">Request a Consultation</Link>
         </div>
       </section>
     </main>
