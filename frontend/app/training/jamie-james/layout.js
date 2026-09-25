@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Jamie James, LPC is a Licensed Professional Counselor, Founder & President of Open Arms Initiative, and founder of Open Arms Foster Care. She leads trauma-informed training and speaking for organizations, schools, churches, and businesses across Oklahoma City.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/training/jamie-james/',
+    canonical: 'https://www.openarmsinitiative.com/training/jamie-james',
   },
   openGraph: {
     title: 'Jamie James, LPC | Trauma-Informed Training & Speaking | Open Arms Initiative',
     description:
       'Licensed Professional Counselor, Founder & President of Open Arms Initiative, and founder of Open Arms Foster Care. Trauma-informed training and speaking for organizations across Oklahoma City.',
-    url: 'https://www.openarmsinitiative.com/training/jamie-james/',
+    url: 'https://www.openarmsinitiative.com/training/jamie-james',
     type: 'profile',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
-    { '@type': 'ListItem', position: 3, name: 'Jamie James, LPC', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
+    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
+    { '@type': 'ListItem', position: 3, name: 'Jamie James, LPC', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
   ],
 };
 
@@ -30,7 +30,7 @@ const SCHEMA_PERSON = {
   name: 'Jamie James',
   jobTitle: 'Licensed Professional Counselor',
   description: 'Jamie James, LPC, is a Licensed Professional Counselor and the Founder & President of Open Arms Initiative. She also founded and leads Open Arms Foster Care, a licensed therapeutic foster care agency serving Oklahoma City, Tulsa, and Lawton. She provides trauma-informed training and speaking for organizations, schools, churches, and businesses.',
-  url: 'https://www.openarmsinitiative.com/training/jamie-james/',
+  url: 'https://www.openarmsinitiative.com/training/jamie-james',
   image: 'https://www.openarmsinitiative.com/Training/upscaled_portrait_4e.jpg',
   worksFor: [
     {

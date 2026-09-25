@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import ParentingSupportRequestForm from '@/components/ParentingSupportRequestForm';
 
-export const metadata = { title: 'Effective Parenting Classes OKC | Open Arms Initiative', description: 'Explore effective parenting classes in OKC with Open Arms Initiative. Build communication, confidence, healthy boundaries, and stronger parent-child connections.', alternates: { canonical: 'https://www.openarmsinitiative.com/parenting-classes-okc/' } };
+export const metadata = { title: 'Effective Parenting Classes OKC | Open Arms Initiative', description: 'Explore effective parenting classes in OKC with Open Arms Initiative. Build communication, confidence, healthy boundaries, and stronger parent-child connections.', alternates: { canonical: 'https://www.openarmsinitiative.com/parenting-classes-okc' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Parenting Classes', item: 'https://www.openarmsinitiative.com/parenting-classes-okc/' },
+    { '@type': 'ListItem', position: 2, name: 'Parenting Classes', item: 'https://www.openarmsinitiative.com/parenting-classes-okc' },
   ],
 };
 

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `Blog | Page ${num} | Open Arms Initiative`,
     description: 'Helpful articles, mental health insights, and community stories from the Open Arms Initiative team.',
-    alternates: { canonical: `${SITE_URL}/blogs/page/${num}/` },
+    alternates: { canonical: `${SITE_URL}/blogs/page/${num}` },
   };
 }
 
@@ -34,8 +34,8 @@ export default async function BlogPagePage({ params }) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs/` },
-      { '@type': 'ListItem', position: 3, name: `Page ${page}`, item: `${SITE_URL}/blogs/page/${page}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs` },
+      { '@type': 'ListItem', position: 3, name: `Page ${page}`, item: `${SITE_URL}/blogs/page/${page}` },
     ],
   };
 

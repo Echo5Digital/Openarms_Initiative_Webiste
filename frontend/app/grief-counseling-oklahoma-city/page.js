@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import GriefCounselingRequestForm from '@/components/GriefCounselingRequestForm';
 
-export const metadata = { title: 'Grief Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate grief counseling in Oklahoma City. Open Arms Initiative provides supportive therapy for bereavement, loss, life changes, and healing.', alternates: { canonical: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city/' } };
+export const metadata = { title: 'Grief Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate grief counseling in Oklahoma City. Open Arms Initiative provides supportive therapy for bereavement, loss, life changes, and healing.', alternates: { canonical: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Grief & Loss Counseling', item: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Grief & Loss Counseling', item: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city' },
   ],
 };
 

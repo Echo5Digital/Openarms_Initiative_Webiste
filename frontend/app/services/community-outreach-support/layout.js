@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Free mental health education, family support resources, and community care brought directly into underserved Oklahoma City neighborhoods by Open Arms Initiative.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/services/community-outreach-support/',
+    canonical: 'https://www.openarmsinitiative.com/services/community-outreach-support',
   },
   openGraph: {
     title: 'Community Outreach & Support Programs | Open Arms Initiative',
     description:
       'Free mental health education, family support resources, and community care brought directly into underserved Oklahoma City neighborhoods.',
-    url: 'https://www.openarmsinitiative.com/services/community-outreach-support/',
+    url: 'https://www.openarmsinitiative.com/services/community-outreach-support',
     type: 'website',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Non-Profit Services', item: 'https://www.openarmsinitiative.com/services/community-outreach-support/' },
-    { '@type': 'ListItem', position: 3, name: 'Community Outreach & Support Programs', item: 'https://www.openarmsinitiative.com/services/community-outreach-support/' },
+    { '@type': 'ListItem', position: 2, name: 'Non-Profit Services', item: 'https://www.openarmsinitiative.com/services/community-outreach-support' },
+    { '@type': 'ListItem', position: 3, name: 'Community Outreach & Support Programs', item: 'https://www.openarmsinitiative.com/services/community-outreach-support' },
   ],
 };
 

@@ -12,6 +12,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.title} | Open Arms Initiative`,
     description: service.summary,
+    alternates: { canonical: `https://www.openarmsinitiative.com/services/${service.slug}` },
   };
 }
 
@@ -37,7 +38,7 @@ export default async function ServiceDetailPage({ params }) {
     .filter((s) => s.slug !== service.slug && s.category === service.category)
     .slice(0, 3);
 
-  const canonicalUrl = `https://www.openarmsinitiative.com/services/${service.slug}/`;
+  const canonicalUrl = `https://www.openarmsinitiative.com/services/${service.slug}`;
 
   const schemaBreadcrumb = {
     '@context': 'https://schema.org',

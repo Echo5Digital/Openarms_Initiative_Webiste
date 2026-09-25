@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Trauma-informed training for pastors, ministry staff, and volunteers. Jamie James, LPC equips churches and faith communities across Oklahoma City with practical mental health and crisis response tools.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/services/churches-faith-based-training/',
+    canonical: 'https://www.openarmsinitiative.com/services/churches-faith-based-training',
   },
   openGraph: {
     title: 'Churches & Faith-Based Training | Open Arms Initiative',
     description:
       'Trauma-informed training for pastors, ministry staff, and volunteers. Practical mental health and crisis response tools for churches and faith communities across Oklahoma City.',
-    url: 'https://www.openarmsinitiative.com/services/churches-faith-based-training/',
+    url: 'https://www.openarmsinitiative.com/services/churches-faith-based-training',
     type: 'website',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
-    { '@type': 'ListItem', position: 3, name: 'Churches & Faith-Based Training', item: 'https://www.openarmsinitiative.com/services/churches-faith-based-training/' },
+    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
+    { '@type': 'ListItem', position: 3, name: 'Churches & Faith-Based Training', item: 'https://www.openarmsinitiative.com/services/churches-faith-based-training' },
   ],
 };
 

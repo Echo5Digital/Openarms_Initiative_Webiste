@@ -1,11 +1,11 @@
 export const metadata = {
   title: 'Donate to Support Counseling & Emotional Healing | Open Arms',
   description: 'Your Gift Transforms Lives. Every donation supports emotional healing, healthy relationships, and lifelong skills for children, parents, and professionals across Oklahoma.',
-  alternates: { canonical: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing/' },
+  alternates: { canonical: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing' },
   openGraph: {
     title: 'Donate to Support Counseling & Emotional Healing | Open Arms',
     description: 'Your Gift Transforms Lives. Every donation supports emotional healing, healthy relationships, and lifelong skills for children, parents, and professionals across Oklahoma.',
-    url: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing/',
+    url: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing',
     type: 'website',
   },
 };
@@ -15,7 +15,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Donate', item: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing/' },
+    { '@type': 'ListItem', position: 2, name: 'Donate', item: 'https://www.openarmsinitiative.com/donate-to-support-counseling-education-emotional-healing' },
   ],
 };
 

@@ -6,7 +6,7 @@ function Arrow() { return <span aria-hidden="true">→</span>; }
 export const metadata = {
   title: 'Insurance & Payment Options | Open Arms Initiative',
   description: 'Open Arms Initiative accepts most major insurance plans, including SoonerCare, Aetna, Humana, and Oklahoma Complete Health, plus private pay options.',
-  alternates: { canonical: 'https://www.openarmsinitiative.com/insurance-payment/' },
+  alternates: { canonical: 'https://www.openarmsinitiative.com/insurance-payment' },
 };
 
 const payers = [

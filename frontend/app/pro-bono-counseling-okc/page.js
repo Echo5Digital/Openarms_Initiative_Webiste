@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import ProBonoRequestForm from '@/components/ProBonoRequestForm';
 
-export const metadata = { title: 'Pro Bono Counseling OKC | Open Arms Initiative', description: 'Explore pro bono counseling in OKC through Open Arms Initiative. Learn about available no-fee counseling and community support for individuals and families.', alternates: { canonical: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc/' } };
+export const metadata = { title: 'Pro Bono Counseling OKC | Open Arms Initiative', description: 'Explore pro bono counseling in OKC through Open Arms Initiative. Learn about available no-fee counseling and community support for individuals and families.', alternates: { canonical: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Pro Bono Counseling', item: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc/' },
+    { '@type': 'ListItem', position: 2, name: 'Pro Bono Counseling', item: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc' },
   ],
 };
 

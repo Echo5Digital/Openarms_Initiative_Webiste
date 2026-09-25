@@ -4,7 +4,7 @@ import { ourTeam } from './teamData';
 export const metadata = {
   title: 'About Open Arms Initiative | Oklahoma City',
   description: 'Meet Open Arms Initiative, an Oklahoma City nonprofit providing trauma-informed counseling, foster family support, education, and compassionate community care.',
-  alternates: { canonical: 'https://www.openarmsinitiative.com/about-us/' },
+  alternates: { canonical: 'https://www.openarmsinitiative.com/about-us' },
 };
 
 const SCHEMA_BREADCRUMB = {
@@ -12,7 +12,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://www.openarmsinitiative.com/about-us/' },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://www.openarmsinitiative.com/about-us' },
   ],
 };
 

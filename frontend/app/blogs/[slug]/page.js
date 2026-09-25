@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | Open Arms Initiative`,
     description: post.excerpt,
-    alternates: { canonical: `${SITE_URL}/blogs/${post.slug}/` },
+    alternates: { canonical: `${SITE_URL}/blogs/${post.slug}` },
   };
 }
 

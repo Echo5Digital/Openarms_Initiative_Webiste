@@ -7,7 +7,7 @@ const POSTS_PER_PAGE = 10;
 export const metadata = {
   title: 'Blog | Open Arms Initiative',
   description: 'Helpful articles, mental health insights, and community stories from the Open Arms Initiative team.',
-  alternates: { canonical: `${SITE_URL}/blogs/` },
+  alternates: { canonical: `${SITE_URL}/blogs` },
 };
 
 const SCHEMA_BREADCRUMB = {
@@ -15,7 +15,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs` },
   ],
 };
 

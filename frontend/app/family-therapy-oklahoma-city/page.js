@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Family Therapy Oklahoma City | Open Arms Initiative',
   description: 'Find compassionate Family Therapy Oklahoma City families trust. Open Arms Initiative offers counseling for family issues Oklahoma City and relationship counseling OKC to help families improve communication, navigate conflict, and build stronger relationships.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city/',
+    canonical: 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city',
   },
 };
 
@@ -15,7 +15,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Family Counseling', item: 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Family Counseling', item: 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city' },
   ],
 };
 

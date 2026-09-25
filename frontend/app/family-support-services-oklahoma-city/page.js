@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import FamilySupportRequestForm from '@/components/FamilySupportRequestForm';
 
-export const metadata = { title: 'Family Support Services Oklahoma City | Open Arms', description: 'Find compassionate family support services in Oklahoma City. Open Arms Initiative helps families access guidance, education, resources, and appropriate support.', alternates: { canonical: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city/' } };
+export const metadata = { title: 'Family Support Services Oklahoma City | Open Arms', description: 'Find compassionate family support services in Oklahoma City. Open Arms Initiative helps families access guidance, education, resources, and appropriate support.', alternates: { canonical: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Family Support', item: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Family Support', item: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city' },
   ],
 };
 

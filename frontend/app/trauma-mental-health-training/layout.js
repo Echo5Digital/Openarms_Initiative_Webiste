@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Frontline staff see the effects of trauma every day, often without training for it. Jamie James, LPC leads foundational trauma and mental health training for nonprofits, coalitions, and community organizations across Oklahoma City and beyond.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/trauma-mental-health-training/',
+    canonical: 'https://www.openarmsinitiative.com/trauma-mental-health-training',
   },
   openGraph: {
     title: 'Trauma & Mental Health Training for Nonprofits and Community Organizations | Open Arms Initiative',
     description:
       'Frontline staff see the effects of trauma every day, often without training for it. Jamie James, LPC leads foundational trauma and mental health training for nonprofits, coalitions, and community organizations across Oklahoma City and beyond.',
-    url: 'https://www.openarmsinitiative.com/trauma-mental-health-training/',
+    url: 'https://www.openarmsinitiative.com/trauma-mental-health-training',
     type: 'website',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
-    { '@type': 'ListItem', position: 3, name: 'Trauma & Mental Health Training', item: 'https://www.openarmsinitiative.com/trauma-mental-health-training/' },
+    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
+    { '@type': 'ListItem', position: 3, name: 'Trauma & Mental Health Training', item: 'https://www.openarmsinitiative.com/trauma-mental-health-training' },
   ],
 };
 
@@ -75,7 +75,7 @@ const SCHEMA_PERSON = {
   name: 'Jamie James',
   jobTitle: 'Licensed Professional Counselor',
   description: 'Jamie James, LPC, is a licensed professional counselor and trainer who leads trauma and mental health training for nonprofits, community organizations, and faith-based teams across Oklahoma City.',
-  url: 'https://www.openarmsinitiative.com/training/jamie-james/',
+  url: 'https://www.openarmsinitiative.com/training/jamie-james',
   worksFor: {
     '@type': 'Organization',
     name: 'Open Arms Initiative',

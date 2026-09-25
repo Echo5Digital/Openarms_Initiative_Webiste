@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import AdultCounselingRequestForm from '@/components/AdultCounselingRequestForm';
 
-export const metadata = { title: 'Adult Counseling in Oklahoma City | Open Arms Initiative', description: 'Find compassionate adult counseling in Oklahoma City. Open Arms Initiative provides personalized individual therapy for life challenges, relationships, growth, and change.', alternates: { canonical: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city/' } };
+export const metadata = { title: 'Adult Counseling in Oklahoma City | Open Arms Initiative', description: 'Find compassionate adult counseling in Oklahoma City. Open Arms Initiative provides personalized individual therapy for life challenges, relationships, growth, and change.', alternates: { canonical: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Adult & Individual Counseling', item: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Adult & Individual Counseling', item: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city' },
   ],
 };
 
