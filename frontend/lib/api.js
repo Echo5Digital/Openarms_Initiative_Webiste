@@ -1,10 +1,13 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
-export async function submitForm(payload) {
+export async function submitForm({ recaptchaToken, ...payload }) {
+  if (!recaptchaToken) {
+    throw new Error('Please complete the "I\'m not a robot" checkbox before submitting.');
+  }
   const res = await fetch(`/api/lead`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({ ...payload, recaptchaToken }),
   });
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));

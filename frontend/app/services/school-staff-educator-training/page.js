@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 /* ─── ICONS ───────────────────────────────────────────────────────────── */
 const IconUserCircle = (p) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...p}><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" /></svg>;
@@ -75,6 +76,7 @@ function SchoolTrainingRequestForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', topic: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -83,7 +85,7 @@ function SchoolTrainingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'school-staff-training', ...form });
+      await submitForm({ service: 'school-staff-training', ...form, recaptchaToken });
       setStatus('success');
     } catch (err) {
       setError(err.message);
@@ -137,7 +139,9 @@ function SchoolTrainingRequestForm() {
 
       {error && <p className="sse-form-error">{error}</p>}
 
-      <button type="submit" className="sse-btn sse-btn-accent sse-form-submit" disabled={status === 'submitting'}>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+
+      <button type="submit" className="sse-btn sse-btn-accent sse-form-submit" disabled={status === 'submitting' || !recaptchaToken}>
         <IconSend width="16" height="16" />
         {status === 'submitting' ? 'Sending…' : 'Request Info Now'}
       </button>

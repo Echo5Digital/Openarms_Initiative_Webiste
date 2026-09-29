@@ -1,8 +1,44 @@
 const ECHO5_API_URL = process.env.ECHO5_API_URL;
 const ECHO5_TENANT_KEY = process.env.ECHO5_TENANT_KEY;
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
+
+async function verifyRecaptcha(token, remoteIp) {
+  if (!RECAPTCHA_SECRET_KEY) {
+    console.error('RECAPTCHA_SECRET_KEY is not configured; rejecting submission.');
+    return false;
+  }
+  if (!token || typeof token !== 'string') return false;
+
+  try {
+    const params = new URLSearchParams({
+      secret: RECAPTCHA_SECRET_KEY,
+      response: token,
+    });
+    if (remoteIp) params.set('remoteip', remoteIp);
+
+    const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
+    });
+    const verifyData = await verifyRes.json();
+
+    return Boolean(verifyData.success) && (typeof verifyData.score !== 'number' || verifyData.score >= RECAPTCHA_SCORE_THRESHOLD);
+  } catch (err) {
+    console.error('reCAPTCHA verification request failed:', err);
+    return false;
+  }
+}
 
 export async function POST(request) {
   const body = await request.json();
+
+  const remoteIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
+  const isHuman = await verifyRecaptcha(body.recaptchaToken, remoteIp);
+  if (!isHuman) {
+    return Response.json({ error: 'CAPTCHA verification failed. Please try again.' }, { status: 403 });
+  }
 
   const fullName = body.name || `${body.firstName || ''} ${body.lastName || ''}`.trim();
   const [firstName, ...rest] = fullName.split(' ');

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 import AppointmentStepIndicator from '@/components/AppointmentStepIndicator';
 
 const IconSend = (props) => (
@@ -27,6 +28,7 @@ export default function FinalCtaForm() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', service: '', insurance: '', contactMethod: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -46,6 +48,7 @@ export default function FinalCtaForm() {
         contactMethod: form.contactMethod,
         topic: form.service,
         message: form.message,
+        recaptchaToken,
       });
       router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
@@ -112,7 +115,9 @@ export default function FinalCtaForm() {
 
       {error && <p className="final-cta-form-error">{error}</p>}
 
-      <button type="submit" className="final-cta-form-submit" disabled={status === 'submitting'}>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+
+      <button type="submit" className="final-cta-form-submit" disabled={status === 'submitting' || !recaptchaToken}>
         <IconSend />
         {status === 'submitting' ? 'Sending…' : 'Continue to Eligibility'}
       </button>

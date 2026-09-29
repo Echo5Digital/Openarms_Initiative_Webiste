@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 const IconUserCircle = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="8" r="3.2" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>
@@ -25,6 +26,7 @@ export default function ChildCounselingRequestForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', insurance: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -33,7 +35,7 @@ export default function ChildCounselingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      const { id } = await submitForm({ service: 'child-counseling', topic: 'Child & Adolescent Counseling', ...form });
+      const { id } = await submitForm({ service: 'child-counseling', topic: 'Child & Adolescent Counseling', ...form, recaptchaToken });
       router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
@@ -80,7 +82,9 @@ export default function ChildCounselingRequestForm() {
 
       {error && <p className="ca-req-error">{error}</p>}
 
-      <button type="submit" className="ca-btn ca-hero-btn-primary ca-req-submit" disabled={status === 'submitting'}>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+
+      <button type="submit" className="ca-btn ca-hero-btn-primary ca-req-submit" disabled={status === 'submitting' || !recaptchaToken}>
         <IconSend />
         {status === 'submitting' ? 'Sending…' : 'Continue to Eligibility'}
       </button>

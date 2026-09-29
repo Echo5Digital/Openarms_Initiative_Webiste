@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 const responsibilities = [
   'Provide therapy for individuals, children, and families using evidence-based, trauma-informed approaches',
@@ -47,6 +48,7 @@ function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -64,6 +66,7 @@ function ApplicationForm() {
         phone: form.phone,
         topic: form.topic,
         message: form.message,
+        recaptchaToken,
       });
       setSubmitted(true);
     } catch (err) {
@@ -97,7 +100,8 @@ function ApplicationForm() {
       <label className="oa-contact-field"><span>Message</span><textarea name="message" value={form.message} onChange={handleChange} rows={4} placeholder="Tell us a bit about yourself and your experience." /></label>
 
       {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
-      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}>{submitting ? 'Submitting…' : 'Submit'}</button>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting || !recaptchaToken}>{submitting ? 'Submitting…' : 'Submit'}</button>
       <p className="oa-contact-form-note">
         Prefer email? Send your resume &amp; cover letter directly to{' '}
         <a href="mailto:info@openarmsfostercare.com">info@openarmsfostercare.com</a>.

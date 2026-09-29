@@ -54,6 +54,10 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-18435077192');
           `}
         </Script>
+        <Script
+          src="https://www.google.com/recaptcha/api.js"
+          strategy="afterInteractive"
+        />
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

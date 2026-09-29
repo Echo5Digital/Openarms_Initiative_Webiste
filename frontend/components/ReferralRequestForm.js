@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 const IconUserCircle = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="8" r="3.2" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>
@@ -34,6 +35,7 @@ export default function ReferralRequestForm() {
   });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -48,6 +50,7 @@ export default function ReferralRequestForm() {
         email: form.email,
         phone: form.patientPhone,
         message: `Referring: ${form.patientName} (${form.relationship || 'relationship not specified'}). Patient email: ${form.patientEmail || 'n/a'}. Patient phone: ${form.patientPhone || 'n/a'}.`,
+        recaptchaToken,
       });
       setStatus('success');
     } catch (err) {
@@ -120,7 +123,9 @@ export default function ReferralRequestForm() {
 
       {error && <p className="fs-req-error">{error}</p>}
 
-      <button type="submit" className="fs-btn fs-req-btn-primary fs-req-submit" disabled={status === 'submitting'}>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+
+      <button type="submit" className="fs-btn fs-req-btn-primary fs-req-submit" disabled={status === 'submitting' || !recaptchaToken}>
         <IconSend />
         {status === 'submitting' ? 'Sending…' : 'Submit Referral'}
       </button>
