@@ -5,6 +5,8 @@ const nextConfig = {
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/apply-now', destination: '/contact', permanent: true },
       { source: '/blog', destination: '/blogs', permanent: true },
+      { source: '/services', destination: '/', permanent: true },
+      { source: '/about', destination: '/about-us', permanent: true },
       { source: '/adult-counseling', destination: '/adult-counseling-oklahoma-city', permanent: true },
       { source: '/individual-counseling', destination: '/adult-counseling-oklahoma-city', permanent: true },
       { source: '/our-team', destination: '/about-us', permanent: true },
