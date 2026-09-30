@@ -83,9 +83,9 @@ export default function Footer() {
           </div>
           <p className="copyright">© Openarms Initiative 2026<br />Developed by <a href="https://www.echo5digital.com/" target="_blank" rel="noopener noreferrer">Echo5 Digital</a>.</p>
           <p className="recaptcha-disclosure" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
-            This site is protected by reCAPTCHA and the Google{' '}
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
-            <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
+            This site is protected by reCAPTCHA. Please read our{' '}
+            <Link href="/privacy-policy">Privacy Policy</Link> and{' '}
+            <Link href="/terms-of-service">Terms of Service</Link>.
           </p>
         </div>
       </div>

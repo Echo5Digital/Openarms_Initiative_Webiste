@@ -10,6 +10,8 @@ const staticRoutes = [
   { path: '/careers', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/video-gallery', priority: 0.5, changeFrequency: 'monthly' },
+  { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms-of-service', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/insurance-payment', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blogs', priority: 0.7, changeFrequency: 'weekly' },
 
