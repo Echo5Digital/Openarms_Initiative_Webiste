@@ -1,14 +1,14 @@
 import ScrollReveal from '@/components/ScrollReveal';
 import ReferralRequestForm from '@/components/ReferralRequestForm';
 
-export const metadata = { title: 'Local Referrals | Open Arms Initiative', description: 'Know someone who could benefit from therapy or family counseling? Refer a friend or community member to Open Arms Initiative in Oklahoma City.', alternates: { canonical: 'https://www.openarmsinitiative.com/local-referrals/' } };
+export const metadata = { title: 'Local Referrals | Open Arms Initiative', description: 'Know someone who could benefit from therapy or family counseling? Refer a friend or community member to Open Arms Initiative in Oklahoma City.', alternates: { canonical: 'https://www.openarmsinitiative.com/local-referrals' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Local Referrals', item: 'https://www.openarmsinitiative.com/local-referrals/' },
+    { '@type': 'ListItem', position: 2, name: 'Local Referrals', item: 'https://www.openarmsinitiative.com/local-referrals' },
   ],
 };
 

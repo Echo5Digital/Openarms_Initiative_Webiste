@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Trauma-informed classroom strategies for teachers, counselors, and school administration. Jamie James, LPC equips educators across Oklahoma City with practical tools for student success and staff well-being.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/services/school-staff-educator-training/',
+    canonical: 'https://www.openarmsinitiative.com/services/school-staff-educator-training',
   },
   openGraph: {
     title: 'School Staff & Educator Training | Open Arms Initiative',
     description:
       'Trauma-informed classroom strategies for teachers, counselors, and school administration. Practical tools for student success and staff well-being across Oklahoma City.',
-    url: 'https://www.openarmsinitiative.com/services/school-staff-educator-training/',
+    url: 'https://www.openarmsinitiative.com/services/school-staff-educator-training',
     type: 'website',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
-    { '@type': 'ListItem', position: 3, name: 'School Staff & Educator Training', item: 'https://www.openarmsinitiative.com/services/school-staff-educator-training/' },
+    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
+    { '@type': 'ListItem', position: 3, name: 'School Staff & Educator Training', item: 'https://www.openarmsinitiative.com/services/school-staff-educator-training' },
   ],
 };
 

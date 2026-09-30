@@ -3,13 +3,13 @@ export const metadata = {
   description:
     'Burnout, turnover, and quiet conflict don\'t resolve themselves. Jamie James, LPC leads practical leadership and workplace mental health training for teams in Oklahoma City and beyond, built around your organization, not a fixed curriculum.',
   alternates: {
-    canonical: 'https://www.openarmsinitiative.com/corporate-business-training/',
+    canonical: 'https://www.openarmsinitiative.com/corporate-business-training',
   },
   openGraph: {
     title: 'Corporate Mental Health Training for Leadership Teams | Open Arms Initiative',
     description:
       'Burnout, turnover, and quiet conflict don\'t resolve themselves. Jamie James, LPC leads practical leadership and workplace mental health training for teams in Oklahoma City and beyond.',
-    url: 'https://www.openarmsinitiative.com/corporate-business-training/',
+    url: 'https://www.openarmsinitiative.com/corporate-business-training',
     type: 'website',
   },
 };
@@ -19,8 +19,8 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james/' },
-    { '@type': 'ListItem', position: 3, name: 'Leadership & Workplace Wellness', item: 'https://www.openarmsinitiative.com/corporate-business-training/' },
+    { '@type': 'ListItem', position: 2, name: 'Training & Speaking', item: 'https://www.openarmsinitiative.com/training/jamie-james' },
+    { '@type': 'ListItem', position: 3, name: 'Leadership & Workplace Wellness', item: 'https://www.openarmsinitiative.com/corporate-business-training' },
   ],
 };
 

@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import DepressionAnxietyRequestForm from '@/components/DepressionAnxietyRequestForm';
 
-export const metadata = { title: 'Depression Counseling Oklahoma | Open Arms Initiative', description: 'Find compassionate depression counseling in Oklahoma. Open Arms Initiative provides support for depression, anxiety, stress, and emotional well-being.', alternates: { canonical: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma/' } };
+export const metadata = { title: 'Depression Counseling Oklahoma | Open Arms Initiative', description: 'Find compassionate depression counseling in Oklahoma. Open Arms Initiative provides support for depression, anxiety, stress, and emotional well-being.', alternates: { canonical: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Depression & Anxiety Counseling', item: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma/' },
+    { '@type': 'ListItem', position: 2, name: 'Depression & Anxiety Counseling', item: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma' },
   ],
 };
 

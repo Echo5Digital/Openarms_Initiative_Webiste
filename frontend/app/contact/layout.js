@@ -1,11 +1,11 @@
 export const metadata = {
   title: 'Contact Open Arms Initiative | Oklahoma City',
   description: 'Contact Open Arms Initiative in Oklahoma City for counseling, family support, foster care services, parenting support, and community resources.',
-  alternates: { canonical: 'https://www.openarmsinitiative.com/contact/' },
+  alternates: { canonical: 'https://www.openarmsinitiative.com/contact' },
   openGraph: {
     title: 'Contact Open Arms Initiative | Oklahoma City',
     description: 'Contact Open Arms Initiative in Oklahoma City for counseling, family support, foster care services, parenting support, and community resources.',
-    url: 'https://www.openarmsinitiative.com/contact/',
+    url: 'https://www.openarmsinitiative.com/contact',
     type: 'website',
   },
 };
@@ -15,7 +15,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Contact Us', item: 'https://www.openarmsinitiative.com/contact/' },
+    { '@type': 'ListItem', position: 2, name: 'Contact Us', item: 'https://www.openarmsinitiative.com/contact' },
   ],
 };
 

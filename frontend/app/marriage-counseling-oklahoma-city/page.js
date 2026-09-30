@@ -2,14 +2,14 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import MarriageCounselingRequestForm from '@/components/MarriageCounselingRequestForm';
 
-export const metadata = { title: 'Marriage Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate marriage counseling in Oklahoma City. Open Arms Initiative helps couples improve communication, navigate conflict, and rebuild connection.', alternates: { canonical: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city/' } };
+export const metadata = { title: 'Marriage Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate marriage counseling in Oklahoma City. Open Arms Initiative helps couples improve communication, navigate conflict, and rebuild connection.', alternates: { canonical: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Marriage & Couples Therapy', item: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Marriage & Couples Therapy', item: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city' },
   ],
 };
 

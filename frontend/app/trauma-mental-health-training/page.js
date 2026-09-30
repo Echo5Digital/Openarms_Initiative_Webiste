@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { submitForm } from '@/lib/api';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 /* ─── FAQ DATA (unchanged) ─────────────────────────────────────────────── */
 const FAQ_ITEMS = [
@@ -149,6 +150,7 @@ function TrainingRequestForm() {
   });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -157,7 +159,7 @@ function TrainingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'training-request', ...form });
+      await submitForm({ service: 'training-request', ...form, recaptchaToken });
       setStatus('success');
     } catch (err) {
       setError(err.message);
@@ -210,7 +212,9 @@ function TrainingRequestForm() {
 
       {error && <p className="tmh2-form-error">{error}</p>}
 
-      <button type="submit" className="tmh2-btn tmh2-btn-accent tmh2-form-submit" disabled={status === 'submitting'}>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+
+      <button type="submit" className="tmh2-btn tmh2-btn-accent tmh2-form-submit" disabled={status === 'submitting' || !recaptchaToken}>
         <IconSend width="16" height="16" />
         {status === 'submitting' ? 'Sending…' : 'Request Info Now'}
       </button>

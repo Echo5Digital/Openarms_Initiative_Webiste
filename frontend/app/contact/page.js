@@ -6,6 +6,7 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import { submitForm } from '@/lib/api';
 import AppointmentStepIndicator from '@/components/AppointmentStepIndicator';
+import RecaptchaCheckbox from '@/components/RecaptchaCheckbox';
 
 const IconSend = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
@@ -99,6 +100,7 @@ function ContactForm() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -117,6 +119,7 @@ function ContactForm() {
         insurance: form.insurance,
         contactMethod: form.contactMethod,
         message: form.message,
+        recaptchaToken,
       });
       router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
@@ -164,7 +167,8 @@ function ContactForm() {
       <label className="oa-contact-field"><span>Message / How can we help?*</span><textarea name="message" value={form.message} onChange={handleChange} rows={4} required /></label>
 
       {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
-      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}><IconSend />{submitting ? 'Sending…' : 'Continue to Eligibility'}</button>
+      <RecaptchaCheckbox onChange={setRecaptchaToken} />
+      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting || !recaptchaToken}><IconSend />{submitting ? 'Sending…' : 'Continue to Eligibility'}</button>
       <p className="oa-contact-form-note">Open Arms Initiative is currently accepting new clients with Humana, Aetna, Oklahoma Complete Health, OHCA (SoonerCare), and private pay. Coverage and eligibility will be verified before services are scheduled.</p>
     </form>
   );
