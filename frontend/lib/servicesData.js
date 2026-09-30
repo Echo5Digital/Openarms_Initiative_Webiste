@@ -14,7 +14,7 @@ export const serviceCategories = {
     ],
     sideTitle: 'Trusted Team',
     sideLinks: [
-      { name: 'About Us', href: '/about' },
+      { name: 'About Us', href: '/about-us' },
       { name: 'Local Referrals', href: '/local-referrals/' },
       { name: 'FAQ', href: '/faq' },
     ],
