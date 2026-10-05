@@ -70,9 +70,9 @@ export default function TestimonialsClient() {
                   <img src="/Training/icon.svg" alt="Google" className="google-review-g-icon" />
                 </div>
 
-                <div className="google-review-stars" aria-label="5 out of 5 stars">
+                <div className="google-review-stars" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, starIdx) => (
-                    <img key={starIdx} src="/Training/f.svg" alt="" className="google-review-star" />
+                    <img key={starIdx} src="/Training/f.svg" alt="5-star rating" className="google-review-star" />
                   ))}
                 </div>
 

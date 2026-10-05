@@ -520,7 +520,7 @@ That's the perspective she brings into every training, workshop, and speaking en
               <div className="reviews-rating">
                 <span className="reviews-stars" aria-hidden="true">★★★★★</span>
                 <span className="reviews-rating-label">
-                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" loading="lazy" />
+                  <img src="/icons8-google-logo-48.png" alt="Google logo" className="reviews-google-icon" loading="lazy" />
                   Google Reviews
                 </span>
               </div>
@@ -560,7 +560,7 @@ That's the perspective she brings into every training, workshop, and speaking en
                         </div>
                         <div className="review-stars" aria-hidden="true">
                           {Array.from({ length: 5 }).map((_, i) => (
-                            <img src="/Training/f.svg" alt="" key={i} loading="lazy" />
+                            <img src="/Training/f.svg" alt="5-star rating" key={i} loading="lazy" />
                           ))}
                         </div>
                         <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>

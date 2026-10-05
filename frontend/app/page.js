@@ -357,7 +357,7 @@ export default function HomePage() {
                 onClick={() => setExpectVideoPlaying(true)}
                 aria-label="Play video: What to Expect at Open Arms"
               >
-                <img src={`https://img.youtube.com/vi/${GROWTH_VIDEO_ID}/maxresdefault.jpg`} alt="" loading="lazy" />
+                <img src={`https://img.youtube.com/vi/${GROWTH_VIDEO_ID}/maxresdefault.jpg`} alt="What to Expect at Open Arms video thumbnail" loading="lazy" />
                 <span className="expect-video-play-btn">
                   <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg>
                 </span>
@@ -388,7 +388,7 @@ export default function HomePage() {
               <div className="reviews-rating">
                 <span className="reviews-stars" aria-hidden="true">★★★★★</span>
                 <span className="reviews-rating-label">
-                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" loading="lazy" />
+                  <img src="/icons8-google-logo-48.png" alt="Google logo" className="reviews-google-icon" loading="lazy" />
                   Google Reviews
                 </span>
               </div>
@@ -428,7 +428,7 @@ export default function HomePage() {
                         </div>
                         <div className="review-stars" aria-hidden="true">
                           {Array.from({ length: 5 }).map((_, i) => (
-                            <img src="/Training/f.svg" alt="" key={i} loading="lazy" />
+                            <img src="/Training/f.svg" alt="5-star rating" key={i} loading="lazy" />
                           ))}
                         </div>
                         <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>

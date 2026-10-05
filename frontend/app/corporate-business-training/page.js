@@ -452,7 +452,7 @@ export default function CorporateBusinessTrainingPage() {
       {/* ══ WHAT THIS TRAINING HELPS — full bg image + icon-card grid ══ */}
       <section className="oah-help">
         <div className="oah-help-bg" aria-hidden="true">
-          <img src="/Training/bg3.png" className="oah-help-bg-img" alt="" />
+          <img src="/Training/bg3.png" className="oah-help-bg-img" alt="Soft cream background with decorative curves" />
           <div className="oah-help-bg-overlay" />
         </div>
 
