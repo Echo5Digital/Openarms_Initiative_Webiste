@@ -16,6 +16,7 @@ export const serviceCategories = {
     sideLinks: [
       { name: 'About Us', href: '/about-us' },
       { name: 'Local Referrals', href: '/local-referrals/' },
+      { name: 'Location', href: '/location' },
       { name: 'FAQ', href: '/faq' },
     ],
     image: '/images/first.png',
