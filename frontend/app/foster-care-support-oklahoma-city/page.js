@@ -5,7 +5,7 @@ import FosterCareRequestForm from '@/components/FosterCareRequestForm';
 export const metadata = {
   title: 'Foster Care Support Oklahoma City | Open Arms Initiative',
   description: 'Find foster care support in Oklahoma City with Open Arms Initiative, including foster parent guidance, training, counseling, and support for foster and adoptive families.',
-  alternates: { canonical: 'https://www.openarmsinitiative.com/foster-care' },
+  alternates: { canonical: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/' },
 };
 
 const SCHEMA_BREADCRUMB = {
@@ -13,7 +13,7 @@ const SCHEMA_BREADCRUMB = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Foster Care Support', item: 'https://www.openarmsinitiative.com/foster-care' },
+    { '@type': 'ListItem', position: 2, name: 'Foster Care Support', item: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/' },
   ],
 };
 

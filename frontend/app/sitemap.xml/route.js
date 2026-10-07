@@ -22,7 +22,7 @@ const staticRoutes = [
   { path: '/family-therapy-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/grief-counseling-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/depression-anxiety-counseling-oklahoma', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/foster-care', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/foster-care-support-oklahoma-city/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/family-support-services-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/parenting-classes-okc', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/local-referrals', priority: 0.7, changeFrequency: 'monthly' },

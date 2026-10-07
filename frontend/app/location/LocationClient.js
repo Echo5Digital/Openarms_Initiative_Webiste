@@ -64,7 +64,7 @@ const beyondCounseling = [
   {
     title: 'Foster Care & Adoption Support',
     text: 'Training, guidance, counseling, and ongoing support for foster and adoptive families navigating the realities of caring for children and building strong family connections.',
-    href: '/foster-care',
+    href: '/foster-care-support-oklahoma-city/',
   },
   {
     title: 'Parenting Support & Classes',

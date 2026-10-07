@@ -62,7 +62,7 @@ const beliefs = [
 
 const kinds = [
   ['Counseling & Therapy', 'Compassionate counseling for adults, children, adolescents, couples, and families navigating emotional, relational, and life challenges.', 'Explore Counseling Services', '/adult-counseling-oklahoma-city/'],
-  ['Foster Care & Adoption Support', 'Training, counseling, guidance, and ongoing support for foster and adoptive families.', 'Explore Foster Family Support', '/foster-care/'],
+  ['Foster Care & Adoption Support', 'Training, counseling, guidance, and ongoing support for foster and adoptive families.', 'Explore Foster Family Support', '/foster-care-support-oklahoma-city/'],
   ['Family & Parenting Support', 'Education, resources, parenting support, and family-focused guidance designed to strengthen relationships and caregiver confidence.', 'Explore Family Support', '/family-support-services-oklahoma-city/'],
   ['Pro Bono Counseling', 'Counseling opportunities designed to reduce financial barriers for eligible individuals and families, subject to program requirements and availability.', 'Explore Pro Bono Counseling', '/pro-bono-counseling-okc/'],
   ['Community Education & Outreach', 'Educational initiatives that help individuals, families, professionals, and community groups better understand mental health, trauma, relationships, and supportive care.', 'Explore Training & Workshops', '/parenting-classes-okc/'],

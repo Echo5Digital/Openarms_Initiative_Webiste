@@ -87,7 +87,7 @@ export const blogContent = {
 
       { type: 'h2', text: 'Counseling for Caregivers and Foster Families' },
       { type: 'p', text: 'Caregivers often hesitate to seek help because they believe they should be able to manage independently. In foster care environments, this belief is particularly strong.' },
-      { type: 'p', html: 'Through <a href="/foster-care/">foster care counseling services</a> at Open Arms Initiative, we frequently work with caregivers navigating secondary trauma, compassion fatigue, and chronic stress. These experiences are common and treatable.' },
+      { type: 'p', html: 'Through <a href="/foster-care-support-oklahoma-city/">foster care counseling services</a> at Open Arms Initiative, we frequently work with caregivers navigating secondary trauma, compassion fatigue, and chronic stress. These experiences are common and treatable.' },
       { type: 'p', text: 'Seeking support does not signal inadequacy. It signals insight.' },
       { type: 'p', text: 'When caregivers stabilize, children benefit. Family systems strengthen.' },
 
@@ -210,7 +210,7 @@ export const blogContent = {
       { type: 'h2', text: 'The Ripple Effect on Families' },
       { type: 'p', text: 'When caregivers experience burnout, relational dynamics shift. Patience decreases. Emotional availability narrows. Conflict tolerance diminishes.' },
       { type: 'p', text: 'In foster care environments, this impact can be amplified. Children with trauma histories often require consistent emotional regulation from adults. If caregivers are depleted, stabilization becomes more difficult.' },
-      { type: 'p', html: 'This is why Open Arms Initiative integrates <a href="/foster-care/"><strong>foster care support services</strong></a> with therapeutic counseling. Supporting caregiver wellness strengthens the entire family system.' },
+      { type: 'p', html: 'This is why Open Arms Initiative integrates <a href="/foster-care-support-oklahoma-city/"><strong>foster care support services</strong></a> with therapeutic counseling. Supporting caregiver wellness strengthens the entire family system.' },
       { type: 'p', text: 'Prevention in this context is both compassionate and strategic.' },
 
       { type: 'h2', text: 'Burnout Versus Depression' },
@@ -341,7 +341,7 @@ export const blogContent = {
       { type: 'p', text: 'The body remembers what the mind tries to forget. When grief is given space in counseling, many clients notice physical relief alongside emotional clarity.' },
 
       { type: 'h2', text: 'Grief in Foster Care and Family Systems' },
-      { type: 'p', html: 'Open Arms Initiative frequently supports <a href="/foster-care/">foster and adoptive families</a>, where grief exists on multiple levels.' },
+      { type: 'p', html: 'Open Arms Initiative frequently supports <a href="/foster-care-support-oklahoma-city/">foster and adoptive families</a>, where grief exists on multiple levels.' },
       { type: 'p', text: 'Children may grieve:' },
       { type: 'list', items: [
         { text: 'Biological family separation' },
@@ -458,7 +458,7 @@ export const blogContent = {
       { type: 'p', html: 'Counselors at <strong>Open Arms Initiative</strong> frequently emphasize that addressing pain early is not weakness, it is preventative mental health care.' },
 
       { type: 'h2', text: 'How Minimizing Pain Impacts Foster and Caregiving Families' },
-      { type: 'p', html: 'Open Arms Initiative works closely with <a href="/foster-care/">foster and adoptive families</a>, where pain minimization is particularly common.' },
+      { type: 'p', html: 'Open Arms Initiative works closely with <a href="/foster-care-support-oklahoma-city/">foster and adoptive families</a>, where pain minimization is particularly common.' },
       { type: 'p', text: 'Caregivers often say:' },
       { type: 'list', items: [
         { text: '"The kids need me to be strong."' },
@@ -493,7 +493,7 @@ export const blogContent = {
         { text: 'Individual counseling' },
         { text: 'Trauma-informed therapy' },
         { html: '<a href="/grief-counseling-oklahoma-city/">Grief and loss support</a>' },
-        { html: '<a href="/foster-care/">Foster care and adoption counseling</a>' },
+        { html: '<a href="/foster-care-support-oklahoma-city/">Foster care and adoption counseling</a>' },
         { text: 'Community-focused mental health services' },
       ] },
       { type: 'p', text: 'Their approach recognizes that pain does not need to be dramatic to be deserving of care. It only needs to be real.' },
@@ -545,7 +545,7 @@ export const blogContent = {
       { type: 'p', text: 'We see people at Open Arms Initiative who realize, sometimes with surprise, that talking openly is less draining than holding everything in.' },
 
       { type: 'h2', text: 'When Community Becomes Part of Healing' },
-      { type: 'p', html: 'Open Arms Initiative extends care beyond individual sessions through community outreach programs, <a href="/foster-care/">foster and adoptive family counseling</a>, and pro bono therapy options. Healing does not only happen in offices. It happens in connection.' },
+      { type: 'p', html: 'Open Arms Initiative extends care beyond individual sessions through community outreach programs, <a href="/foster-care-support-oklahoma-city/">foster and adoptive family counseling</a>, and pro bono therapy options. Healing does not only happen in offices. It happens in connection.' },
 
       { type: 'h2', text: 'Final Thoughts' },
       { type: 'p', text: 'Talking to a counselor is not a weakness. It is a quiet declaration that your life is worth understanding.' },
@@ -2161,7 +2161,7 @@ export const blogContent = {
       { type: 'p', html: 'Loss hits hard, doesn\'t it? A buddy lost his mom a few years back—man, it tore him up. You could see it in his eyes, even when he tried to shrug it off. That\'s where <strong>Bereavement Therapy OKC</strong> comes in, something we offer with pride. It\'s not about slapping a Band-Aid on that kind of pain—some hurts stick around—but about figuring out how to keep going. Counselors here in Oklahoma City have sat with folks just like him, listening, letting them cry or yell or whatever\'s needed. A few talks can lighten that load, whether it\'s one person alone or a whole family sorting it out together.' },
 
       { type: 'h2', text: 'The Unique Struggles of Foster Families' },
-      { type: 'p', html: 'Then there\'s the kind of loss that creeps in unexpectedly. A neighbor fosters kids—a sweet woman with a big heart. She once shared about saying goodbye to a little girl she\'d cared for like her own. It broke her. That\'s the reality of <a href="/foster-care/"><strong>foster care</strong></a> here in Oklahoma, for parents and kids alike. We get that, so there\'s 24/7 support for foster families—someone to call when it\'s 2 a.m. and everything\'s falling apart. Counseling is built for those moments, helping everyone hold on to hope, no matter how messy it gets.' },
+      { type: 'p', html: 'Then there\'s the kind of loss that creeps in unexpectedly. A neighbor fosters kids—a sweet woman with a big heart. She once shared about saying goodbye to a little girl she\'d cared for like her own. It broke her. That\'s the reality of <a href="/foster-care-support-oklahoma-city/"><strong>foster care</strong></a> here in Oklahoma, for parents and kids alike. We get that, so there\'s 24/7 support for foster families—someone to call when it\'s 2 a.m. and everything\'s falling apart. Counseling is built for those moments, helping everyone hold on to hope, no matter how messy it gets.' },
 
       { type: 'figure', image: '/Grief-Counseling-In-Oklahoma-City.webp', alt: 'Grief Counseling In Oklahoma City' },
 

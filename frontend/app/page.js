@@ -71,7 +71,7 @@ const howWeCanHelp = [
   },
   {
     slug: 'foster-care-adoption-counseling',
-    href: '/foster-care/',
+    href: '/foster-care-support-oklahoma-city/',
     title: 'Foster Care & Adoption Counseling',
     summary: 'Foster and adoptive families face a unique set of challenges. Our counselors understand the realities of placement, attachment, and transition, and offer support built around them.',
     icon: (
@@ -598,7 +598,7 @@ export default function HomePage() {
             </span>
             <h3>Foster Care Support</h3>
             <p>Foster care comes with its own set of challenges, and its own kind of support. We offer training, guidance, and placement support to help foster families build stable, loving homes.</p>
-            <Link href="/foster-care/" className="teaser-card-link">Learn About Foster Care Support &rsaquo;</Link>
+            <Link href="/foster-care-support-oklahoma-city/" className="teaser-card-link">Learn About Foster Care Support &rsaquo;</Link>
           </article>
           <article className="teaser-card reveal reveal-from-bottom">
             <span className="teaser-card-icon training">

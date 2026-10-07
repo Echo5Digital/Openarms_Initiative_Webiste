@@ -4,7 +4,7 @@ import Image from 'next/image';
 const serviceColumns = [
   [
     { name: 'Child & Adolescent Counseling', href: '/child-counseling-services-oklahoma-city/' },
-    { name: 'Foster Care & Adoption Counseling', href: '/foster-care/' },
+    { name: 'Foster Care & Adoption Counseling', href: '/foster-care-support-oklahoma-city/' },
     { name: 'Depression & Anxiety Counseling', href: '/depression-anxiety-counseling-oklahoma/' },
   ],
   [
