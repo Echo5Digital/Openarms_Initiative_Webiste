@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "why-do-newly-married-couples-struggle-with-adjustments-common-challenges-and-how-to-cope",
+    "title": "Why Do Newly Married Couples Struggle With Adjustments? Common Challenges and How to Cope",
+    "date": "October 6, 2026",
+    "category": "blog",
+    "excerpt": "Struggling with newly married couple adjustment? Discover common newlywed challenges like finances, communication, and boundaries, plus practical coping strategies.",
+    "image": "/why-do-newly-married-couples-struggle-with-adjustments-common-challenges-and-how-to-cope/featured.jpg",
+    "alt": "Why Do Newly Married Couples Struggle With Adjustments? Common Challenges and How to Cope"
+  },
+  {
     "slug": "how-comparing-children-can-affect-their-mental-and-emotional-health",
     "title": "How Comparing Children Can Affect Their Mental and Emotional Health",
     "date": "September 23, 2026",
