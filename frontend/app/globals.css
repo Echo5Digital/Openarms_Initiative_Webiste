@@ -10812,6 +10812,7 @@ footer a:hover {
 /* School Staff & Educator Training page */
 .sse-page{--blue:#00AFF7;--blue-dark:#0170ED;--cream:#E6F2FD;--tint:#F0F7FE;--ink:#1B2B22;--muted:#5B6B60;--line:#E3EADD;--white:#fff;background:var(--white);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
 .sse-page h1,.sse-page h2,.sse-page h3,.sse-page h4{font-family:'Plus Jakarta Sans','DM Sans',Arial,sans-serif;font-weight:700;color:#072B3A;margin:0}
+.sse-page .final-cta-inner h2{color:#fff;margin:0 0 12px}
 .sse-wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 .sse-section{padding:56px 0}
 .sse-section--tint{background:var(--tint)}

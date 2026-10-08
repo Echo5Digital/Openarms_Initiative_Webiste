@@ -775,16 +775,15 @@ export default function CorporateBusinessTrainingPage() {
       </section>
 
       {/* ══ FINAL CTA ══ */}
-      <section className="jj-cta">
-        <div className="jj-cta-inner reveal reveal-from-bottom">
+      <section className="final-cta-section">
+        <div className="final-cta-inner reveal reveal-from-bottom">
           <div>
-            <h2 className="jj-cta-title">Tell Us About Your Team</h2>
-            <p className="jj-cta-sub">Whatever is happening in your organization right now, the first step is just telling us about it.</p>
+            <h2>Tell Us About Your Team</h2>
+            <p>Whatever is happening in your organization right now, the first step is just telling us about it.</p>
           </div>
-          <Link href="/contact?training=leadership-workplace-wellness" className="jj-btn jj-btn-accent">
-            Tell Us About Your Team
-            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </Link>
+          <div className="final-cta-buttons">
+            <Link href="/contact?training=leadership-workplace-wellness" className="final-cta-btn primary">Tell Us About Your Team</Link>
+          </div>
         </div>
       </section>
 
