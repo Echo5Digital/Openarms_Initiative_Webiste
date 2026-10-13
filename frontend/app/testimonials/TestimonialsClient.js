@@ -46,7 +46,7 @@ export default function TestimonialsClient() {
       <section className="testimonials-section-v2 testimonials-section-v2-top">
         <div className="testimonials-container">
           <div className="testimonials-heading reveal reveal-from-bottom">
-            <h2>Hear from our clients</h2>
+            <h1>Hear from our clients</h1>
             <p>Our clients love working with us, just read what they have to say!</p>
           </div>
 

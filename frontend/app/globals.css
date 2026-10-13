@@ -10548,6 +10548,7 @@ footer a:hover {
   margin: 0 auto 48px;
 }
 
+.testimonials-heading h1,
 .testimonials-heading h2 {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.9rem, 3.2vw, 2.5rem);
