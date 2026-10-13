@@ -17,6 +17,6 @@ export default function LocalReferralsPage() { return <main className="fs-page r
   <ScrollReveal />
 
   <section className="fs-hero"><div className="fs-hero-split-inner referral-only-inner">
-    <div className="fs-hero-form-card reveal reveal-from-bottom" id="referral-form"><div className="fs-hero-form-body"><h3>Referral Bonus</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Do you know someone who could benefit from therapy or family counseling? Refer a friend or community member to Open Arms Initiative and help us extend our mission of healing and hope. How awesome is that?</p><ReferralRequestForm /></div><div className="fs-hero-form-photo"><img src="/female-wedding-planner-working-with-couple-100kb.jpg" alt="Community members supporting one another" /></div></div>
+    <div className="fs-hero-form-card reveal reveal-from-bottom" id="referral-form"><div className="fs-hero-form-body"><h1>Referral Bonus</h1><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Do you know someone who could benefit from therapy or family counseling? Refer a friend or community member to Open Arms Initiative and help us extend our mission of healing and hope. How awesome is that?</p><ReferralRequestForm /></div><div className="fs-hero-form-photo"><img src="/female-wedding-planner-working-with-couple-100kb.jpg" alt="Community members supporting one another" /></div></div>
   </div></section>
 </main>}
