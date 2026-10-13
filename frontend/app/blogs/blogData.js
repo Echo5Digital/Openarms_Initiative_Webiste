@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "how-therapy-helps-heal-emotional-wounds-understanding-the-path-to-healing",
+    "title": "How Therapy Helps Heal Emotional Wounds: Understanding the Path to Healing",
+    "date": "October 12, 2026",
+    "category": "blog",
+    "excerpt": "Discover how therapy helps with healing emotional wounds. Open Arms Initiative offers proven approaches for emotional trauma recovery and lasting resilience.",
+    "image": "/how-therapy-helps-heal-emotional-wounds-understanding-the-path-to-healing/featured.jpg",
+    "alt": "How Therapy Helps Heal Emotional Wounds: Understanding the Path to Healing"
+  },
+  {
     "slug": "why-do-newly-married-couples-struggle-with-adjustments-common-challenges-and-how-to-cope",
     "title": "Why Do Newly Married Couples Struggle With Adjustments? Common Challenges and How to Cope",
     "date": "October 6, 2026",
