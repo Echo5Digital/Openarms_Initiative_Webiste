@@ -1,5 +1,16 @@
 export const blogPosts = [
   {
+    "slug": "breaking-generational-trauma-how-healing-yourself-can-transform-your-parenting",
+    "title": "Breaking Generational Trauma: How Healing Yourself Can Transform Your Parenting",
+    "metaTitle": "Breaking Generational Trauma: Healing Starts With Parents",
+    "date": "October 15, 2026",
+    "category": "blog",
+    "excerpt": "Explore how childhood wounds influence parenting and how emotional healing, faith, and self-awareness can help break generational trauma.",
+    "image": "/Training/openarms_youtube_banner_optimized.jpg",
+    "heroImage": "/Training/leading-through-weight-wide.jpg",
+    "alt": "Breaking Generational Trauma: How Healing Yourself Can Transform Your Parenting"
+  },
+  {
     "slug": "how-therapy-helps-heal-emotional-wounds-understanding-the-path-to-healing",
     "title": "How Therapy Helps Heal Emotional Wounds: Understanding the Path to Healing",
     "date": "October 12, 2026",

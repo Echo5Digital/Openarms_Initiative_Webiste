@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '../blogData';
 import { blogContent } from '../blogContent';
 import FaqAccordion from '../FaqAccordion';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const SITE_URL = 'https://www.openarmsinitiative.com';
 
@@ -13,7 +14,9 @@ export async function generateMetadata({ params }) {
     return { title: 'Post Not Found | Open Arms Initiative' };
   }
   return {
-    title: `${post.title} | Open Arms Initiative`,
+    // Optional `metaTitle` lets a post carry an SEO title that differs from its
+    // on-page H1 (post.title); it's used as-is, without the brand suffix.
+    title: post.metaTitle || `${post.title} | Open Arms Initiative`,
     description: post.excerpt,
     alternates: { canonical: `${SITE_URL}/blogs/${post.slug}` },
   };
@@ -202,6 +205,7 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <main className="blog-post-page">
+      {content.scrollReveal && <ScrollReveal />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBlogPosting) }} />
       {/* Hero — real photo background (from the post's own featured image) +
@@ -210,7 +214,7 @@ export default async function BlogPostPage({ params }) {
           body instead of ending on a hard line. */}
       <section
         className="blog-post-hero blog-post-hero-photo"
-        style={post.image ? { backgroundImage: `url(${post.image})` } : undefined}
+        style={(post.heroImage || post.image) ? { backgroundImage: `url(${post.heroImage || post.image})` } : undefined}
       >
         <div className="blog-post-hero-overlay" aria-hidden="true" />
         <div className="blog-post-hero-inner">
@@ -295,7 +299,42 @@ export default async function BlogPostPage({ params }) {
             </div>
           </div>
 
-          <aside className="blog-post-sidebar">
+          <aside className={`blog-post-sidebar${content.sidebarVideo ? ' blog-post-sidebar-has-video' : ''}`}>
+            {content.sidebarVideo && (
+              <div className={`blog-post-sidebar-video${content.scrollReveal ? ' reveal oa-rise' : ''}`}>
+                <div className="blog-post-sidebar-video-head">
+                  <span className="blog-post-sidebar-video-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </span>
+                  <span className="blog-post-sidebar-video-label">Watch the Video</span>
+                </div>
+                <div className="blog-post-sidebar-video-frame">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${content.sidebarVideo.id}`}
+                    title={content.sidebarVideo.title}
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="blog-post-sidebar-video-body">
+                  <h3 className="blog-post-sidebar-video-title">{content.sidebarVideo.title}</h3>
+                  {content.sidebarVideo.caption && (
+                    <p className="blog-post-sidebar-video-caption">{content.sidebarVideo.caption}</p>
+                  )}
+                  <a
+                    href={`https://www.youtube.com/watch?v=${content.sidebarVideo.id}`}
+                    className="blog-post-sidebar-video-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Watch on YouTube &rarr;
+                  </a>
+                </div>
+              </div>
+            )}
+
             <div className="blog-post-sidebar-cta">
               <div className="blog-post-sidebar-cta-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>

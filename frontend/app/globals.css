@@ -8290,6 +8290,118 @@ footer a:hover {
   top: 24px;
 }
 
+/* With the video card the sidebar (~1100px) is taller than most laptop
+   viewports. Keep it pinned like other posts, but start below the floating
+   nav pill and cap its height to the window so the cards that don't fit
+   (e.g. Related Posts) stay reachable by scrolling inside the sidebar.
+   The negative margin / padding pair leaves room for the cards' shadows,
+   which overflow would otherwise clip. */
+@media (min-width: 901px) {
+  .blog-post-sidebar-has-video {
+    top: 100px;
+    max-height: calc(100vh - 124px);
+    overflow-y: auto;
+    margin: -8px;
+    padding: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .blog-post-sidebar-has-video::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Keep cards at full height; the sidebar scrolls instead of squashing them. */
+  .blog-post-sidebar-has-video > * {
+    flex-shrink: 0;
+  }
+}
+
+/* Optional YouTube card at the top of the sidebar (content.sidebarVideo). */
+.blog-post-sidebar-video {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(1, 112, 237, 0.12);
+  border: 1px solid rgba(1, 112, 237, 0.15);
+  overflow: hidden;
+}
+
+.blog-post-sidebar-video-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #072B3A, #0170ED);
+}
+
+.blog-post-sidebar-video-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.blog-post-sidebar-video-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+}
+
+.blog-post-sidebar-video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #072B3A;
+}
+
+.blog-post-sidebar-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.blog-post-sidebar-video-body {
+  padding: 18px 20px 20px;
+}
+
+.blog-post-sidebar-video-title {
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  font-size: 15.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #072B3A;
+  margin: 0 0 6px;
+}
+
+.blog-post-sidebar-video-caption {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4A6578;
+  margin: 0;
+}
+
+.blog-post-sidebar-video-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0170ED;
+  text-decoration: none;
+}
+
+.blog-post-sidebar-video-link:hover {
+  color: #0159c4;
+}
+
 .blog-post-sidebar-cta {
   background: rgba(1, 112, 237, 0.06);
   border: 1px solid rgba(1, 112, 237, 0.16);
@@ -8460,6 +8572,260 @@ footer a:hover {
 @media (max-width: 640px) {
   .blog-post-rich-html {
     margin: -26px -20px 0;
+  }
+}
+
+/* Scroll-reveal helpers for rich-html posts. They build on the site's
+   .reveal / .is-visible system (components/ScrollReveal.js). The slide-in-from-
+   right variant falls back to a rise on narrow screens so nothing pushes the
+   page sideways. */
+.reveal.oa-rise {
+  transform: translateY(26px);
+}
+
+.reveal.oa-slide-r {
+  transform: translateX(44px);
+}
+
+.reveal.oa-rise.is-visible,
+.reveal.oa-slide-r.is-visible {
+  transform: translate(0, 0);
+}
+
+@media (max-width: 768px) {
+  .reveal.oa-slide-r {
+    transform: translateY(30px);
+  }
+}
+
+.blog-post-rich-html .oa-bar {
+  display: block;
+  width: 52px;
+  height: 4px;
+  margin: 0 0 20px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0170ED, #00AFF7);
+  transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+}
+
+.blog-post-rich-html .oa-heading.reveal:not(.is-visible) .oa-bar {
+  width: 0;
+}
+
+.blog-post-rich-html .oa-cell {
+  display: flex;
+}
+
+.blog-post-rich-html .oa-cell > * {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-post-rich-html .oa-heading.reveal:not(.is-visible) .oa-bar {
+    width: 52px;
+  }
+
+  .blog-post-rich-html .oa-bar {
+    transition: none;
+  }
+}
+
+/* Interactive cards inside rich-html posts (generational-trauma post).
+   Hover states live here, not inline, because inline !important styles
+   can't be overridden by :hover. */
+.blog-post-rich-html .oa-lift {
+  background: #ffffff;
+  border: 1px solid rgba(1, 112, 237, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(1, 112, 237, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-post-rich-html .oa-icon,
+.blog-post-rich-html .oa-step-badge {
+  transition: transform 0.3s ease;
+}
+
+/* Blue panel holding see-through "glass" cards. */
+.blog-post-rich-html .oa-panel {
+  position: relative;
+  overflow: hidden;
+  margin: 8px 0 24px;
+  padding: 26px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #072B3A 0%, #0170ED 100%);
+  box-shadow: 0 14px 34px rgba(1, 112, 237, 0.28);
+}
+
+.blog-post-rich-html .oa-panel::before,
+.blog-post-rich-html .oa-panel::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+}
+
+.blog-post-rich-html .oa-panel::before {
+  width: 220px;
+  height: 220px;
+  top: -90px;
+  right: -60px;
+}
+
+.blog-post-rich-html .oa-panel::after {
+  width: 160px;
+  height: 160px;
+  bottom: -70px;
+  left: 18%;
+  background: rgba(0, 175, 247, 0.16);
+}
+
+/* Video block styled like the About Us video: dark footer backdrop, navy card
+   with a cyan border (reuses the growth-video-* card classes). */
+.blog-post-rich-html .oa-video-panel {
+  margin: 28px 0 8px;
+  padding: 28px;
+  border-radius: 22px;
+  background: #072B3A url('/images/footer.png') center / cover no-repeat;
+  box-shadow: 0 18px 40px rgba(7, 43, 58, 0.25);
+}
+
+.blog-post-rich-html .oa-video-panel .growth-video-card {
+  background: #072B3A;
+  border-color: rgba(0, 175, 247, 0.35);
+}
+
+@media (max-width: 640px) {
+  .blog-post-rich-html .oa-video-panel {
+    padding: 14px;
+    border-radius: 18px;
+  }
+}
+
+.blog-post-rich-html .oa-glass {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(3, 20, 40, 0.18);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* "Hidden belief" cards: deep-navy and royal-blue gradients in a checkerboard,
+   with a soft glow disc that grows on hover. */
+.blog-post-rich-html .oa-belief {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px 22px 22px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-image: linear-gradient(135deg, #072B3A 0%, #0170ED 100%);
+  background-size: 160% 160%;
+  background-position: 0% 50%;
+  box-shadow: 0 10px 24px rgba(1, 112, 237, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+}
+
+.blog-post-rich-html .oa-cell:nth-child(even) > .oa-belief {
+  background-image: linear-gradient(135deg, #0159c4 0%, #0398E0 100%);
+}
+
+.blog-post-rich-html .oa-belief::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  right: -34px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.blog-post-rich-html .oa-belief-mark {
+  position: relative;
+  flex-shrink: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 60px;
+  line-height: 0.8;
+  padding-top: 10px;
+  color: #00AFF7;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.blog-post-rich-html .oa-cell:nth-child(even) > .oa-belief .oa-belief-mark {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.blog-post-rich-html .oa-belief-text {
+  position: relative;
+  font-size: 15.5px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  padding-top: 2px;
+  color: #ffffff;
+}
+
+@media (hover: hover) {
+  .blog-post-rich-html .oa-lift:hover {
+    transform: translateY(-5px);
+    border-color: rgba(1, 112, 237, 0.45);
+    box-shadow: 0 16px 32px rgba(1, 112, 237, 0.22);
+  }
+
+  .blog-post-rich-html .oa-glass:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 16px 32px rgba(3, 20, 40, 0.3);
+  }
+
+  .blog-post-rich-html .oa-lift:hover .oa-icon,
+  .blog-post-rich-html .oa-glass:hover .oa-icon {
+    transform: scale(1.1) rotate(-6deg);
+  }
+
+  .blog-post-rich-html .oa-lift:hover .oa-step-badge {
+    transform: scale(1.18);
+  }
+
+  .blog-post-rich-html .oa-belief:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 38px rgba(1, 112, 237, 0.4);
+    background-position: 100% 50%;
+  }
+
+  .blog-post-rich-html .oa-belief:hover::before {
+    transform: scale(1.7);
+  }
+
+  .blog-post-rich-html .oa-belief:hover .oa-belief-mark {
+    transform: rotate(-10deg) scale(1.2);
+    color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-post-rich-html .oa-lift,
+  .blog-post-rich-html .oa-lift:hover,
+  .blog-post-rich-html .oa-glass,
+  .blog-post-rich-html .oa-glass:hover,
+  .blog-post-rich-html .oa-belief,
+  .blog-post-rich-html .oa-belief:hover,
+  .blog-post-rich-html .oa-belief::before,
+  .blog-post-rich-html .oa-belief-mark,
+  .blog-post-rich-html .oa-icon,
+  .blog-post-rich-html .oa-step-badge {
+    transition: none;
+    transform: none;
   }
 }
 
@@ -8762,6 +9128,12 @@ footer a:hover {
 @media (max-width: 800px) {
   .blog-post-hero {
     padding: 120px 20px 32px;
+  }
+
+  /* Photo banners keep room below the title for the 90px wave, otherwise the
+     wave covers the date/category line on mobile. */
+  .blog-post-hero-photo {
+    padding-bottom: 90px;
   }
 
   .blog-post-section {
