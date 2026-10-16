@@ -213,8 +213,14 @@ export default async function BlogPostPage({ params }) {
           (.jj-hero-wave-section), so a post's hero blends into the article
           body instead of ending on a hard line. */}
       <section
-        className="blog-post-hero blog-post-hero-photo"
-        style={(post.heroImage || post.image) ? { backgroundImage: `url(${post.heroImage || post.image})` } : undefined}
+        className={`blog-post-hero blog-post-hero-photo${post.heroOverlay ? ' blog-post-hero-clear' : ''}`}
+        style={(post.heroImage || post.image) ? {
+          backgroundImage: `url("${post.heroImage || post.image}")`,
+          // Optional per-post focal points (CSS background-position values).
+          '--hero-pos': post.heroPosition,
+          '--hero-pos-m': post.heroPositionMobile,
+          '--hero-ov': post.heroOverlay,
+        } : undefined}
       >
         <div className="blog-post-hero-overlay" aria-hidden="true" />
         <div className="blog-post-hero-inner">

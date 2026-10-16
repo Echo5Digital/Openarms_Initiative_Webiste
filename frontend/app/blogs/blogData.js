@@ -1,5 +1,19 @@
 export const blogPosts = [
   {
+    "slug": "healing-shouldn-t-stop-making-trauma-informed-counseling-and-community-support-accessible-to-every-family",
+    "title": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family",
+    "metaTitle": "Affordable Trauma-Informed Counseling & Family Support",
+    "date": "October 18, 2026",
+    "category": "blog",
+    "excerpt": "Learn how Open Arms Initiative helps families access affordable counseling and equips churches and schools with trauma-informed training.",
+    "image": "/Training/banner trauma 1 copy.jpg",
+    "heroImage": "/Training/african-american-doctor-surgeon-sharing-his-ptsd-issues-with-psychiatrist.webp",
+    "heroPosition": "50% 17%",
+    "heroPositionMobile": "72% 50%",
+    "heroOverlay": 0.45,
+    "alt": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family"
+  },
+  {
     "slug": "breaking-generational-trauma-how-healing-yourself-can-transform-your-parenting",
     "title": "Breaking Generational Trauma: How Healing Yourself Can Transform Your Parenting",
     "metaTitle": "Breaking Generational Trauma: Healing Starts With Parents",
