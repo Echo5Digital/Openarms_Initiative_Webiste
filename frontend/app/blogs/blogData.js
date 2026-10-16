@@ -3,7 +3,7 @@ export const blogPosts = [
     "slug": "healing-shouldn-t-stop-making-trauma-informed-counseling-and-community-support-accessible-to-every-family",
     "title": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family",
     "metaTitle": "Affordable Trauma-Informed Counseling & Family Support",
-    "date": "October 18, 2026",
+    "date": "October 19, 2026",
     "category": "blog",
     "excerpt": "Learn how Open Arms Initiative helps families access affordable counseling and equips churches and schools with trauma-informed training.",
     "image": "/Training/banner trauma 1 copy.jpg",
