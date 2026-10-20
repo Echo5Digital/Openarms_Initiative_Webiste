@@ -4,39 +4,74 @@ import AdultCounselingRequestForm from '@/components/AdultCounselingRequestForm'
 
 export const metadata = { title: 'Adult Counseling in Oklahoma City | Open Arms Initiative', description: 'Find compassionate adult counseling in Oklahoma City. Open Arms Initiative provides personalized individual therapy for life challenges, relationships, growth, and change.', alternates: { canonical: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_ADULT_COUNSELING = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Adult & Individual Counseling', item: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Adult Counseling',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Compassionate adult counseling in Oklahoma City, providing personalized individual therapy for life challenges, relationships, growth, and change.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'What is individual counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Individual counseling is one-on-one therapy between you and a mental health professional. It provides a private environment to discuss emotions, experiences, relationships, behaviors, personal concerns, or goals.' } },
-    { '@type': 'Question', name: 'How do I know if I should see a therapist?', acceptedAnswer: { '@type': 'Answer', text: 'There isn’t one specific point when someone needs therapy. You may consider counseling if you’re feeling overwhelmed, experiencing recurring difficulties, navigating a major life change, struggling with relationships, feeling stuck, or simply wanting to understand yourself better.' } },
-    { '@type': 'Question', name: 'Do I need a mental health diagnosis to attend counseling?', acceptedAnswer: { '@type': 'Answer', text: 'No. People seek counseling for many reasons, including stress, relationships, life transitions, self-esteem, boundaries, personal development, decision-making, and emotional support.' } },
-    { '@type': 'Question', name: 'What if I don’t know what to talk about?', acceptedAnswer: { '@type': 'Answer', text: 'That’s okay. You don’t need to arrive with a prepared explanation. You can start with whatever feels important—or simply tell your therapist that you aren’t sure where to begin.' } },
-    { '@type': 'Question', name: 'Can I discuss relationship problems during individual counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Individual therapy can provide space to explore relationship concerns, communication, boundaries, recurring patterns, and how relationships affect you. If the concern involves multiple family members or the broader family relationship, Family Counseling may also be appropriate.' } },
-    { '@type': 'Question', name: 'Can I attend therapy for personal growth?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Counseling doesn’t have to begin with a crisis. Therapy can support self-awareness, confidence, healthier boundaries, improved relationships, decision-making, and personal development.' } },
-    { '@type': 'Question', name: 'Do you provide adult and individual counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Adult Counseling in Oklahoma City and individualized one-on-one therapy for adults seeking support with personal challenges, relationships, life transitions, personal growth, and emotional concerns.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city',
+      name: 'Adult Counseling in Oklahoma City | Open Arms Initiative',
+      description: 'Find compassionate adult counseling in Oklahoma City. Open Arms Initiative provides personalized individual therapy for life challenges, relationships, growth, and change.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Adult & Individual Counseling', item: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#service',
+      serviceType: 'Adult Counseling',
+      name: 'Adult Counseling',
+      url: 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Compassionate adult counseling in Oklahoma City, providing personalized individual therapy for life challenges, relationships, growth, and change.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/adult-counseling-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is individual counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Individual counseling is one-on-one therapy between you and a mental health professional. It provides a private environment to discuss emotions, experiences, relationships, behaviors, personal concerns, or goals.' } },
+        { '@type': 'Question', name: 'How do I know if I should see a therapist?', acceptedAnswer: { '@type': 'Answer', text: 'There isn’t one specific point when someone needs therapy. You may consider counseling if you’re feeling overwhelmed, experiencing recurring difficulties, navigating a major life change, struggling with relationships, feeling stuck, or simply wanting to understand yourself better.' } },
+        { '@type': 'Question', name: 'Do I need a mental health diagnosis to attend counseling?', acceptedAnswer: { '@type': 'Answer', text: 'No. People seek counseling for many reasons, including stress, relationships, life transitions, self-esteem, boundaries, personal development, decision-making, and emotional support.' } },
+        { '@type': 'Question', name: 'What if I don’t know what to talk about?', acceptedAnswer: { '@type': 'Answer', text: 'That’s okay. You don’t need to arrive with a prepared explanation. You can start with whatever feels important—or simply tell your therapist that you aren’t sure where to begin.' } },
+        { '@type': 'Question', name: 'Can I discuss relationship problems during individual counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Individual therapy can provide space to explore relationship concerns, communication, boundaries, recurring patterns, and how relationships affect you. If the concern involves multiple family members or the broader family relationship, Family Counseling may also be appropriate.' } },
+        { '@type': 'Question', name: 'Can I attend therapy for personal growth?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Counseling doesn’t have to begin with a crisis. Therapy can support self-awareness, confidence, healthier boundaries, improved relationships, decision-making, and personal development.' } },
+        { '@type': 'Question', name: 'Do you provide adult and individual counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Adult Counseling in Oklahoma City and individualized one-on-one therapy for adults seeking support with personal challenges, relationships, life transitions, personal growth, and emotional concerns.' } },
+      ],
+    },
   ],
 };
 
@@ -126,9 +161,7 @@ const faqs = [
 ];
 
 export default function AdultCounselingPage() { return <main className="adult-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ADULT_COUNSELING) }} />
   <ScrollReveal />
 
   <section className="adult-hero"><div className="adult-hero-split-inner">
