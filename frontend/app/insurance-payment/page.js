@@ -28,9 +28,57 @@ const coverageCards = [
   ['Pro Bono Program', 'A limited pro bono program is available for qualifying families without insurance or other payment options.'],
 ];
 
+const SCHEMA_INSURANCE_PAYMENT = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/insurance-payment#webpage',
+      url: 'https://www.openarmsinitiative.com/insurance-payment',
+      name: 'Insurance & Payment Options | Open Arms Initiative',
+      description: 'Open Arms Initiative accepts most major insurance plans, including SoonerCare, Aetna, Humana, and Oklahoma Complete Health, plus private pay options.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/insurance-payment#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/insurance-payment#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Insurance & Payment', item: 'https://www.openarmsinitiative.com/insurance-payment' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+  ],
+};
+
 export default function InsurancePaymentPage() {
   return (
     <main className="fs-page ip-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_INSURANCE_PAYMENT) }} />
       <ScrollReveal />
       <section className="insurance-strip-section ip-hero">
         <div className="insurance-strip-inner section-reveal section-reveal-left">
