@@ -34,6 +34,16 @@ const SCHEMA_ABOUT = {
       '@id': 'https://www.openarmsinitiative.com/#organization',
       name: 'Open Arms Initiative',
       url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
       founder: { '@id': 'https://www.openarmsinitiative.com/about-us#jamie-james' },
       employee: [
         { '@id': 'https://www.openarmsinitiative.com/about-us#jamie-james' },
