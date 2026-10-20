@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Script from 'next/script';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
@@ -36,5 +37,10 @@ export default function RecaptchaCheckbox({ onChange }) {
 
   if (!RECAPTCHA_SITE_KEY) return null;
 
-  return <div ref={containerRef} className="recaptcha-checkbox-widget" style={{ margin: '0.5rem 0' }} />;
+  return (
+    <>
+      <Script src="https://www.google.com/recaptcha/api.js" strategy="lazyOnload" />
+      <div ref={containerRef} className="recaptcha-checkbox-widget" style={{ margin: '0.5rem 0' }} />
+    </>
+  );
 }
