@@ -70,9 +70,6 @@ export default function DonatePage() {
                 src="https://donorbox.org/embed/open-arms-mental-health?show_content=true"
                 name="donorbox"
                 id="dbox-form-embed"
-                seamless="seamless"
-                frameBorder="0"
-                scrolling="no"
                 allow="payment"
                 style={{ width: '100%', minHeight: 560, border: 'none', display: 'block' }}
               />
