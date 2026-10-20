@@ -187,7 +187,7 @@ export default function HomePage() {
   const totalReviewPages = Math.ceil(clientReviews.length / REVIEWS_PER_PAGE);
   const revealRootRef = useRef(null);
 
-  useEffect(() => {
+  useEffect(() = alt="Kamryn Bass, Google review of Open Arms Initiative." > {
     const root = revealRootRef.current;
     if (!root) return;
     if (typeof IntersectionObserver === 'undefined') {
