@@ -81,7 +81,7 @@ function TeamGrid({ members, size = 'md' }) {
     <div className={`oa-team-grid oa-team-grid-${size} reveal-stagger`}>
       {members.map((m) => (
         <div className="oa-team-card reveal reveal-from-bottom" key={m.name}>
-          <div className="oa-team-photo-wrap"><img src={m.photo} alt={m.name} className="oa-team-photo" loading="lazy" /></div>
+          <div className="oa-team-photo-wrap"><img src={m.photo} alt={`${m.name}, ${m.title} at Open Arms Initiative in Oklahoma City`} className="oa-team-photo" loading="lazy" /></div>
           <div className="oa-team-caption">
             <h3>{m.name}</h3>
             <p>{m.title}</p>

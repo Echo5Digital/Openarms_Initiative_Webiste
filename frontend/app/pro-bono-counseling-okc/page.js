@@ -241,7 +241,7 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
         {teamMembers.map((member) => (
           <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
             <div className="team-photo-media">
-              <img src={member.photo} alt={member.name} />
+              <img src={member.photo} alt={`${member.name}, ${member.title} providing pro bono counseling in OKC`} />
             </div>
             <div className="team-photo-caption">
               <span className="team-photo-name">{member.name}</span>

@@ -553,7 +553,7 @@ That's the perspective she brings into every training, workshop, and speaking en
                       <article className="review-card reveal reveal-from-bottom" key={review.author}>
                         <div className="review-author-row">
                           {review.photo && (
-                            <img src={review.photo} alt={review.author} className="review-author-photo" loading="lazy" />
+                            <img src={review.photo} alt={`${review.author}, Google review of Open Arms Initiative`} className="review-author-photo" loading="lazy" />
                           )}
                           <span className="review-author">{review.author}</span>
                           <img src="/Training/icon.svg" alt="Google" className="review-google-icon" loading="lazy" />

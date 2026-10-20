@@ -223,7 +223,7 @@ export default function AdultCounselingPage() { return <main className="adult-pa
         {teamMembers.map((member) => (
           <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
             <div className="team-photo-media">
-              <img src={member.photo} alt={member.name} />
+              <img src={member.photo} alt={`${member.name}, ${member.title} providing adult counseling in Oklahoma City`} />
             </div>
             <div className="team-photo-caption">
               <span className="team-photo-name">{member.name}</span>

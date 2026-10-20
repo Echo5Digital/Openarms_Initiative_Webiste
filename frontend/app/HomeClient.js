@@ -421,7 +421,7 @@ export default function HomePage() {
                       <article className="review-card reveal reveal-from-bottom" key={review.author}>
                         <div className="review-author-row">
                           {review.photo && (
-                            <img src={review.photo} alt={review.author} className="review-author-photo" loading="lazy" />
+                            <img src={review.photo} alt={`${review.author}, Google review of Open Arms Initiative`} className="review-author-photo" loading="lazy" />
                           )}
                           <span className="review-author">{review.author}</span>
                           <img src="/Training/icon.svg" alt="Google" className="review-google-icon" loading="lazy" />
@@ -527,7 +527,7 @@ export default function HomePage() {
             {teamMembers.map((member) => (
               <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
                 <div className="team-photo-media">
-                  <img src={member.photo} alt={member.name} loading="lazy" />
+                  <img src={member.photo} alt={`${member.name}, ${member.title} at Open Arms Initiative in Oklahoma City`} loading="lazy" />
                 </div>
                 <div className="team-photo-caption">
                   <span className="team-photo-name">{member.name}</span>

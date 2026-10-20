@@ -276,7 +276,7 @@ export default async function BlogPostPage({ params }) {
                   {content.previousPost && (
                     <Link href={`/blogs/${content.previousPost.slug}`} className="blog-post-nav-card">
                       <span className="blog-post-nav-thumb">
-                        <img src={content.previousPost.image} alt="Previous post thumbnail" />
+                        <img src={content.previousPost.image} alt={content.previousPost.title} />
                       </span>
                       <span className="blog-post-nav-text">
                         <span className="blog-post-nav-label">
@@ -297,7 +297,7 @@ export default async function BlogPostPage({ params }) {
                         <span className="blog-post-nav-title">{content.nextPost.title}</span>
                       </span>
                       <span className="blog-post-nav-thumb">
-                        <img src={content.nextPost.image} alt="Next post thumbnail" />
+                        <img src={content.nextPost.image} alt={content.nextPost.title} />
                       </span>
                     </Link>
                   )}

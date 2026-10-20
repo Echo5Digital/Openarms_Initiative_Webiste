@@ -56,7 +56,7 @@ export default function TestimonialsClient() {
                 <div className="google-review-top">
                   <div className="google-review-avatar-row">
                     {review.photo ? (
-                      <img src={review.photo} alt={review.author} className="google-review-avatar" />
+                      <img src={review.photo} alt={`${review.author}, Google review of Open Arms Initiative`} className="google-review-avatar" />
                     ) : (
                       <span
                         className="google-review-avatar google-review-avatar-initials"

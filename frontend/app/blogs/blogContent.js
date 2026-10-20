@@ -1951,7 +1951,7 @@ export const blogContent = {
       ] },
       { type: 'p', text: 'Remedy: Engage in low-pressure enjoyment by offering short, new experiences that need not be based on sustained positive affect, making a new five-minute recipe as a team, listening to a short podcast, or looking at nature out of your window. Loss Support Counseling Oklahoma City experts suggest creating bookmarks of joy by taking pictures or retaining small souvenirs of happy times to look back upon during tough times.' },
 
-      { type: 'figure', image: '/Training/Depression-Relief.webp', alt: 'Depression Relief' },
+      { type: 'figure', image: '/Training/Depression-Relief.webp', alt: 'Person experiencing relief after depression counseling' },
 
       { type: 'h2', text: 'Taking the First Step to Throw Away Depression' },
       { type: 'p', html: 'If depression is affecting your relationship, remember that seeking help demonstrates strength, not weakness. Through <a href="/adult-counseling-oklahoma-city/"><strong>Individual Counseling OKC</strong></a> or approaches like <a href="/marriage-counseling-oklahoma-city/"><strong>Relationship Counseling Services Oklahoma City</strong></a>, you can cure any anxiety and depression.' },
@@ -3106,7 +3106,7 @@ export const blogContent = {
       { type: 'h3', text: 'Repeating Unhealthy Patterns' },
       { type: 'p', text: "One of the most painful effects of intergenerational trauma is the tendency to recreate familiar dynamics. Adults who grew up with chaos or emotional abuse may unconsciously gravitate toward partners who treat them the same way. The familiarity feels like comfort, even when it's harmful. Breaking this cycle requires awareness and, often, professional support through trauma therapy." },
 
-      { type: 'figure', image: '/childhood-trauma-afftect-adulthood-daa727.webp', alt: 'Childhood Trauma afftect adulthood' },
+      { type: 'figure', image: '/childhood-trauma-afftect-adulthood-daa727.webp', alt: 'Adult reflecting on how childhood trauma affects adulthood' },
 
       { type: 'h2', text: 'The Connection Between Childhood Trauma and Mental Health' },
       { type: 'p', text: 'Childhood trauma doesn\'t just affect relationships. It impacts overall mental health in ways that ripple outward into every area of life. Research consistently shows that people with higher ACE scores are at greater risk for depression, anxiety, PTSD, substance use disorders, and chronic health conditions.' },
@@ -3194,7 +3194,7 @@ export const blogContent = {
       { type: 'p', text: 'Stress and unresolved emotional tension often show up in the body. Frequent headaches, stomach problems, muscle tension, or changes in appetite can all be connected to mental health. If your doctor has ruled out a physical cause, it may be worth exploring the emotional side with a counselor.' },
       { type: 'p', text: 'Open Arms Initiative takes a whole-person approach, recognizing that mental and physical health are deeply connected.' },
 
-      { type: 'figure', image: '/can-counseling-help-bd8920.webp', alt: 'Can counseling help' },
+      { type: 'figure', image: '/can-counseling-help-bd8920.webp', alt: 'Person considering whether counseling can help with their concerns' },
 
       { type: 'h2', text: "How Does Counseling Help When You Can't Name the Problem?" },
       { type: 'p', text: "Counseling helps by giving you a structured, safe space to slow down and pay attention to what's actually going on inside you. A skilled counselor uses conversation, reflection, and evidence-based counseling techniques to help you uncover patterns you might not see on your own." },
@@ -3265,7 +3265,7 @@ export const blogContent = {
       { type: 'p', text: 'Every couple disagrees. But if you find yourselves having the same fight over and over without resolution, there is likely a deeper issue beneath the surface that neither of you has been able to address on your own.' },
       { type: 'p', text: 'A trained relationship therapist can help you identify the root cause of recurring conflicts and guide you toward couples conflict resolution strategies that actually stick.' },
 
-      { type: 'figure', image: '/marriage-therapy-18a25c.webp', alt: 'marriage Therapy' },
+      { type: 'figure', image: '/marriage-therapy-18a25c.webp', alt: 'Couple in a marriage therapy session' },
 
       { type: 'h2', text: '3. Trust Has Been Damaged' },
       { type: 'p', text: 'Whether it involves infidelity, financial dishonesty, or broken promises, a breach of trust can feel impossible to move past without outside help. The pain is real, and so is the resentment that often follows.' },
@@ -3455,7 +3455,7 @@ export const blogContent = {
       { type: 'p', text: "For families dealing with a loved one's addiction or self-destructive patterns, the urge to intervene, rescue, and fix is overwhelming. But enabling behavior often delays real change. Letting someone experience the natural consequences of their choices is not cruelty. It is often the most loving thing you can do." },
       { type: 'p', text: 'Open Arms Initiative offers family support services that help loved ones navigate this painful but necessary shift. Learning to let people make their own choices while maintaining your own well-being is one of the hardest skills to develop, and one of the most rewarding.' },
 
-      { type: 'figure', image: '/let-them-theory-bb3e63.jpg', alt: 'Let Them Theory' },
+      { type: 'figure', image: '/let-them-theory-bb3e63.jpg', alt: 'Therapist discussing the Let Them Theory in a counseling session' },
 
       { type: 'h2', text: "When the Let Them Theory Doesn't Work" },
       { type: 'p', text: 'Here is where the conversation gets more complex. The Let Them Theory is not a universal solution, and applying it carelessly can cause real harm. As therapists, the team at Open Arms Initiative sees several patterns where this mindset backfires.' },
