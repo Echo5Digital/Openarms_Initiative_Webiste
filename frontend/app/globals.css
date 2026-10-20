@@ -760,7 +760,7 @@ h1, h2, h3 {
   position: absolute;
   z-index: -3;
   inset: 0;
-  background: url('/web banner 2 copy (2).jpg') center center / cover no-repeat;
+  background: url('/web banner 2 copy (2).webp') center center / cover no-repeat;
 }
 
 .reference-hero-overlay {
@@ -2424,7 +2424,7 @@ footer a:hover {
   }
   .home-hero-video .hero-banner-bg {
     display: block;
-    background-image: url('/Training/weqwwqe.png');
+    background-image: url('/Training/weqwwqe.webp');
   }
   .reference-hero-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.55) 55%, rgba(255, 255, 255, 0.3) 100%);
@@ -7633,7 +7633,7 @@ footer a:hover {
 .oa-contact-hero-inner .fs-hero-copy{align-items:flex-start;max-width:600px}
 .oa-contact-hero-overlay{display:none}
 @media(max-width:900px){
-  .oa-contact-page .fs-hero{background:url('/Training/weqwwqe.png') center/cover no-repeat}
+  .oa-contact-page .fs-hero{background:url('/Training/weqwwqe.webp') center/cover no-repeat}
   .oa-contact-hero-overlay{display:block;position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.75) 0%,rgba(255,255,255,.55) 55%,rgba(255,255,255,.3) 100%)}
 }
 @media(max-width:520px){
@@ -7748,7 +7748,7 @@ footer a:hover {
 .oa-about-hero-copy .fs-kicker{align-self:flex-start}
 @media(max-width:900px){.oa-about-hero-copy{max-width:100%}}
 @media(max-width:640px){
-  .oa-about-hero{background:url('/Training/weqwwqe.png') center/cover no-repeat}
+  .oa-about-hero{background:url('/Training/weqwwqe.webp') center/cover no-repeat}
   .oa-about-hero-overlay{display:block;position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.75) 0%,rgba(255,255,255,.55) 55%,rgba(255,255,255,.3) 100%)}
 }
 
