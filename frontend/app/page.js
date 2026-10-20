@@ -138,6 +138,7 @@ const SCHEMA_HOME = {
 export default function Page() {
   return (
     <>
+      <link rel="preload" as="image" href="/Training/weqwwqe.webp" fetchPriority="high" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_HOME) }} />
       <HomeClient />
     </>
