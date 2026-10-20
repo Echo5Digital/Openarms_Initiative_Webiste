@@ -143,7 +143,7 @@ export default function FamilySupportPage() { return <main className="fs-page te
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Family-Centered', 'Compassionate Guidance', 'Community Focused', 'Practical Support'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
 
   <section className="fs-section"><div className="fs-container"><div className="fs-alone reveal reveal-from-bottom">
-    <span className="fs-alone-badge"><img src="/ng.png" alt="" /></span>
+    <span className="fs-alone-badge"><img src="/ng.png" alt="Open hands holding a heart icon" /></span>
     <i className="fs-alone-divider" />
     <h2>You Shouldn&rsquo;t Have to Figure Everything Out Alone</h2>
     <i className="fs-alone-leaf"><span className="fs-alone-leaf-dot" /></i>

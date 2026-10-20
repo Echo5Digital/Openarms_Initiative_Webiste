@@ -1,5 +1,48 @@
 export const blogPosts = [
   {
+    "slug": "healing-shouldn-t-stop-making-trauma-informed-counseling-and-community-support-accessible-to-every-family",
+    "title": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family",
+    "metaTitle": "Affordable Trauma-Informed Counseling & Family Support",
+    "date": "October 19, 2026",
+    "category": "blog",
+    "excerpt": "Learn how Open Arms Initiative helps families access affordable counseling and equips churches and schools with trauma-informed training.",
+    "image": "/Training/banner trauma 1 copy.jpg",
+    "heroImage": "/Training/african-american-doctor-surgeon-sharing-his-ptsd-issues-with-psychiatrist.webp",
+    "heroPosition": "50% 17%",
+    "heroPositionMobile": "72% 50%",
+    "heroOverlay": 0.45,
+    "alt": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family"
+  },
+  {
+    "slug": "breaking-generational-trauma-how-healing-yourself-can-transform-your-parenting",
+    "title": "Breaking Generational Trauma: How Healing Yourself Can Transform Your Parenting",
+    "metaTitle": "Breaking Generational Trauma: Healing Starts With Parents",
+    "date": "October 15, 2026",
+    "category": "blog",
+    "excerpt": "Explore how childhood wounds influence parenting and how emotional healing, faith, and self-awareness can help break generational trauma.",
+    "image": "/Training/openarms_youtube_banner_optimized.jpg",
+    "heroImage": "/Training/leading-through-weight-wide.jpg",
+    "alt": "Breaking Generational Trauma: How Healing Yourself Can Transform Your Parenting"
+  },
+  {
+    "slug": "how-therapy-helps-heal-emotional-wounds-understanding-the-path-to-healing",
+    "title": "How Therapy Helps Heal Emotional Wounds: Understanding the Path to Healing",
+    "date": "October 12, 2026",
+    "category": "blog",
+    "excerpt": "Discover how therapy helps with healing emotional wounds. Open Arms Initiative offers proven approaches for emotional trauma recovery and lasting resilience.",
+    "image": "/how-therapy-helps-heal-emotional-wounds-understanding-the-path-to-healing/featured.jpg",
+    "alt": "How Therapy Helps Heal Emotional Wounds: Understanding the Path to Healing"
+  },
+  {
+    "slug": "why-do-newly-married-couples-struggle-with-adjustments-common-challenges-and-how-to-cope",
+    "title": "Why Do Newly Married Couples Struggle With Adjustments? Common Challenges and How to Cope",
+    "date": "October 6, 2026",
+    "category": "blog",
+    "excerpt": "Struggling with newly married couple adjustment? Discover common newlywed challenges like finances, communication, and boundaries, plus practical coping strategies.",
+    "image": "/why-do-newly-married-couples-struggle-with-adjustments-common-challenges-and-how-to-cope/featured.jpg",
+    "alt": "Why Do Newly Married Couples Struggle With Adjustments? Common Challenges and How to Cope"
+  },
+  {
     "slug": "how-comparing-children-can-affect-their-mental-and-emotional-health",
     "title": "How Comparing Children Can Affect Their Mental and Emotional Health",
     "date": "September 23, 2026",

@@ -62,7 +62,7 @@ const beliefs = [
 
 const kinds = [
   ['Counseling & Therapy', 'Compassionate counseling for adults, children, adolescents, couples, and families navigating emotional, relational, and life challenges.', 'Explore Counseling Services', '/adult-counseling-oklahoma-city/'],
-  ['Foster Care & Adoption Support', 'Training, counseling, guidance, and ongoing support for foster and adoptive families.', 'Explore Foster Family Support', '/foster-care/'],
+  ['Foster Care & Adoption Support', 'Training, counseling, guidance, and ongoing support for foster and adoptive families.', 'Explore Foster Family Support', '/foster-care-support-oklahoma-city/'],
   ['Family & Parenting Support', 'Education, resources, parenting support, and family-focused guidance designed to strengthen relationships and caregiver confidence.', 'Explore Family Support', '/family-support-services-oklahoma-city/'],
   ['Pro Bono Counseling', 'Counseling opportunities designed to reduce financial barriers for eligible individuals and families, subject to program requirements and availability.', 'Explore Pro Bono Counseling', '/pro-bono-counseling-okc/'],
   ['Community Education & Outreach', 'Educational initiatives that help individuals, families, professionals, and community groups better understand mental health, trauma, relationships, and supportive care.', 'Explore Training & Workshops', '/parenting-classes-okc/'],
@@ -280,7 +280,7 @@ export default function AboutClient() {
         <h2>&ldquo;People may come to Open Arms for different reasons. What they should find here is the same: compassion, respect, and somewhere to begin.&rdquo;</h2>
         <Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link>
       </div>
-        <img src="/business-team-joining-hands-teamwork-concept-100kb.jpg" alt="Open Arms Initiative team supporting the community together" />
+        <img src="/business-team-joining-hands-teamwork-concept-100kb.jpg" alt="Open Arms Initiative team supporting the community ALL together"/>
         <aside>You may be looking for a counselor.<br /><br />You may need support for your child.<br /><br />You may be opening your home to a foster child.<br /><br />You may be trying to strengthen your family.<br /><br />Or you may simply be trying to figure out what comes next.<br /><br /><strong>Whatever brought you here, you don&apos;t have to have everything figured out before you reach out.</strong></aside>
       </div></section>
 

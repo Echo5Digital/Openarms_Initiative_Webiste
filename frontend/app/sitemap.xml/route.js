@@ -10,6 +10,8 @@ const staticRoutes = [
   { path: '/careers', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/video-gallery', priority: 0.5, changeFrequency: 'monthly' },
+  { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms-of-service', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/insurance-payment', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blogs', priority: 0.7, changeFrequency: 'weekly' },
 
@@ -20,7 +22,7 @@ const staticRoutes = [
   { path: '/family-therapy-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/grief-counseling-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/depression-anxiety-counseling-oklahoma', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/foster-care', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/foster-care-support-oklahoma-city/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/family-support-services-oklahoma-city', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/parenting-classes-okc', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/local-referrals', priority: 0.7, changeFrequency: 'monthly' },

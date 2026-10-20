@@ -46,7 +46,7 @@ export default function TestimonialsClient() {
       <section className="testimonials-section-v2 testimonials-section-v2-top">
         <div className="testimonials-container">
           <div className="testimonials-heading reveal reveal-from-bottom">
-            <h2>Hear from our clients</h2>
+            <h1>Hear from our clients</h1>
             <p>Our clients love working with us, just read what they have to say!</p>
           </div>
 
@@ -70,9 +70,9 @@ export default function TestimonialsClient() {
                   <img src="/Training/icon.svg" alt="Google" className="google-review-g-icon" />
                 </div>
 
-                <div className="google-review-stars" aria-label="5 out of 5 stars">
+                <div className="google-review-stars" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, starIdx) => (
-                    <img key={starIdx} src="/Training/f.svg" alt="" className="google-review-star" />
+                    <img key={starIdx} src="/Training/f.svg" alt="5-star rating" className="google-review-star" />
                   ))}
                 </div>
 

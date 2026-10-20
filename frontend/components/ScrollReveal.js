@@ -12,7 +12,9 @@ export default function ScrollReveal() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          // Also reveal anything already scrolled past (e.g. after a reload
+          // mid-page), so scrolling back up never shows blank gaps.
+          if (entry.isIntersecting || entry.boundingClientRect.bottom < 0) {
             entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           }

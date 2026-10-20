@@ -64,7 +64,7 @@ const beyondCounseling = [
   {
     title: 'Foster Care & Adoption Support',
     text: 'Training, guidance, counseling, and ongoing support for foster and adoptive families navigating the realities of caring for children and building strong family connections.',
-    href: '/foster-care',
+    href: '/foster-care-support-oklahoma-city/',
   },
   {
     title: 'Parenting Support & Classes',
@@ -183,13 +183,9 @@ export default function LocationClient() {
               Connect With Open Arms
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a className="reference-hero-button-secondary" href="/services">
-              Explore Our Services
-            </a>
           </div>
           <div className="hero-mobile-cta">
             <Link href="/contact" className="hero-mobile-cta-btn">Connect With Open Arms</Link>
-            <Link href="/services" className="hero-mobile-cta-btn secondary">Explore Our Services</Link>
           </div>
         </div>
       </section>

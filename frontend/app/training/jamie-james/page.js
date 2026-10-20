@@ -170,7 +170,7 @@ export default function JamieJamesPage() {
     {
       title: 'Foster Care, Adoption & Child Welfare',
       desc: 'Specialized training for agencies, foster parents, and child welfare professionals rooted in clinical and lived experience.',
-      href: '/foster-care',
+      href: '/foster-care-support-oklahoma-city/',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
     },
     {
@@ -520,7 +520,7 @@ That's the perspective she brings into every training, workshop, and speaking en
               <div className="reviews-rating">
                 <span className="reviews-stars" aria-hidden="true">★★★★★</span>
                 <span className="reviews-rating-label">
-                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" loading="lazy" />
+                  <img src="/icons8-google-logo-48.png" alt="Google logo" className="reviews-google-icon" loading="lazy" />
                   Google Reviews
                 </span>
               </div>
@@ -560,7 +560,7 @@ That's the perspective she brings into every training, workshop, and speaking en
                         </div>
                         <div className="review-stars" aria-hidden="true">
                           {Array.from({ length: 5 }).map((_, i) => (
-                            <img src="/Training/f.svg" alt="" key={i} loading="lazy" />
+                            <img src="/Training/f.svg" alt="5-star rating" key={i} loading="lazy" />
                           ))}
                         </div>
                         <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
