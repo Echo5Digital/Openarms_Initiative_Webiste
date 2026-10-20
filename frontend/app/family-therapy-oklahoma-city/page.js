@@ -125,7 +125,7 @@ const SCHEMA_FAMILY_THERAPY = {
     {
       '@type': 'FAQPage',
       '@id': 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city#faq',
-      mainEntity: faqs.map(([question, answer]) => ({
+      mainEntity: faqs.map(([question, answer]) = alt="Lori Baker, LMFT-S, Therapist providing child and Adolescent counseling in Oklahoma City" > ({
         '@type': 'Question',
         name: question,
         acceptedAnswer: { '@type': 'Answer', text: answer },
