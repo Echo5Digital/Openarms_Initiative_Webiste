@@ -4,38 +4,73 @@ import ProBonoRequestForm from '@/components/ProBonoRequestForm';
 
 export const metadata = { title: 'Pro Bono Counseling OKC | Open Arms Initiative', description: 'Explore pro bono counseling in OKC through Open Arms Initiative. Learn about available no-fee counseling and community support for individuals and families.', alternates: { canonical: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_PRO_BONO = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Pro Bono Counseling', item: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Pro Bono Counseling',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Pro bono counseling in Oklahoma City provided as part of Open Arms Initiative’s nonprofit mission to reduce financial barriers to mental health support.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'What does pro bono counseling mean?', acceptedAnswer: { '@type': 'Answer', text: 'Pro bono counseling generally refers to professional counseling services provided without the standard counseling fee for people who meet applicable program requirements.' } },
-    { '@type': 'Question', name: 'Does Open Arms Initiative offer pro bono counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Pro Bono Counseling in OKC as part of its commitment to improving access to mental health support. Availability and eligibility may vary, so contact Open Arms for current program information.' } },
-    { '@type': 'Question', name: 'Is pro bono counseling completely free?', acceptedAnswer: { '@type': 'Answer', text: 'Pro bono generally means that the standard professional counseling fee is waived. Open Arms Initiative can explain the specific terms of its current program during the inquiry or intake process.' } },
-    { '@type': 'Question', name: 'Who qualifies for pro bono counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Eligibility can depend on Open Arms Initiative’s current program requirements, available providers, capacity, and other applicable considerations. Contact the organization directly for current eligibility information.' } },
-    { '@type': 'Question', name: 'Is pro bono counseling confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Counseling services are generally confidential subject to applicable legal, ethical, and safety-related exceptions. Your provider can explain confidentiality and its limits before or during the counseling process.' } },
-    { '@type': 'Question', name: 'What happens if there are no pro bono appointments available?', acceptedAnswer: { '@type': 'Answer', text: 'Availability may change based on program capacity and provider schedules. Open Arms Initiative can explain current availability and, when appropriate and possible, discuss other relevant support options or community resources.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#webpage',
+      url: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc',
+      name: 'Pro Bono Counseling OKC | Open Arms Initiative',
+      description: 'Explore pro bono counseling in OKC through Open Arms Initiative. Learn about available no-fee counseling and community support for individuals and families.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Pro Bono Counseling', item: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#service',
+      serviceType: 'Pro Bono Counseling',
+      name: 'Pro Bono Counseling',
+      url: 'https://www.openarmsinitiative.com/pro-bono-counseling-okc',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Pro bono counseling in Oklahoma City provided as part of Open Arms Initiative’s nonprofit mission to reduce financial barriers to mental health support.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/pro-bono-counseling-okc#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'What does pro bono counseling mean?', acceptedAnswer: { '@type': 'Answer', text: 'Pro bono counseling generally refers to professional counseling services provided without the standard counseling fee for people who meet applicable program requirements.' } },
+        { '@type': 'Question', name: 'Does Open Arms Initiative offer pro bono counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Pro Bono Counseling in OKC as part of its commitment to improving access to mental health support. Availability and eligibility may vary, so contact Open Arms for current program information.' } },
+        { '@type': 'Question', name: 'Is pro bono counseling completely free?', acceptedAnswer: { '@type': 'Answer', text: 'Pro bono generally means that the standard professional counseling fee is waived. Open Arms Initiative can explain the specific terms of its current program during the inquiry or intake process.' } },
+        { '@type': 'Question', name: 'Who qualifies for pro bono counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Eligibility can depend on Open Arms Initiative’s current program requirements, available providers, capacity, and other applicable considerations. Contact the organization directly for current eligibility information.' } },
+        { '@type': 'Question', name: 'Is pro bono counseling confidential?', acceptedAnswer: { '@type': 'Answer', text: 'Counseling services are generally confidential subject to applicable legal, ethical, and safety-related exceptions. Your provider can explain confidentiality and its limits before or during the counseling process.' } },
+        { '@type': 'Question', name: 'What happens if there are no pro bono appointments available?', acceptedAnswer: { '@type': 'Answer', text: 'Availability may change based on program capacity and provider schedules. Open Arms Initiative can explain current availability and, when appropriate and possible, discuss other relevant support options or community resources.' } },
+      ],
+    },
   ],
 };
 
@@ -130,9 +165,7 @@ const teamMembers = [
 ];
 
 export default function ProBonoCounselingPage() { return <main className="fs-page pro-bono-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRO_BONO) }} />
   <ScrollReveal />
 
   <section className="fs-hero"><div className="fs-hero-split-inner">
