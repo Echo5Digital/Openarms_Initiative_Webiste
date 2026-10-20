@@ -4,38 +4,73 @@ import MarriageCounselingRequestForm from '@/components/MarriageCounselingReques
 
 export const metadata = { title: 'Marriage Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate marriage counseling in Oklahoma City. Open Arms Initiative helps couples improve communication, navigate conflict, and rebuild connection.', alternates: { canonical: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_MARRIAGE_COUNSELING = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Marriage & Couples Therapy', item: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Marriage & Couples Therapy',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Compassionate marriage and couples counseling in Oklahoma City, helping partners improve communication, navigate conflict, rebuild trust, and reconnect.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How do we know if we need couples counseling?', acceptedAnswer: { '@type': 'Answer', text: 'You don’t need to wait until your relationship reaches a breaking point. Couples may consider counseling when communication has become difficult, the same conflicts keep returning, emotional distance is growing, trust has been affected, or they want professional support navigating a major transition.' } },
-    { '@type': 'Question', name: 'What happens during marriage counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Your therapist will learn about your relationship, concerns, communication patterns, and goals. Counseling provides a structured environment where both partners can discuss difficult issues, understand each other’s perspectives, and work toward healthier ways of communicating and relating.' } },
-    { '@type': 'Question', name: 'Will the therapist take one person’s side?', acceptedAnswer: { '@type': 'Answer', text: 'Couples counseling is not intended to determine a winner or assign blame. The therapist’s role is to support the therapeutic process and help both partners explore the patterns, concerns, and experiences affecting the relationship.' } },
-    { '@type': 'Question', name: 'Can couples therapy help us communicate better?', acceptedAnswer: { '@type': 'Answer', text: 'Improving communication is a common focus of couples therapy. Counseling can help partners recognize communication patterns, express needs more clearly, listen more effectively, and approach disagreements in healthier ways.' } },
-    { '@type': 'Question', name: 'Do you offer couples therapy in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Couples Therapy in OKC for partners seeking support with communication, recurring conflict, emotional distance, trust concerns, relationship transitions, and other challenges.' } },
-    { '@type': 'Question', name: 'Should we consider counseling even if we aren’t married?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Couples counseling can be relevant to committed partners regardless of marital status. Your therapist can discuss your concerns and determine whether the service is appropriate for your circumstances.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city',
+      name: 'Marriage Counseling Oklahoma City | Open Arms Initiative',
+      description: 'Find compassionate marriage counseling in Oklahoma City. Open Arms Initiative helps couples improve communication, navigate conflict, and rebuild connection.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Marriage & Couples Therapy', item: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#service',
+      serviceType: 'Marriage & Couples Therapy',
+      name: 'Marriage & Couples Counseling',
+      url: 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Compassionate marriage and couples counseling in Oklahoma City, helping partners improve communication, navigate conflict, rebuild trust, and reconnect.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/marriage-counseling-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do we know if we need couples counseling?', acceptedAnswer: { '@type': 'Answer', text: 'You don’t need to wait until your relationship reaches a breaking point. Couples may consider counseling when communication has become difficult, the same conflicts keep returning, emotional distance is growing, trust has been affected, or they want professional support navigating a major transition.' } },
+        { '@type': 'Question', name: 'What happens during marriage counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Your therapist will learn about your relationship, concerns, communication patterns, and goals. Counseling provides a structured environment where both partners can discuss difficult issues, understand each other’s perspectives, and work toward healthier ways of communicating and relating.' } },
+        { '@type': 'Question', name: 'Will the therapist take one person’s side?', acceptedAnswer: { '@type': 'Answer', text: 'Couples counseling is not intended to determine a winner or assign blame. The therapist’s role is to support the therapeutic process and help both partners explore the patterns, concerns, and experiences affecting the relationship.' } },
+        { '@type': 'Question', name: 'Can couples therapy help us communicate better?', acceptedAnswer: { '@type': 'Answer', text: 'Improving communication is a common focus of couples therapy. Counseling can help partners recognize communication patterns, express needs more clearly, listen more effectively, and approach disagreements in healthier ways.' } },
+        { '@type': 'Question', name: 'Do you offer couples therapy in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Couples Therapy in OKC for partners seeking support with communication, recurring conflict, emotional distance, trust concerns, relationship transitions, and other challenges.' } },
+        { '@type': 'Question', name: 'Should we consider counseling even if we aren’t married?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Couples counseling can be relevant to committed partners regardless of marital status. Your therapist can discuss your concerns and determine whether the service is appropriate for your circumstances.' } },
+      ],
+    },
   ],
 };
 
@@ -81,9 +116,7 @@ const challenges = [['Communication Breakdowns','You talk, but neither person fe
 const faqs = [['How do we know if we need couples counseling?', 'You don’t need to wait until your relationship reaches a breaking point. Couples may consider counseling when communication has become difficult, the same conflicts keep returning, emotional distance is growing, trust has been affected, or they want professional support navigating a major transition.'],['What happens during marriage counseling?', 'Your therapist will learn about your relationship, concerns, communication patterns, and goals. Counseling provides a structured environment where both partners can discuss difficult issues, understand each other’s perspectives, and work toward healthier ways of communicating and relating.'],['Will the therapist take one person’s side?', 'Couples counseling is not intended to determine a winner or assign blame. The therapist’s role is to support the therapeutic process and help both partners explore the patterns, concerns, and experiences affecting the relationship.'],['Can couples therapy help us communicate better?', 'Improving communication is a common focus of couples therapy. Counseling can help partners recognize communication patterns, express needs more clearly, listen more effectively, and approach disagreements in healthier ways.'],['Do you offer couples therapy in Oklahoma City?', <>Yes. Open Arms Initiative provides <strong>Couples Therapy in OKC</strong> for partners seeking support with communication, recurring conflict, emotional distance, trust concerns, relationship transitions, and other challenges.</>],['Should we consider counseling even if we aren’t married?', 'Yes. Couples counseling can be relevant to committed partners regardless of marital status. Your therapist can discuss your concerns and determine whether the service is appropriate for your circumstances.']];
 
 export default function MarriageCounselingPage() { return <main className="marriage-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_MARRIAGE_COUNSELING) }} />
   <ScrollReveal />
   <section className="marriage-hero-split"><div className="marriage-hero-split-inner"><div className="marriage-hero-split-copy reveal reveal-from-left"><p className="marriage-kicker">RECONNECT. UNDERSTAND. GROW TOGETHER.</p><h1>Marriage Counseling<br />in Oklahoma City</h1><i /><p className="marriage-lead">When You Still Care, But Connecting Feels Hard</p><p>You may love each other deeply and still feel distant. Conversations may turn into arguments. Silence may have replaced connection. Trust may feel fragile, or you may simply wonder how two people who once felt so close became so disconnected.</p><p>You don&apos;t have to know how to fix everything before asking for help.</p><p>At Open Arms Initiative, we provide compassionate <strong>Marriage Counseling in Oklahoma City</strong> to help couples understand what is happening beneath the conflict, communicate more openly, and find a healthier way forward, together.</p><div className="marriage-actions"><Link className="marriage-btn marriage-req-btn-primary" href="/contact">Request an Appointment</Link><a className="marriage-btn marriage-req-btn-outline" href="#approach">Explore Our Approach</a></div></div><div className="marriage-hero-form-card reveal reveal-from-right"><div className="marriage-hero-form-body"><h3>Request an Appointment</h3><span className="marriage-hero-form-underline" /><p className="marriage-hero-form-sub">Tell us a bit about your relationship and we&rsquo;ll help you find the right support.</p><MarriageCounselingRequestForm /></div><div className="marriage-hero-form-photo"><img src="/sd.jpeg" alt="Couple in marriage counseling" /></div></div></div></section>
   <section className="marriage-trust-section"><div className="marriage-container marriage-trust reveal reveal-from-bottom">{['Compassionate Support','Safe & Confidential','Experienced Therapists','In-Person & Online'].map((x,i)=><div key={x}><b>{trustIcons[i]}</b>{x}</div>)}</div></section>
