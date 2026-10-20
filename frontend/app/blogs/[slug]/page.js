@@ -165,49 +165,66 @@ export default async function BlogPostPage({ params }) {
     ? relatedPosts
     : blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
-  const schemaBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs/` },
-      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
-    ],
-  };
+  // Real FAQ Q&As for this post, if any — derived from the same `faq` blocks
+  // that FaqAccordion renders, so the schema can never drift from what's
+  // actually shown on the page.
+  const faqBlocks = content.blocks.filter((b) => b.type === 'faq' && b.q && b.a);
 
-  const schemaBlogPosting = {
+  const schemaBlogPost = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: `${SITE_URL}${encodeURI(post.image)}`,
-    datePublished: isoDate,
-    dateModified: isoDate,
-    author: {
-      '@type': 'Organization',
-      name: 'Open Arms Initiative',
-      url: SITE_URL,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Open Arms Initiative',
-      url: SITE_URL,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/images/logo-full.png`,
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${postUrl}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs/` },
+          { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+        ],
       },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': postUrl,
-    },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: 'Open Arms Initiative',
+      },
+      {
+        '@type': ['MedicalClinic', 'NGO'],
+        '@id': `${SITE_URL}/#organization`,
+        name: 'Open Arms Initiative',
+        url: `${SITE_URL}/`,
+        logo: { '@type': 'ImageObject', '@id': `${SITE_URL}/#logo`, url: `${SITE_URL}/images/logo-full.png` },
+      },
+      {
+        '@type': 'BlogPosting',
+        '@id': `${postUrl}#article`,
+        headline: post.title,
+        description: post.excerpt,
+        image: `${SITE_URL}${encodeURI(post.image)}`,
+        datePublished: isoDate,
+        dateModified: isoDate,
+        author: { '@id': `${SITE_URL}/#organization` },
+        publisher: { '@id': `${SITE_URL}/#organization` },
+        isPartOf: { '@id': `${SITE_URL}/blogs#blog` },
+        breadcrumb: { '@id': `${postUrl}#breadcrumb` },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+      },
+      ...(faqBlocks.length > 0 ? [{
+        '@type': 'FAQPage',
+        '@id': `${postUrl}#faq`,
+        mainEntity: faqBlocks.map((b) => ({
+          '@type': 'Question',
+          name: b.q,
+          acceptedAnswer: { '@type': 'Answer', text: b.a },
+        })),
+      }] : []),
+    ],
   };
 
   return (
     <main className="blog-post-page">
       {content.scrollReveal && <ScrollReveal />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBlogPosting) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBlogPost) }} />
       {/* Hero — real photo background (from the post's own featured image) +
           the same wave-bottom graphic used elsewhere on the site
           (.jj-hero-wave-section), so a post's hero blends into the article
