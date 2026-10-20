@@ -4,38 +4,73 @@ import ParentingSupportRequestForm from '@/components/ParentingSupportRequestFor
 
 export const metadata = { title: 'Effective Parenting Classes OKC | Open Arms Initiative', description: 'Explore effective parenting classes in OKC with Open Arms Initiative. Build communication, confidence, healthy boundaries, and stronger parent-child connections.', alternates: { canonical: 'https://www.openarmsinitiative.com/parenting-classes-okc' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_PARENTING_CLASSES = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Parenting Classes', item: 'https://www.openarmsinitiative.com/parenting-classes-okc' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Parenting Classes',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Effective parenting classes and parent support training in Oklahoma City, helping parents and caregivers build communication, confidence, and healthy boundaries.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Are parenting classes only for parents who are struggling?', acceptedAnswer: { '@type': 'Answer', text: 'No. Parenting education can benefit caregivers at many stages. Some parents seek support because of a particular challenge, while others want to strengthen communication, understand their child’s development, or build greater confidence.' } },
-    { '@type': 'Question', name: 'What can I learn in a parenting class?', acceptedAnswer: { '@type': 'Answer', text: 'Topics can vary, but parenting education may address communication, behavior, boundaries, emotional awareness, parent-child relationships, family transitions, stress, and other practical parenting concerns.' } },
-    { '@type': 'Question', name: 'Do you offer parenting classes in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides parenting support and educational programming in Oklahoma City. Contact us to learn about currently available classes, workshops, or parent-support opportunities.' } },
-    { '@type': 'Question', name: 'Are parenting classes the same as family therapy?', acceptedAnswer: { '@type': 'Answer', text: 'No. Parenting classes are primarily educational, while family therapy is a clinical service addressing therapeutic concerns and family relationships. Some families may benefit from one or both depending on their circumstances.' } },
-    { '@type': 'Question', name: 'Can parenting support help me communicate better with my teenager?', acceptedAnswer: { '@type': 'Answer', text: 'Parenting education can help caregivers explore communication strategies, boundaries, expectations, and ways to maintain connection as adolescents develop greater independence.' } },
-    { '@type': 'Question', name: 'What if my child needs counseling too?', acceptedAnswer: { '@type': 'Answer', text: 'If your child is experiencing concerns that may benefit from therapeutic support, Open Arms Initiative also provides Child & Adolescent Counseling. Your family can explore the available services to determine an appropriate next step.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#webpage',
+      url: 'https://www.openarmsinitiative.com/parenting-classes-okc',
+      name: 'Effective Parenting Classes OKC | Open Arms Initiative',
+      description: 'Explore effective parenting classes in OKC with Open Arms Initiative. Build communication, confidence, healthy boundaries, and stronger parent-child connections.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Parenting Classes', item: 'https://www.openarmsinitiative.com/parenting-classes-okc' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#service',
+      serviceType: 'Parenting Classes',
+      name: 'Parenting Classes',
+      url: 'https://www.openarmsinitiative.com/parenting-classes-okc',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Effective parenting classes and parent support training in Oklahoma City, helping parents and caregivers build communication, confidence, and healthy boundaries.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/parenting-classes-okc#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'Are parenting classes only for parents who are struggling?', acceptedAnswer: { '@type': 'Answer', text: 'No. Parenting education can benefit caregivers at many stages. Some parents seek support because of a particular challenge, while others want to strengthen communication, understand their child’s development, or build greater confidence.' } },
+        { '@type': 'Question', name: 'What can I learn in a parenting class?', acceptedAnswer: { '@type': 'Answer', text: 'Topics can vary, but parenting education may address communication, behavior, boundaries, emotional awareness, parent-child relationships, family transitions, stress, and other practical parenting concerns.' } },
+        { '@type': 'Question', name: 'Do you offer parenting classes in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides parenting support and educational programming in Oklahoma City. Contact us to learn about currently available classes, workshops, or parent-support opportunities.' } },
+        { '@type': 'Question', name: 'Are parenting classes the same as family therapy?', acceptedAnswer: { '@type': 'Answer', text: 'No. Parenting classes are primarily educational, while family therapy is a clinical service addressing therapeutic concerns and family relationships. Some families may benefit from one or both depending on their circumstances.' } },
+        { '@type': 'Question', name: 'Can parenting support help me communicate better with my teenager?', acceptedAnswer: { '@type': 'Answer', text: 'Parenting education can help caregivers explore communication strategies, boundaries, expectations, and ways to maintain connection as adolescents develop greater independence.' } },
+        { '@type': 'Question', name: 'What if my child needs counseling too?', acceptedAnswer: { '@type': 'Answer', text: 'If your child is experiencing concerns that may benefit from therapeutic support, Open Arms Initiative also provides Child & Adolescent Counseling. Your family can explore the available services to determine an appropriate next step.' } },
+      ],
+    },
   ],
 };
 
@@ -129,9 +164,7 @@ const teamMembers = [
 ];
 
 export default function ParentingClassesPage() { return <main className="fs-page pc-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PARENTING_CLASSES) }} />
   <ScrollReveal />
 
   <section className="fs-hero"><div className="fs-hero-split-inner">
