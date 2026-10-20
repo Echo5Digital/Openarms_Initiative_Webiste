@@ -4,38 +4,73 @@ import FamilySupportRequestForm from '@/components/FamilySupportRequestForm';
 
 export const metadata = { title: 'Family Support Services Oklahoma City | Open Arms', description: 'Find compassionate family support services in Oklahoma City. Open Arms Initiative helps families access guidance, education, resources, and appropriate support.', alternates: { canonical: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_FAMILY_SUPPORT = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Family Support', item: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Family Support Services',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Compassionate family support services in Oklahoma City, including guidance, education, resources, and connections to appropriate care.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'What are family support services?', acceptedAnswer: { '@type': 'Answer', text: 'Family support services can include education, guidance, resources, referrals, and other forms of assistance designed to help families navigate challenges and strengthen family well-being. Available support depends on the organization, program, and family’s circumstances.' } },
-    { '@type': 'Question', name: 'How do I know what type of support my family needs?', acceptedAnswer: { '@type': 'Answer', text: 'You don’t necessarily need to know before reaching out. Start by explaining the challenges your family is experiencing. Open Arms Initiative can help you explore available services and determine what type of support may be appropriate.' } },
-    { '@type': 'Question', name: 'Are family support services the same as family counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. Family counseling is a therapeutic service provided by qualified mental health professionals. Family support can be broader and may include education, resources, guidance, or connections to services. Some families may benefit from both.' } },
-    { '@type': 'Question', name: 'Can you help parents who are struggling?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides family-centered support and educational resources that may help parents and caregivers navigate challenges. The appropriate service depends on your family’s particular needs and circumstances.' } },
-    { '@type': 'Question', name: 'Do you provide family support services in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Family Support Services in Oklahoma City designed to help families access support, education, guidance, and appropriate resources.' } },
-    { '@type': 'Question', name: 'Can you help me find the right service for my child or family?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative can help you explore available services based on the concerns you share. Depending on your circumstances, appropriate options may include family support, counseling, child and adolescent services, education, or connections to other resources.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city',
+      name: 'Family Support Services Oklahoma City | Open Arms',
+      description: 'Find compassionate family support services in Oklahoma City. Open Arms Initiative helps families access guidance, education, resources, and appropriate support.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Family Support', item: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#service',
+      serviceType: 'Family Support Services',
+      name: 'Family Support Services',
+      url: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Compassionate family support services in Oklahoma City, including guidance, education, resources, and connections to appropriate care.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'What are family support services?', acceptedAnswer: { '@type': 'Answer', text: 'Family support services can include education, guidance, resources, referrals, and other forms of assistance designed to help families navigate challenges and strengthen family well-being. Available support depends on the organization, program, and family’s circumstances.' } },
+        { '@type': 'Question', name: 'How do I know what type of support my family needs?', acceptedAnswer: { '@type': 'Answer', text: 'You don’t necessarily need to know before reaching out. Start by explaining the challenges your family is experiencing. Open Arms Initiative can help you explore available services and determine what type of support may be appropriate.' } },
+        { '@type': 'Question', name: 'Are family support services the same as family counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. Family counseling is a therapeutic service provided by qualified mental health professionals. Family support can be broader and may include education, resources, guidance, or connections to services. Some families may benefit from both.' } },
+        { '@type': 'Question', name: 'Can you help parents who are struggling?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides family-centered support and educational resources that may help parents and caregivers navigate challenges. The appropriate service depends on your family’s particular needs and circumstances.' } },
+        { '@type': 'Question', name: 'Do you provide family support services in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Family Support Services in Oklahoma City designed to help families access support, education, guidance, and appropriate resources.' } },
+        { '@type': 'Question', name: 'Can you help me find the right service for my child or family?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative can help you explore available services based on the concerns you share. Depending on your circumstances, appropriate options may include family support, counseling, child and adolescent services, education, or connections to other resources.' } },
+      ],
+    },
   ],
 };
 
@@ -122,9 +157,7 @@ const faqs = [
 ];
 
 export default function FamilySupportPage() { return <main className="fs-page team-boost family-support-page">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAMILY_SUPPORT) }} />
   <ScrollReveal />
 
   <section className="fs-hero"><div className="fs-hero-split-inner">
