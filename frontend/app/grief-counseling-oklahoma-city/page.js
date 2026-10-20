@@ -4,38 +4,73 @@ import GriefCounselingRequestForm from '@/components/GriefCounselingRequestForm'
 
 export const metadata = { title: 'Grief Counseling Oklahoma City | Open Arms Initiative', description: 'Find compassionate grief counseling in Oklahoma City. Open Arms Initiative provides supportive therapy for bereavement, loss, life changes, and healing.', alternates: { canonical: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_GRIEF_COUNSELING = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Grief & Loss Counseling', item: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Grief Counseling',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Compassionate grief counseling in Oklahoma City, providing supportive therapy for bereavement, loss, life changes, and healing.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How do I know if I need grief counseling?', acceptedAnswer: { '@type': 'Answer', text: 'There is no specific level of grief you must reach before seeking counseling. You may consider support if your loss feels difficult to process, you’re struggling with everyday responsibilities or relationships, you feel isolated in your grief, or you simply want a private place to talk about what you’re experiencing.' } },
-    { '@type': 'Question', name: 'Is grief counseling only for someone who has experienced a death?', acceptedAnswer: { '@type': 'Answer', text: 'No. People can experience grief following many kinds of loss, including the end of a relationship, pregnancy loss, estrangement, major life changes, changes in independence, or the loss of an expected future.' } },
-    { '@type': 'Question', name: 'How long does grief last?', acceptedAnswer: { '@type': 'Answer', text: 'There is no universal timeline for grief. Everyone experiences and adjusts to loss differently. Grief can also change over time rather than simply disappearing. Counseling provides support based on your individual experience rather than expecting you to follow a particular schedule.' } },
-    { '@type': 'Question', name: 'What happens during grief counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Grief counseling provides space to talk about your loss and explore the emotions, memories, changes, and concerns connected with it. Your therapist can help you better understand your grief experience and develop ways to navigate difficult emotions and adjustments.' } },
-    { '@type': 'Question', name: 'Do you provide grief counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Grief Counseling in Oklahoma City for people seeking compassionate, professional support while navigating bereavement, significant loss, and major life changes.' } },
-    { '@type': 'Question', name: 'Can I attend grief counseling individually?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Individual grief counseling can provide private, one-on-one support tailored to your experience and needs. You can also learn more about our Individual Counseling services if you’re seeking broader one-on-one therapeutic support.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city',
+      name: 'Grief Counseling Oklahoma City | Open Arms Initiative',
+      description: 'Find compassionate grief counseling in Oklahoma City. Open Arms Initiative provides supportive therapy for bereavement, loss, life changes, and healing.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Grief & Loss Counseling', item: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#service',
+      serviceType: 'Grief Counseling',
+      name: 'Grief & Loss Counseling',
+      url: 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Compassionate grief counseling in Oklahoma City, providing supportive therapy for bereavement, loss, life changes, and healing.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/grief-counseling-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I know if I need grief counseling?', acceptedAnswer: { '@type': 'Answer', text: 'There is no specific level of grief you must reach before seeking counseling. You may consider support if your loss feels difficult to process, you’re struggling with everyday responsibilities or relationships, you feel isolated in your grief, or you simply want a private place to talk about what you’re experiencing.' } },
+        { '@type': 'Question', name: 'Is grief counseling only for someone who has experienced a death?', acceptedAnswer: { '@type': 'Answer', text: 'No. People can experience grief following many kinds of loss, including the end of a relationship, pregnancy loss, estrangement, major life changes, changes in independence, or the loss of an expected future.' } },
+        { '@type': 'Question', name: 'How long does grief last?', acceptedAnswer: { '@type': 'Answer', text: 'There is no universal timeline for grief. Everyone experiences and adjusts to loss differently. Grief can also change over time rather than simply disappearing. Counseling provides support based on your individual experience rather than expecting you to follow a particular schedule.' } },
+        { '@type': 'Question', name: 'What happens during grief counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Grief counseling provides space to talk about your loss and explore the emotions, memories, changes, and concerns connected with it. Your therapist can help you better understand your grief experience and develop ways to navigate difficult emotions and adjustments.' } },
+        { '@type': 'Question', name: 'Do you provide grief counseling in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Grief Counseling in Oklahoma City for people seeking compassionate, professional support while navigating bereavement, significant loss, and major life changes.' } },
+        { '@type': 'Question', name: 'Can I attend grief counseling individually?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Individual grief counseling can provide private, one-on-one support tailored to your experience and needs. You can also learn more about our Individual Counseling services if you’re seeking broader one-on-one therapeutic support.' } },
+      ],
+    },
   ],
 };
 
@@ -112,9 +147,7 @@ const faqs = [
 ];
 
 export default function GriefCounselingPage() { return <main className="grief-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_GRIEF_COUNSELING) }} />
   <ScrollReveal />
   <section className="grief-hero-split"><div className="grief-hero-split-inner"><div className="grief-hero-split-copy reveal reveal-from-left"><p className="grief-kicker">YOU DON&rsquo;T HAVE TO GRIEVE ALONE.</p><h1>Grief Counseling<br />in Oklahoma City</h1><i /><p className="grief-lead">There Is No Right Way or Right Timeline to Grieve</p><p>Loss can change the way everything feels.</p><p>The world keeps moving, but part of you may feel like it has stopped. Some days bring sadness. Others bring anger, confusion, guilt, numbness, or emotions you weren&apos;t expecting at all.</p><p>You don&apos;t have to rush yourself through any of it.</p><p>At Open Arms Initiative, our Grief Counseling in Oklahoma City provides a compassionate space to process loss, understand what you&apos;re experiencing, and find support as you learn to carry what has changed.</p><div className="grief-actions"><Link href="/contact" className="grief-btn grief-req-btn-primary">Request an Appointment</Link><a href="#support" className="grief-btn grief-req-btn-outline">Explore Grief Support</a></div></div><div className="grief-hero-form-card reveal reveal-from-right"><div className="grief-hero-form-body"><h3>Request an Appointment</h3><span className="grief-hero-form-underline" /><p className="grief-hero-form-sub">Tell us a bit about what you&rsquo;re going through and we&rsquo;ll help you find the right support.</p><GriefCounselingRequestForm /></div><div className="grief-hero-form-photo"><img src="/nh8.jpg.jpg" alt="Woman finding a quiet moment while processing grief with her counselor" /></div></div></div></section>
   <section className="grief-trust-section"><div className="grief-container grief-trust">{['Compassionate Support', 'Safe & Confidential', 'Personalized Care', 'In-Person & Online'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
