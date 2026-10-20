@@ -643,8 +643,7 @@ export default function HomePage() {
               <div className="mission-image-wrap reveal reveal-from-right">
                 <img
                   src="/counseling-conversation.jpg"
-                  alt="Open Arms Initiative team supporting families across Oklahoma City"
-                  loading="lazy"
+                  alt="Open Arms Initiative team supporting families across Oklahoma city."loading="lazy"
                 />
               </div>
             </div>
