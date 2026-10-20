@@ -4,38 +4,73 @@ import ChildCounselingRequestForm from '@/components/ChildCounselingRequestForm'
 
 export const metadata = { title: 'Child Counseling Services Oklahoma City | Open Arms', description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.', alternates: { canonical: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city' } };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_CHILD_COUNSELING = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Child & Adolescent Counseling', item: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Child Counseling',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How do I know if my child may benefit from counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Consider speaking with a mental health professional if you’ve noticed persistent changes in your child’s mood, behavior, relationships, school experience, communication, or ability to cope with everyday challenges. You can also seek counseling simply because your child is navigating a difficult transition and could benefit from additional support.' } },
-    { '@type': 'Question', name: 'What happens during child counseling?', acceptedAnswer: { '@type': 'Answer', text: 'The counseling process depends on your child’s age, needs, concerns, and treatment goals. A therapist may use developmentally appropriate conversations, activities, and therapeutic approaches to help your child communicate, explore emotions, and develop healthy coping skills.' } },
-    { '@type': 'Question', name: 'What if my child doesn’t want to talk?', acceptedAnswer: { '@type': 'Answer', text: 'Children and teenagers may need time before they feel comfortable opening up. Therapists work to establish trust and create an environment where young people can engage at an appropriate pace rather than expecting them to immediately discuss difficult experiences.' } },
-    { '@type': 'Question', name: 'Are parents involved in child counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Parent or caregiver involvement can vary based on the child’s age, needs, treatment goals, and confidentiality considerations. Your therapist can explain how you may participate and how you can support your child’s progress outside therapy.' } },
-    { '@type': 'Question', name: 'Do you provide counseling for teenagers in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides counseling support for children and adolescents in Oklahoma City. Therapy can address age-appropriate emotional, relational, family, school, and life-transition concerns based on the young person’s individual needs.' } },
-    { '@type': 'Question', name: 'Can counseling help when our whole family is struggling?', acceptedAnswer: { '@type': 'Answer', text: 'When concerns involve broader family relationships or communication patterns, Family Counseling may also be appropriate. Your provider can help determine which counseling approach best fits your family’s needs.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city',
+      name: 'Child Counseling Services Oklahoma City | Open Arms',
+      description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Child & Adolescent Counseling', item: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#service',
+      serviceType: 'Child Counseling',
+      name: 'Child & Adolescent Counseling',
+      url: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I know if my child may benefit from counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Consider speaking with a mental health professional if you’ve noticed persistent changes in your child’s mood, behavior, relationships, school experience, communication, or ability to cope with everyday challenges. You can also seek counseling simply because your child is navigating a difficult transition and could benefit from additional support.' } },
+        { '@type': 'Question', name: 'What happens during child counseling?', acceptedAnswer: { '@type': 'Answer', text: 'The counseling process depends on your child’s age, needs, concerns, and treatment goals. A therapist may use developmentally appropriate conversations, activities, and therapeutic approaches to help your child communicate, explore emotions, and develop healthy coping skills.' } },
+        { '@type': 'Question', name: 'What if my child doesn’t want to talk?', acceptedAnswer: { '@type': 'Answer', text: 'Children and teenagers may need time before they feel comfortable opening up. Therapists work to establish trust and create an environment where young people can engage at an appropriate pace rather than expecting them to immediately discuss difficult experiences.' } },
+        { '@type': 'Question', name: 'Are parents involved in child counseling?', acceptedAnswer: { '@type': 'Answer', text: 'Parent or caregiver involvement can vary based on the child’s age, needs, treatment goals, and confidentiality considerations. Your therapist can explain how you may participate and how you can support your child’s progress outside therapy.' } },
+        { '@type': 'Question', name: 'Do you provide counseling for teenagers in Oklahoma City?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative provides counseling support for children and adolescents in Oklahoma City. Therapy can address age-appropriate emotional, relational, family, school, and life-transition concerns based on the young person’s individual needs.' } },
+        { '@type': 'Question', name: 'Can counseling help when our whole family is struggling?', acceptedAnswer: { '@type': 'Answer', text: 'When concerns involve broader family relationships or communication patterns, Family Counseling may also be appropriate. Your provider can help determine which counseling approach best fits your family’s needs.' } },
+      ],
+    },
   ],
 };
 
@@ -96,9 +131,7 @@ const faqs = [
 ];
 
 export default function ChildCounselingPage() { return <main className="ca-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_CHILD_COUNSELING) }} />
   <ScrollReveal />
   <section className="ca-hero-split"><div className="ca-hero-split-inner"><div className="ca-hero-split-copy reveal reveal-from-left"><p className="ca-kicker">HELPING YOUNG HEARTS FEEL HEARD.</p><h1>Child Counseling Services<br />in Oklahoma City</h1><i /><p className="ca-lead">When Your Child Is Struggling, You Don&rsquo;t Have to Find the Answers Alone</p><p>You know your child. You notice when their smile changes, when they become quieter than usual, when frustration turns into frequent outbursts, or when school and friendships start to feel harder.</p><p>Sometimes children and teens don&apos;t have the words to explain what they&apos;re feeling. At Open Arms Initiative, our <strong>Child Counseling Services in Oklahoma City</strong> provide a supportive environment where children and adolescents can express themselves, feel understood, develop healthy coping skills, and receive professional support through life&apos;s challenges.</p><div className="ca-actions"><Link href="/contact" className="ca-btn ca-hero-btn-primary">Request an Appointment</Link><a href="#approach" className="ca-btn ca-hero-btn-outline">Explore Child &amp; Teen Counseling</a></div></div><div className="ca-hero-form-card reveal reveal-from-right"><div className="ca-hero-form-body"><h3>Request an Appointment</h3><span className="ca-hero-form-underline" /><p className="ca-hero-form-sub">Tell us a bit about your child and we&rsquo;ll help you find the right support.</p><ChildCounselingRequestForm /></div><div className="ca-hero-form-photo"><img src="/nh6.jpg" alt="Child feeling supported during a counseling session in Oklahoma City."/></div></div></div></section>
   <section className="ca-trust-section"><div className="ca-container ca-trust">{['Compassionate Care', 'Child & Teen Focused', 'Family-Supportive', 'Safe & Confidential'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
