@@ -47,7 +47,12 @@ const SCHEMA_CAREERS = {
       },
       datePosted: '2026-10-20',
       employmentType: ['FULL_TIME', 'PART_TIME'],
-      hiringOrganization: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      hiringOrganization: {
+        '@type': 'Organization',
+        name: 'Open Arms Initiative',
+        sameAs: 'https://www.openarmsinitiative.com/',
+        logo: 'https://www.openarmsinitiative.com/images/logo-full.png',
+      },
       jobLocation: {
         '@type': 'Place',
         address: {
