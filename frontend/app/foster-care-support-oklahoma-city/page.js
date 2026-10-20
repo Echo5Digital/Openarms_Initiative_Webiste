@@ -8,38 +8,73 @@ export const metadata = {
   alternates: { canonical: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/' },
 };
 
-const SCHEMA_BREADCRUMB = {
+const SCHEMA_FOSTER_CARE = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Foster Care Support', item: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/' },
-  ],
-};
-
-const SCHEMA_SERVICE = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Foster Care Support',
-  provider: {
-    '@type': 'Organization',
-    name: 'Open Arms Initiative',
-    url: 'https://www.openarmsinitiative.com/',
-  },
-  areaServed: 'Oklahoma City, OK',
-  description: 'Foster care support in Oklahoma City including foster parent guidance, training, counseling, and support for foster and adoptive families.',
-};
-
-const SCHEMA_FAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'What support does Open Arms provide for foster families?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative currently describes its foster support as including comprehensive training, 24/7 guidance, child placement support, and trauma-focused counseling for foster families.' } },
-    { '@type': 'Question', name: 'Does Open Arms provide counseling for children in foster care?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms has a dedicated Foster Care & Adoption Counseling service and also provides Child & Adolescent Counseling using trauma-informed approaches.' } },
-    { '@type': 'Question', name: 'Does Open Arms support foster parents too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms states that it provides ongoing support for foster parents, including foster parent training and 24/7 guidance.' } },
-    { '@type': 'Question', name: 'Can adoptive families receive support?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms’ existing Foster Care & Adoption Counseling program specifically supports both foster and adoptive families through the emotional complexities associated with their journeys.' } },
-    { '@type': 'Question', name: 'What if our entire family is struggling with the transition?', acceptedAnswer: { '@type': 'Answer', text: 'Depending on your family’s needs, Foster Care & Adoption Counseling, Family Counseling, Child & Adolescent Counseling, or broader Family Support Services may be appropriate.' } },
-    { '@type': 'Question', name: 'How do we get started?', acceptedAnswer: { '@type': 'Answer', text: 'Contact Open Arms Initiative and explain what kind of foster, adoption, counseling, or family support you’re looking for. The organization can then guide you toward the appropriate available service.' } },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#webpage',
+      url: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/',
+      name: 'Foster Care Support Oklahoma City | Open Arms Initiative',
+      description: 'Find foster care support in Oklahoma City with Open Arms Initiative, including foster parent guidance, training, counseling, and support for foster and adoptive families.',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      mainEntity: { '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#service' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Foster Care Support', item: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+    {
+      '@type': ['MedicalClinic', 'NGO'],
+      '@id': 'https://www.openarmsinitiative.com/#organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+      telephone: '+1-405-920-8934',
+      image: { '@id': 'https://www.openarmsinitiative.com/#logo' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1101 Sovereign Row, Unit A',
+        addressLocality: 'Oklahoma City',
+        addressRegion: 'OK',
+        postalCode: '73108',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#service',
+      serviceType: 'Foster Care Support',
+      name: 'Foster Care & Adoption Support',
+      url: 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city/',
+      provider: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Oklahoma City', containedInPlace: { '@type': 'State', name: 'Oklahoma' } },
+      description: 'Foster care support in Oklahoma City including foster parent guidance, training, counseling, and support for foster and adoptive families.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.openarmsinitiative.com/foster-care-support-oklahoma-city#faq',
+      mainEntity: [
+        { '@type': 'Question', name: 'What support does Open Arms provide for foster families?', acceptedAnswer: { '@type': 'Answer', text: 'Open Arms Initiative currently describes its foster support as including comprehensive training, 24/7 guidance, child placement support, and trauma-focused counseling for foster families.' } },
+        { '@type': 'Question', name: 'Does Open Arms provide counseling for children in foster care?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms has a dedicated Foster Care & Adoption Counseling service and also provides Child & Adolescent Counseling using trauma-informed approaches.' } },
+        { '@type': 'Question', name: 'Does Open Arms support foster parents too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms states that it provides ongoing support for foster parents, including foster parent training and 24/7 guidance.' } },
+        { '@type': 'Question', name: 'Can adoptive families receive support?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms’ existing Foster Care & Adoption Counseling program specifically supports both foster and adoptive families through the emotional complexities associated with their journeys.' } },
+        { '@type': 'Question', name: 'What if our entire family is struggling with the transition?', acceptedAnswer: { '@type': 'Answer', text: 'Depending on your family’s needs, Foster Care & Adoption Counseling, Family Counseling, Child & Adolescent Counseling, or broader Family Support Services may be appropriate.' } },
+        { '@type': 'Question', name: 'How do we get started?', acceptedAnswer: { '@type': 'Answer', text: 'Contact Open Arms Initiative and explain what kind of foster, adoption, counseling, or family support you’re looking for. The organization can then guide you toward the appropriate available service.' } },
+      ],
+    },
   ],
 };
 
@@ -127,9 +162,7 @@ const faqs = [
 ];
 
 export default function FosterCarePage() { return <main className="grief-page foster-care-page team-boost">
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FOSTER_CARE) }} />
   <ScrollReveal />
 
   <section className="marriage-hero-split grief-hero-split"><div className="marriage-hero-split-inner"><div className="marriage-hero-split-copy reveal reveal-from-left"><p className="marriage-kicker">SUPPORT FOR THE JOURNEY. CARE FOR THE WHOLE FAMILY.</p><h1>Foster Care Support<br />in Oklahoma City</h1><i /><p className="marriage-lead">Opening Your Home Takes Heart. You Don&rsquo;t Have to Navigate Everything That Comes Next Alone.</p><p>Foster care can bring moments of connection, growth, uncertainty, joy, and challenge, sometimes all at once.</p><p>You may be trying to understand a child&apos;s behavior while helping them feel safe. You may be navigating new routines, appointments, transitions, relationships, or questions you never expected to face.</p><p>At Open Arms Initiative, we support foster and adoptive families with compassionate guidance, training, counseling, and ongoing support designed to help children and caregivers move forward together.</p><div className="marriage-actions"><Link className="marriage-btn marriage-req-btn-primary" href="/contact">Connect With Foster Care Support</Link><a className="marriage-btn marriage-req-btn-outline" href="#carry">Explore Our Approach</a></div></div><div className="marriage-hero-form-card reveal reveal-from-right"><div className="marriage-hero-form-body"><h3>Request an Appointment</h3><span className="marriage-hero-form-underline" /><p className="marriage-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><FosterCareRequestForm /></div><div className="marriage-hero-form-photo"><img src="/fs.jpg" alt="Foster family spending time together outdoors in Oklahoma City" /></div></div></div></section>
