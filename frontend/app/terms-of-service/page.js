@@ -120,13 +120,48 @@ const sections = [
   },
 ];
 
+const SCHEMA_TERMS_OF_SERVICE = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/terms-of-service#webpage',
+      url: 'https://www.openarmsinitiative.com/terms-of-service',
+      name: 'Terms of Service | Open Arms Initiative',
+      description: 'The terms that apply when you use the Open Arms Initiative website, request an appointment, submit a form, or donate online.',
+      dateModified: '2026-09-30',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/terms-of-service#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/terms-of-service#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: 'https://www.openarmsinitiative.com/terms-of-service' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+  ],
+};
+
 export default function TermsOfServicePage() {
   return (
-    <LegalPage
-      title="Terms of Service"
-      updated="September 30, 2026"
-      intro="Please read these terms before using our website. They explain what you can expect from us and what we ask of you when you visit, request an appointment, or donate."
-      sections={sections}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_TERMS_OF_SERVICE) }} />
+      <LegalPage
+        title="Terms of Service"
+        updated="September 30, 2026"
+        intro="Please read these terms before using our website. They explain what you can expect from us and what we ask of you when you visit, request an appointment, or donate."
+        sections={sections}
+      />
+    </>
   );
 }

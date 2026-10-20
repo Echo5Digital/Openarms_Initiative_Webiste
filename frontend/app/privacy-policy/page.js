@@ -125,13 +125,48 @@ const sections = [
   },
 ];
 
+const SCHEMA_PRIVACY_POLICY = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://www.openarmsinitiative.com/privacy-policy#webpage',
+      url: 'https://www.openarmsinitiative.com/privacy-policy',
+      name: 'Privacy Policy | Open Arms Initiative',
+      description: 'How Open Arms Initiative collects, uses, and protects your information when you visit our website, request an appointment, or contact our Oklahoma City team.',
+      dateModified: '2026-09-30',
+      isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
+      about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
+      breadcrumb: { '@id': 'https://www.openarmsinitiative.com/privacy-policy#breadcrumb' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://www.openarmsinitiative.com/privacy-policy#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://www.openarmsinitiative.com/privacy-policy' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.openarmsinitiative.com/#website',
+      url: 'https://www.openarmsinitiative.com/',
+      name: 'Open Arms Initiative',
+    },
+  ],
+};
+
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage
-      title="Privacy Policy"
-      updated="September 30, 2026"
-      intro="Your trust matters to us. This policy explains what information we collect through our website, how we use and protect it, and the choices you have."
-      sections={sections}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRIVACY_POLICY) }} />
+      <LegalPage
+        title="Privacy Policy"
+        updated="September 30, 2026"
+        intro="Your trust matters to us. This policy explains what information we collect through our website, how we use and protect it, and the choices you have."
+        sections={sections}
+      />
+    </>
   );
 }
