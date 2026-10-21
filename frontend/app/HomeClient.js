@@ -187,7 +187,7 @@ export default function HomePage() {
   const totalReviewPages = Math.ceil(clientReviews.length / REVIEWS_PER_PAGE);
   const revealRootRef = useRef(null);
 
-  useEffect(() = alt="Kamryn Bass, Google review of Open Arms Initiative." > {
+  useEffect(() => {
     const root = revealRootRef.current;
     if (!root) return;
     if (typeof IntersectionObserver === 'undefined') {
@@ -632,7 +632,8 @@ export default function HomePage() {
               <div className="mission-image-wrap reveal reveal-from-right">
                 <img
                   src="/counseling-conversation.jpg"
-                  alt="Open Arms Initiative team supporting families across Oklahoma City."loading="lazy"
+                  alt="Open Arms Initiative team supporting families across Oklahoma City."
+                  loading="lazy"
                 />
               </div>
             </div>
