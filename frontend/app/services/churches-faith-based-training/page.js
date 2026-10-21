@@ -230,7 +230,7 @@ export default function ChurchesFaithBasedTrainingPage() {
               </p>
             </div>
             <div className="chf-hero-form-photo">
-              <img src="/images/second.png" alt="Ministry leaders and volunteers gathered for faith-based mental health training" />
+              <img src="/images/churches-faith-based-training.png" alt="Ministry leaders and volunteers gathered for faith-based mental health training" />
             </div>
           </div>
         </div>

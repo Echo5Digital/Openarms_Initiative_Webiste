@@ -19,7 +19,7 @@ export const serviceCategories = {
       { name: 'Location', href: '/location' },
       { name: 'FAQ', href: '/faq' },
     ],
-    image: '/images/first.png',
+    image: '/images/school-staff-educator-training-okc.png',
   },
   // Hidden for now — restore this entry to bring "Clinical Training & Workshops" back to the nav.
   // 'Clinical Training & Workshops': {
@@ -46,7 +46,7 @@ export const serviceCategories = {
       { name: 'Instagram', href: 'https://www.instagram.com/openarms_initiative/', external: true },
       { name: 'Youtube', href: 'https://www.youtube.com/watch?v=IkwbPsOvdHU', external: true },
     ],
-    image: '/images/4th.png',
+    image: '/images/community-outreach-support.png',
   },
 };
 
@@ -66,7 +66,7 @@ export const trainingSpeakingMenu = {
     { name: 'Careers', href: '/careers' },
     { name: 'FAQ', href: '/faq' },
   ],
-  image: '/images/second.png',
+  image: '/images/churches-faith-based-training.png',
 };
 
 export const allServices = [
@@ -166,7 +166,7 @@ export const allServices = [
       'Destigmatizing mental health in ministry',
     ],
     details: 'We partner with church leaders and faith organizations to provide specialized workshops that bridge spiritual support with clinical mental health insights.',
-    image: '/images/second.png',
+    image: '/images/churches-faith-based-training.png',
   },
   {
     slug: 'corporate-business-training',
@@ -194,7 +194,7 @@ export const allServices = [
       'Fostering supportive learning environments',
     ],
     details: 'Educators are often the first to see signs of trauma or emotional distress in youth. We provide practical tools to turn classrooms into safe learning havens.',
-    image: '/images/first.png',
+    image: '/images/school-staff-educator-training-okc.png',
   },
   {
     slug: 'trauma-informed-care-training',
@@ -222,7 +222,7 @@ export const allServices = [
       'Interactive learning modules',
     ],
     details: 'Promoting community awareness breaks down stigma and encourages early care. This workshop provides clear insights into mental health and human growth stages.',
-    image: '/images/second.png',
+    image: '/images/churches-faith-based-training.png',
   },
   {
     slug: 'parenting-skills-development',
@@ -236,7 +236,7 @@ export const allServices = [
       'Parental confidence building',
     ],
     details: 'Parenting can be challenging. Our courses equip parents with modern, trauma-aware discipline and communication skills to create a harmonious home.',
-    image: '/images/first.png',
+    image: '/images/school-staff-educator-training-okc.png',
   },
   {
     slug: 'anxiety-depression-stress-management',
@@ -264,7 +264,7 @@ export const allServices = [
       'Support for vulnerable families',
     ],
     details: 'Our non-profit outreach programs bring mental health awareness, resource navigation, and family support directly into local Oklahoma communities.',
-    image: '/images/4th.png',
+    image: '/images/community-outreach-support.png',
   },
   {
     slug: 'pro-bono-therapy',

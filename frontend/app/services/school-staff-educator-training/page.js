@@ -226,7 +226,7 @@ export default function SchoolStaffEducatorTrainingPage() {
               </p>
             </div>
             <div className="sse-hero-form-photo">
-              <img src="/images/first.png" alt="Teachers and school staff in a trauma-informed classroom training session" />
+              <img src="/images/school-staff-educator-training-okc.png" alt="Teachers and school staff in a trauma-informed classroom training session" />
             </div>
           </div>
         </div>

@@ -177,7 +177,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
       <p>At Open Arms Initiative, our <strong>Effective Parenting Classes in OKC</strong> provide practical education, compassionate guidance, and supportive tools to help parents and caregivers feel more confident as they navigate the challenges of raising children.</p>
       <div className="fs-actions"><a href="#needs" className="fs-btn fs-solid">Explore Parenting Support</a><Link href="/contact" className="fs-btn fs-outline">Connect With Open Arms</Link></div>
     </div>
-    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/gm-100kb (1).jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
+    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/effective-parenting-classes-okc.jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Practical Guidance', 'Family-Centered', 'Supportive Education', 'No Judgment'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
@@ -198,7 +198,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
 
   <section className="fs-section fs-understand-section"><div className="fs-container"><div className="fs-understand">
     <div className="reveal reveal-from-left"><h2>Parenting Support Isn&rsquo;t About Becoming a Perfect Parent</h2><p>There is no perfect parent. There is no single parenting strategy that works for every child. And there isn&apos;t a checklist that makes every difficult moment disappear.</p><p>Our <strong>Parent Support Training in Oklahoma City</strong> focuses on helping parents better understand their children, strengthen communication, establish appropriate boundaries, and develop practical approaches they can use at home.</p></div>
-    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/par2.jpg" alt="Family drawing and hands together on a table at home" /></div>
+    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/parent-support-training-oklahoma-city.jpg" alt="Family drawing and hands together on a table at home" /></div>
     <div className="reveal reveal-from-right">
       <p className="fs-kicker-label">PARENTING SUPPORT MAY HELP YOU:</p>
       <div className="fs-check-grid">{supportList.map(x => <span key={x}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5 9 18 20 6" /></svg>{x}</span>)}</div>
@@ -207,7 +207,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
   <p className="fs-understand-close reveal reveal-from-bottom"><strong>The goal isn&apos;t perfection. It&apos;s connection, understanding, and growth.</strong></p>
   </div></section>
 
-  <section className="fs-statement fs-statement-parenting"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You don&rsquo;t have to know everything to be the parent your child needs.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Explore Parenting Support</Link></div><img src="/parents-brushing-daughter-hair-100kb.jpg" alt="Parent and child sharing a supportive moment" /><aside>Parenting involves learning.<br /><br />Your child is growing. You&apos;re growing too.<br /><br />There is strength in being willing to ask questions, learn new approaches, and seek support when something isn&apos;t working.</aside></div></section>
+  <section className="fs-statement fs-statement-parenting"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You don&rsquo;t have to know everything to be the parent your child needs.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Explore Parenting Support</Link></div><img src="/parenting-workshops-oklahoma-city.jpg" alt="Parent and child sharing a supportive moment" /><aside>Parenting involves learning.<br /><br />Your child is growing. You&apos;re growing too.<br /><br />There is strength in being willing to ask questions, learn new approaches, and seek support when something isn&apos;t working.</aside></div></section>
 
   <section className="fs-section pc-process-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">Practical Tools for Real Family Life</h2><i className="fs-line-center" />
@@ -262,7 +262,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
       <div className="pc-quote"><p>Sometimes the most important change begins when a parent feels:</p><p className="pc-quote-line">&ldquo;I understand my child a little better now.&rdquo;</p></div>
     </div>
     <div className="pb-understand-photo reveal reveal-from-right pc-no-fade">
-      <img src="/cc.jpg" alt="Parent and child sharing a supportive moment" />
+      <img src="/parenting-support-oklahoma-city.jpg" alt="Parent and child sharing a supportive moment" />
     </div>
   </div></div></section>
 

@@ -31,25 +31,25 @@ const PROGRAMS = [
     desc: 'Learn to identify behavioral and emotional indicators of trauma and mental health concerns.',
   },
   {
-    img: '/Training/authentic-group-therapy-meeting.jpg',
+    img: '/Training/trauma-mental-health-training-organizations.jpg',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0h10m-10 0H3m18-7v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" /></svg>,
     name: 'Understanding Human Behavior Through a Trauma Lens',
     desc: "Explore why people respond the way they do and what's really beneath the behavior.",
   },
   {
-    img: '/Training/mid-shot-man-therapist-taking-notes-near-woman.webp',
+    img: '/Training/helping-professionals-staff-wellness-training.webp',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" /><polyline points="9 12 11 14 15 10" /></svg>,
     name: 'Staying Well While Doing Hard Work',
     desc: 'Practical self-care and stress-management strategies for helping professionals.',
   },
   {
-    img: '/Training/therapy-session-where-teenager-discusses-her-struggles-with-anxiety.webp',
+    img: '/Training/mental-health-awareness-nonprofit-staff-training.webp',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z" /></svg>,
     name: 'Grief, Loss, and Emotional Support Skills',
     desc: 'Tools for supporting others through hard experiences with compassion and boundaries.',
   },
   {
-    img: '/Training/people-having-debate-while-looking-computer.webp',
+    img: '/Training/human-service-staff-professional-development.webp',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><line x1="8" y1="10" x2="16" y2="10" /><line x1="8" y1="14" x2="12" y2="14" /></svg>,
     name: 'Communication and Conflict Skills for Human-Service Teams',
     desc: 'Build stronger relationships and navigate tough conversations with confidence.',
@@ -324,7 +324,7 @@ export default function TraumaMentalHealthTrainingPage() {
 
             <div className="tmh2-hero-form-photo">
               <Image
-                src="/Training/authentic-group-therapy-meeting.jpg"
+                src="/Training/trauma-mental-health-training-organizations.jpg"
                 alt="Nonprofit and community organization staff in a trauma and mental health training session"
                 fill
                 sizes="(max-width: 1000px) 100vw, 45vw"
@@ -504,7 +504,7 @@ export default function TraumaMentalHealthTrainingPage() {
             </Link>
           </div>
           <div className="tmh2-session-photo reveal reveal-from-right">
-            <Image src="/Training/people-working-tech-brand-together (1).webp" alt="Team discussing training needs" width={700} height={500} className="tmh2-session-img" />
+            <Image src="/Training/trauma-informed-training-nonprofits.webp" alt="Team discussing training needs" width={700} height={500} className="tmh2-session-img" />
           </div>
           <div className="tmh2-session-list reveal reveal-from-bottom">
             <div className="tmh2-session-item"><span><IconEar width="18" height="18" /></span>We listen first.</div>
@@ -778,7 +778,7 @@ export default function TraumaMentalHealthTrainingPage() {
 
         /* HELPS SECTION BG */
         .tmh2-bg-wrapper{ position:relative; overflow:hidden; z-index:1; }
-        .tmh2-helps-bg{ position:absolute; inset:0; background:url('/Training/bg4.png') center center / cover no-repeat; z-index:0; }
+        .tmh2-helps-bg{ position:absolute; inset:0; background:url('/Training/staff-trauma-mental-health-training-bg.png') center center / cover no-repeat; z-index:0; }
         .tmh2-helps-overlay{ position:absolute; inset:0; background:rgba(255,255,255,0.72); z-index:0; }
 
         /* HELPS GRID */

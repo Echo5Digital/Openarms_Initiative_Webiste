@@ -230,7 +230,7 @@ export default function CommunityOutreachSupportPage() {
               </p>
             </div>
             <div className="cos-hero-form-photo">
-              <img src="/images/4th.png" alt="Open Arms Initiative community outreach event in an Oklahoma City neighborhood" />
+              <img src="/images/community-outreach-support.png" alt="Open Arms Initiative community outreach event in an Oklahoma City neighborhood" />
             </div>
           </div>
         </div>

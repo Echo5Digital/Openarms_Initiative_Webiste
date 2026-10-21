@@ -138,7 +138,7 @@ export default function AboutClient() {
             <p className="oa-mission-note"><strong>Healthier individuals</strong> can strengthen families.<br /><strong>Stronger families</strong> can strengthen communities.</p>
           </div>
           <div className="oa-mission-media reveal reveal-from-right">
-            <img src="/making-the-most-of-marriage-counseling-shutterstock-2377029067-66db63c16e3a6 (1).webp" alt="Couple finding support and connection at Open Arms Initiative" />
+            <img src="/non-profit-community-support-okc.webp" alt="Couple finding support and connection at Open Arms Initiative" />
           </div>
         </div>
       </div></section>
@@ -280,7 +280,7 @@ export default function AboutClient() {
         <h2>&ldquo;People may come to Open Arms for different reasons. What they should find here is the same: compassion, respect, and somewhere to begin.&rdquo;</h2>
         <Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link>
       </div>
-        <img src="/business-team-joining-hands-teamwork-concept-100kb.jpg" alt="Open Arms Initiative team supporting the community ALL together"/>
+        <img src="/professional-development-for-human-service-staff.jpg" alt="Open Arms Initiative team supporting the community ALL together"/>
         <aside>You may be looking for a counselor.<br /><br />You may need support for your child.<br /><br />You may be opening your home to a foster child.<br /><br />You may be trying to strengthen your family.<br /><br />Or you may simply be trying to figure out what comes next.<br /><br /><strong>Whatever brought you here, you don&apos;t have to have everything figured out before you reach out.</strong></aside>
       </div></section>
 

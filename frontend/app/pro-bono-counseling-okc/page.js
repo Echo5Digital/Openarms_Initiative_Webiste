@@ -179,7 +179,7 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
       <p>Because asking for help takes courage, and cost shouldn&apos;t automatically close the door.</p>
       <div className="fs-actions"><Link href="/contact" className="fs-btn fs-solid">Ask About Pro Bono Counseling</Link><a href="#community" className="fs-btn fs-outline">Explore Community Support</a></div>
     </div>
-    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your situation and we&rsquo;ll help you find the right support.</p><ProBonoRequestForm /></div><div className="fs-hero-form-photo"><img src="/pb1.jpg" alt="Compassionate counseling conversation" /></div></div>
+    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your situation and we&rsquo;ll help you find the right support.</p><ProBonoRequestForm /></div><div className="fs-hero-form-photo"><img src="/pro-bono-counseling-in-okc.jpg" alt="Compassionate counseling conversation" /></div></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Compassionate Care', 'Community Focused', 'Confidential Support', 'Access With Dignity'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
@@ -206,7 +206,7 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
       <Link href="/contact" className="fs-btn fs-solid">Ask About Current Availability</Link>
     </div>
     <div className="pb-understand-photo reveal reveal-from-right">
-      <img src="/pb3.jpg" alt="Group counseling conversation" />
+      <img src="/what-is-pro-bono-counseling.jpg" alt="Group counseling conversation" />
     </div>
   </div></div></section>
 
@@ -215,7 +215,7 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
     <div className="fs-needs-grid reveal-stagger">{needs.map(([h, p], i) => <article className="reveal reveal-from-bottom fs-need-card" key={h}><span className="fs-need-icon">{needsIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
   </div></section>
 
-  <section className="fs-statement pb-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;Needing help and needing financial support can exist in the same sentence. Neither should be a source of shame.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Ask About Pro Bono Counseling</Link></div><img src="/pb2.jpg" alt="Hands offering comfort and support" /><aside>You don&apos;t need to justify why life has become difficult.<br /><br />And you don&apos;t need to feel embarrassed about asking what options are available.<br /><br />Start with a conversation.</aside></div></section>
+  <section className="fs-statement pb-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;Needing help and needing financial support can exist in the same sentence. Neither should be a source of shame.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Ask About Pro Bono Counseling</Link></div><img src="/financial-support-for-counseling.jpg" alt="Hands offering comfort and support" /><aside>You don&apos;t need to justify why life has become difficult.<br /><br />And you don&apos;t need to feel embarrassed about asking what options are available.<br /><br />Start with a conversation.</aside></div></section>
 
   <section className="fs-section fs-pillars-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">Access With Dignity</h2><i className="fs-line-center" />
@@ -257,13 +257,13 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
 
   <section className="fs-section fs-section-notavailable-probono"><div className="fs-container"><div className="fs-understand">
     <div className="reveal reveal-from-left"><h2>What If Pro Bono Counseling Isn&rsquo;t Currently Available?</h2><p>Reaching out still matters.</p><p>Program capacity can vary, and availability may not always match every person&apos;s needs or preferred timing.</p><p>When appropriate and possible, Open Arms Initiative can help you understand other available services, programs, or community resources that may be relevant to your circumstances.</p></div>
-    <div className="fs-understand-media fs-understand-media-probono reveal reveal-from-bottom"><img src="/Individual-Therapy.jpg" alt="Counselor listening attentively during a conversation" /></div>
+    <div className="fs-understand-media fs-understand-media-probono reveal reveal-from-bottom"><img src="/pro-bono-okc.jpg" alt="Counselor listening attentively during a conversation" /></div>
     <div className="reveal reveal-from-right"><p>We don&apos;t want the conversation to end with:</p><p><strong>&ldquo;We can&apos;t help.&rdquo;</strong></p><p>Whenever possible, we want it to continue with:</p><p><strong>&ldquo;Let&apos;s understand what options may be available.&rdquo;</strong></p></div>
   </div></div></section>
 
   <section id="community" className="fs-section fs-understand-section fs-community-section-probono"><div className="fs-container"><div className="fs-understand">
     <div className="reveal reveal-from-left"><h2>Community Support Is Part of Our Mission</h2><p>Mental health doesn&apos;t exist separately from families and communities.</p><p>When people can access support, families can become stronger. When caregivers have resources, children can benefit. When individuals feel heard and connected, communities can become more resilient.</p><p>Our <strong>Non-Profit Community Support in OKC</strong> reflects Open Arms Initiative&rsquo;s broader commitment to helping people access education, resources, counseling, and family-focused support.</p></div>
-    <div className="fs-understand-media fs-understand-media-probono reveal reveal-from-bottom"><img src="/view-people-wearing-face-masks-group-therapy-due-coronavirus-pandemic-100kb.jpg" alt="Group therapy session supporting community mental health" /></div>
+    <div className="fs-understand-media fs-understand-media-probono reveal reveal-from-bottom"><img src="/non-profit-community-support-in-okc.jpg" alt="Group therapy session supporting community mental health" /></div>
     <div className="reveal reveal-from-right">
       <p className="fs-kicker-label">DEPENDING ON AVAILABLE PROGRAMS, WE MAY CONNECT YOU WITH:</p>
       <div className="fs-check-grid">{communityList.map(x => <span key={x}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5 9 18 20 6" /></svg>{x}</span>)}</div>
