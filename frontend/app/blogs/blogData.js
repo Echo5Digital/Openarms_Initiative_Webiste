@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "why-do-some-people-fear-commitment-understanding-the-psychology-behind-it",
+    "title": "Why Do Some People Fear Commitment? Understanding the Psychology Behind It",
+    "date": "November 3, 2026",
+    "category": "blog",
+    "excerpt": "Explore the psychology behind fear of commitment, common causes, and how Open Arms Initiative helps individuals and couples overcome commitment anxiety.",
+    "image": "/why-do-some-people-fear-commitment-understanding-the-psychology-behind-it/love-issues.jpg",
+    "alt": "love issues"
+  },
+  {
     "slug": "healing-shouldn-t-stop-making-trauma-informed-counseling-and-community-support-accessible-to-every-family",
     "title": "Healing Shouldn't Stop: Making Trauma-Informed Counseling and Community Support Accessible to Every Family",
     "metaTitle": "Affordable Trauma-Informed Counseling & Family Support",
