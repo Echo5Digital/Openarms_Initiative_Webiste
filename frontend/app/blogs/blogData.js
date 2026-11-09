@@ -81,6 +81,7 @@ export const blogPosts = [
   {
     "slug": "10-signs-your-relationship-could-benefit-from-couples-therapy",
     "title": "10 Signs Your Relationship Could Benefit from Couples Therapy",
+    "metaTitle": "10 Signs You Need Couples Therapy | Open Arms Initiative",
     "date": "July 28, 2026",
     "category": "Blog",
     "excerpt": "Every relationship goes through rough patches. Disagreements, misunderstandings,...",
@@ -333,6 +334,7 @@ export const blogPosts = [
   {
     "slug": "4-ways-depression-can-affect-your-relationships",
     "title": "4 Ways Depression Can Affect Your Relationships",
+    "metaTitle": "4 Ways Depression Affects Relationships | Open Arms",
     "date": "May 21, 2025",
     "category": "Blog",
     "excerpt": "Depression extends far beyond temporary sadness or difficult life phases;...",

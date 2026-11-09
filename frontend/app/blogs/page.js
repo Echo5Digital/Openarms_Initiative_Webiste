@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.openarmsinitiative.com';
 const POSTS_PER_PAGE = 10;
 
 export const metadata = {
-  title: 'Blog | Open Arms Initiative',
+  title: 'Mental Health Blog | Open Arms Initiative Oklahoma City',
   description: 'Helpful articles, mental health insights, and community stories from the Open Arms Initiative team.',
   alternates: { canonical: `${SITE_URL}/blogs` },
 };
@@ -17,7 +17,7 @@ const SCHEMA_BLOGS = {
       '@type': 'CollectionPage',
       '@id': `${SITE_URL}/blogs#webpage`,
       url: `${SITE_URL}/blogs`,
-      name: 'Blog | Open Arms Initiative',
+      name: 'Mental Health Blog | Open Arms Initiative Oklahoma City',
       description: 'Helpful articles, mental health insights, and community stories from the Open Arms Initiative team.',
       isPartOf: { '@id': `${SITE_URL}/#website` },
       about: { '@id': `${SITE_URL}/#organization` },

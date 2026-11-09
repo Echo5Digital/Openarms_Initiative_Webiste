@@ -2,7 +2,7 @@ import AboutClient from './AboutClient';
 
 export const metadata = {
   title: 'About Open Arms Initiative | Oklahoma City',
-  description: 'Meet Open Arms Initiative, an Oklahoma City nonprofit providing trauma-informed counseling, foster family support, education, and compassionate community care.',
+  description: 'Meet Open Arms Initiative, an Oklahoma City nonprofit offering trauma-informed counseling, foster family support, education, and compassionate care.',
   alternates: { canonical: 'https://www.openarmsinitiative.com/about-us' },
 };
 
