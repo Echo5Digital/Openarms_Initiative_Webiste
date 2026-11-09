@@ -1,5 +1,10 @@
 import HomeClient from './HomeClient';
 
+export const metadata = {
+  title: 'Mental Health Training Oklahoma City | Open Arms Initiative',
+  description: 'Open Arms Initiative offers mental health counseling, trauma-informed care, foster care support and family therapy in Oklahoma City. Get compassionate care',
+};
+
 const SCHEMA_HOME = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -90,7 +95,7 @@ const SCHEMA_HOME = {
       '@type': 'WebPage',
       '@id': 'https://www.openarmsinitiative.com/#webpage',
       url: 'https://www.openarmsinitiative.com/',
-      name: 'Open Arms Initiative | Mental Health & Family Support in Oklahoma City',
+      name: 'Mental Health Training Oklahoma City | Open Arms Initiative',
       isPartOf: { '@id': 'https://www.openarmsinitiative.com/#website' },
       about: { '@id': 'https://www.openarmsinitiative.com/#organization' },
       mainEntity: { '@id': 'https://www.openarmsinitiative.com/#organization' },
