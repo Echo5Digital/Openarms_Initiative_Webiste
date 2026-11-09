@@ -1,5 +1,16 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Pin the Turbopack root to this folder. Without it, Next walks up to the
+  // nearest lockfile (e.g. a stray ../package-lock.json) and then can't resolve
+  // the virtual next/font/google module.
+  turbopack: {
+    root: projectRoot,
+  },
   async redirects() {
     return [
       { source: '/contact-us', destination: '/contact', permanent: true },
