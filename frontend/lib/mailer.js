@@ -28,6 +28,8 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+const CRM_URL = 'https://echo-5-leads.vercel.app/login';
+
 function buildNotificationHtml({ heading, intro, rows, footerNote }) {
   const visibleRows = rows.filter((row) => row && row.value);
   const rowsHtml = visibleRows
@@ -69,7 +71,18 @@ function buildNotificationHtml({ heading, intro, rows, footerNote }) {
               </td>
             </tr>
             <tr>
-              <td style="padding:4px 32px 26px;">
+              <td style="padding:8px 32px 4px;" align="center">
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="border-radius:10px;background:linear-gradient(135deg,#0170ED 0%,#00AFF7 100%);">
+                      <a href="${CRM_URL}" style="display:inline-block;padding:13px 28px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">View Lead in CRM &rarr;</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 32px 26px;">
                 <p style="margin:18px 0 0;padding-top:16px;border-top:1px solid #eef0f3;font-size:12.5px;color:#9aa1b0;">Submitted ${escapeHtml(timestamp)} CT${footerNote ? ` &middot; ${escapeHtml(footerNote)}` : ''}</p>
               </td>
             </tr>
