@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    "slug": "why-do-small-problems-feel-so-overwhelming-when-you-re-stressed",
+    "title": "Why Do Small Problems Feel So Overwhelming When You're Stressed?",
+    "date": "November 11, 2026",
+    "category": "blog",
+    "excerpt": "Discover why small problems feel overwhelming when you're stressed, the psychology behind amplified reactions, and practical ways to manage emotional overwhelm.",
+    "image": "/why-do-small-problems-feel-so-overwhelming-when-you-re-stressed/why-small-problems-feel-overwhelming.jpg",
+    "alt": "Why small problems feel overwhelming"
+  },
+  {
     "slug": "why-do-some-people-fear-commitment-understanding-the-psychology-behind-it",
     "title": "Why Do Some People Fear Commitment? Understanding the Psychology Behind It",
     "date": "November 3, 2026",

@@ -1,3 +1,5 @@
+const { sendTeamNotification, buildNotificationHtml } = require('@/lib/mailer');
+
 const ECHO5_API_URL = process.env.ECHO5_API_URL;
 const ECHO5_TENANT_KEY = process.env.ECHO5_TENANT_KEY;
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
@@ -84,6 +86,33 @@ export async function POST(request) {
         'X-Tenant-Key': ECHO5_TENANT_KEY,
       },
       body: JSON.stringify({ notes: noteLines.join('\n') }),
+    }).catch(() => {});
+  }
+
+  {
+    const displayName = fullName || body.email;
+    const rows = [
+      { label: 'Name', value: displayName },
+      { label: 'Email', value: body.email },
+      { label: 'Phone', value: body.phone },
+      { label: 'Service', value: body.topic || body.service },
+      { label: 'Payment/Insurance', value: body.insurance },
+      { label: 'Preferred Contact Method', value: body.contactMethod },
+      { label: 'Message', value: body.message },
+    ];
+
+    sendTeamNotification({
+      subject: `New Lead Submitted — ${displayName}`,
+      text: [
+        `A new lead was submitted on the website.`,
+        ``,
+        ...rows.map((r) => `${r.label}: ${r.value || '—'}`),
+      ].join('\n'),
+      html: buildNotificationHtml({
+        heading: 'New Lead Submitted',
+        intro: 'A new lead was submitted through the website.',
+        rows,
+      }),
     }).catch(() => {});
   }
 
