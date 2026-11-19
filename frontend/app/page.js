@@ -2,10 +2,10 @@ import HomeClient from './HomeClient';
 
 export const metadata = {
   title: 'Counseling Oklahoma City | Open Arms Initiative',
-  description: 'Open Arms Initiative offers mental health counseling, trauma-informed care, foster care support and family therapy in Oklahoma City. Get compassionate care',
+  description: 'Need counseling in Oklahoma City? Open Arms Initiative offers trauma-informed care for children, adults and families. SoonerCare accepted. New clients welcome.',
   openGraph: {
     title: 'Counseling Oklahoma City | Open Arms Initiative',
-    description: 'Open Arms Initiative offers mental health counseling, trauma-informed care, foster care support and family therapy in Oklahoma City. Get compassionate care',
+    description: 'Need counseling in Oklahoma City? Open Arms Initiative offers trauma-informed care for children, adults and families. SoonerCare accepted. New clients welcome.',
     url: 'https://www.openarmsinitiative.com/',
     siteName: 'Open Arms Initiative',
     locale: 'en_US',
