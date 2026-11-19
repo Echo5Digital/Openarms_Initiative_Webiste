@@ -236,7 +236,7 @@ export default function HomePage() {
         <div className="hero-banner-bg" aria-hidden="true"></div>
         <div className="reference-hero-overlay"></div>
         <div className="reference-hero-copy reveal reveal-from-bottom">
-          <h1 className="hero-accent-heading">Mental Health Counseling for Children, Adults &amp; Families <span className="hero-accent-heading-highlight">in Oklahoma City</span></h1>
+          <h1 className="hero-accent-heading">Counseling <span className="hero-accent-heading-highlight">in Oklahoma City</span> for Children, Adults &amp; Families</h1>
           <div className="hero-divider" aria-hidden="true">
             <span className="hero-divider-line"></span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0170ED" strokeWidth="1.6"><path d="M12 21c-4-1-8-5-8-10a8 8 0 0 1 8-8c5 0 9 4 9 9 0 5-4.5 9-9 9Z"/><path d="M12 21c0-6 2-13 8-16"/></svg>
